@@ -20,7 +20,7 @@ theme: readthedocs
 nav:
   - Home: index.md
   - Week 1 - Introduction:
-      - Overview: week1/class_overview.md
+      - Overview: week_01/class_overview.md
       - Sturctures:
-          - Structure of the Course: week1/class_struc.md
+          - Structure of the Course: week_01/class_struc.md
   - Flying Mini: week_02/How_to_Fly_DJI_Mini.md
