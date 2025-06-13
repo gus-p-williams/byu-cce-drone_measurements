@@ -19,3 +19,4 @@ markdown_extensions:
 theme: readthedocs
 nav:
   - Home: index.md
+  - Flying Mini: week_02/How_to_Fly_DJI_Mini.md
