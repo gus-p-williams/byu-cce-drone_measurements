@@ -1,8 +1,5 @@
-# Header 1
-we will learn about drones 
+# Introduction
 
-help
+Welcome to the drone class.
 
-jowaie
-## Little Header
-### Even smaller
+You will be accessing your before class readings and videos on GitHub throughout the semester.
