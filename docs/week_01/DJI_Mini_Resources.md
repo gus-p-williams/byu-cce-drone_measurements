@@ -1,6 +1,7 @@
 # Flying the DJI Mini
 
-### Infrastructure Inspection
+#### Infrastructure Inspection
+
 ## PreClass Readings
 In preparation for class, please watch the videos listed:
 ### Video 1:
