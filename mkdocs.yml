@@ -21,9 +21,6 @@ nav:
   - Home: index.md
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
-      - Sturctures:
-          - Structure of the Course: week_01/class_struc.md
-      - How to Fly Mini: week_01/How_to_Fly_DJI_Mini.md
       - Fly DJI Mini Resources: week_01/DJI_Mini_Resources.md
   - Week 2 - Drone Certification 1:
       - Test Prep Part 1: week_02/Test_Prep_pt1.md
