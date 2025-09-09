@@ -10,7 +10,7 @@ In preparation for class, please watch the videos listed:
 
 
 ### Video 2:
-[What to Know Before, During, and After Flying] (https://byu.sharepoint.com/sites/CEDroneClass/Shared%20Documents/General/How%20To%20Drone%20Videos/20240410_Before-while-after-vid_SC.mp4?referrer=Teams.TEAMS-ELECTRON&referrerScenario=teamsSdk_ns-bim&web=1){:target="_blank"}
+[What to Know Before, During, and After Flying](https://byu.sharepoint.com/sites/CEDroneClass/Shared%20Documents/General/How%20To%20Drone%20Videos/20240410_Before-while-after-vid_SC.mp4?referrer=Teams.TEAMS-ELECTRON&referrerScenario=teamsSdk_ns-bim&web=1){:target="_blank"}
 
 
 ---
