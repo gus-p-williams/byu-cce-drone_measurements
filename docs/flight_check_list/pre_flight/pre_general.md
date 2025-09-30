@@ -18,6 +18,7 @@ A comprehensive pre-flight checklist is essential for ensuring the safety and su
 - [ ] Propellers inspected for damage or wear
 - [ ] Firmware and software updated to the latest versions
 - [ ] Landing pad packed (if applicable)
+- [ ] SD Card inserted and has sufficient storage
 
 ---
 
