@@ -16,9 +16,19 @@ markdown_extensions:
     - admonition
     - pymdownx.arithmatex:
         generic: true
+    - pymdownx.tasklist:
+        custom_checkbox: false
+        clickable_checkbox: true
+    - pymdownx.emoji:
+
 theme: readthedocs
 nav:
   - Home: index.md
+  - Flight Checklist:
+      - Pre-Flight Checklist:
+          - General Checklist: flight_check_list/pre_flight/pre_general.md
+      - Post-Flight Checklist:
+          - General Checklist: flight_check_list/post_flight/post_general.md
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
       - Fly DJI Mini Resources: week_01/DJI_Mini_Resources.md
