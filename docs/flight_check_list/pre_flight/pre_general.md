@@ -6,10 +6,10 @@ A comprehensive pre-flight checklist is essential for ensuring the safety and su
 
 ## Checklist
 - [ ]Battery levels checked and sufficient for flight
-    - [ ]Drone Batteries
-    - [ ]Controller Batteries
-    - [ ]Spare Batteries
-    - [ ]Other Equipment Batteries (if applicable)
+- [ ]Drone Batteries
+- [ ]Controller Batteries
+- [ ]Spare Batteries
+- [ ]Other Equipment Batteries (if applicable)
 - [ ]All equipment packed and accounted for
 - [ ]Weather conditions checked and suitable for flight
 - [ ]Flight plan reviewed and understood
