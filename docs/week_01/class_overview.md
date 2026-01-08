@@ -12,148 +12,154 @@ The Other Resources are resources meant to be helpful to you while working on yo
 
 # Day 1 — Introduction to Drones for Measurement in Civil Engineering
 
-Welcome to **Drone Measurements**. This course is built around a core principle of civil engineering:  
-**measurement matters, but the required accuracy depends on the decision being made**.
+Welcome to **Drone Measurements**. This course is grounded in a fundamental principle of civil engineering:
+**engineering decisions are only as good as the measurements that support them**.
 
-Sometimes a simple method — such as pacing a distance or taking a single photograph — is accurate enough.  
-Other times, engineering decisions require carefully planned data collection and processing, producing
-orthomosaics or 3D models accurate to the centimeter or better.
+Civil engineers routinely operate under constraints of accuracy, time, cost, safety, and available
+technology. In some situations, approximate measurements — such as pacing distances or visual
+estimates — are sufficient to inform decisions. In other cases, engineering judgment requires
+high-quality, well-documented data, such as orthomosaics or 3D models with centimeter-level accuracy.
 
-Drones allow engineers to operate across this entire spectrum. Throughout this course, you will learn
-how to select appropriate measurement methods, understand their limitations, and evaluate whether the
-data quality is sufficient for engineering use.
+This course introduces drone-based measurement methods as tools that support engineering analysis,
+design, and decision-making. Emphasis is placed not only on data collection, but on evaluating whether
+the collected data are **appropriate, reliable, and defensible** for a given engineering application.
 
 ---
 
-## Why Use Drones for Measurement?
+## Engineering Use of Drones for Measurement
 
-Drones expand what civil engineers can measure safely, efficiently, and repeatedly. Compared to
-traditional field methods, drones can:
+Unmanned Aerial Systems (UAS), commonly referred to as drones, have become valuable tools in civil
+engineering practice. When properly applied, drones enable engineers to:
 
-- Collect data quickly over large or difficult-to-access areas
-- Improve safety by keeping personnel out of hazardous environments
-- Provide consistent, repeatable measurements over time
-- Capture spatial data that integrates directly with CAD, GIS, and modeling software
+- Collect spatial data efficiently over large or complex sites
+- Improve safety by reducing exposure to hazardous environments
+- Acquire repeatable measurements to support monitoring and change detection
+- Integrate spatial data into engineering analysis, modeling, and design workflows
 
-However, drone data is **not automatically accurate**. Flight planning, sensor choice, ground control,
-and processing decisions all affect the quality of the final measurements. This course emphasizes
-*understanding those tradeoffs*.
+However, drone data quality depends on engineering decisions made during planning, flight execution,
+and data processing. Understanding these dependencies is essential to responsible engineering practice.
 
 ---
 
 ## Visual Measurements: Photos and Orthomosaics
 
-### Aerial Photos
+### Aerial Photographs
 
-The most basic drone measurement product is an aerial photograph. When the camera position, altitude,
-and lens properties are known, distances and areas can be estimated directly from images.
+Aerial photographs represent the simplest form of drone-based measurement. When camera properties,
+flight altitude, and geometry are understood, distances and areas can be estimated directly from images.
 
-Aerial photos are commonly used for:
+Aerial photographs are commonly used for:
 
-- Site reconnaissance
-- Visual documentation
-- Identifying features and boundaries
-- Preliminary measurements when high precision is not required
+- Preliminary site reconnaissance
+- Visual documentation of existing conditions
+- Identifying features relevant to engineering analysis
+- Approximate measurements when high precision is not required
 
-Even simple photos can provide valuable engineering insight when used appropriately.
+Engineers must recognize the limitations of photographic measurements and assess whether their accuracy
+is sufficient for the intended application.
 
 ---
 
 ### Orthomosaics
 
-An **orthomosaic** is created by stitching many overlapping images into a single, geometrically corrected
-map with a uniform scale. Unlike raw photos, orthomosaics allow accurate measurement anywhere in the image.
+An **orthomosaic** is produced by processing multiple overlapping images into a single geometrically
+corrected image with a uniform scale. Orthomosaics allow consistent measurement across the entire image
+and reduce distortions present in individual photographs.
 
-Orthomosaics are used for:
+Orthomosaics support engineering tasks such as:
 
 - Measuring distances and areas
-- Mapping construction sites
+- Mapping construction sites and infrastructure
 - Creating base maps for design and planning
-- Comparing site conditions over time
+- Documenting site conditions over time
 
-With proper planning and ground control, orthomosaics can achieve centimeter-level accuracy.
+With appropriate flight planning and ground control, orthomosaics can achieve centimeter-level accuracy,
+making them suitable for many civil engineering applications.
 
 ---
 
-## Terrain and Surface Models
+## Terrain and Surface Modeling
 
 ### Digital Elevation Models (DEM)
 
-A **Digital Elevation Model (DEM)** represents the elevation of the surface, including vegetation,
-structures, and terrain. DEMs are useful for:
+A **Digital Elevation Model (DEM)** represents the elevation of the surface, including terrain,
+vegetation, and structures. DEMs are commonly used in civil engineering for:
 
-- Drainage analysis
+- Drainage and watershed analysis
 - Surface modeling
-- Change detection
+- Change detection and monitoring
 
 ---
 
 ### Digital Terrain Models (DTM)
 
-A **Digital Terrain Model (DTM)** represents the bare earth surface, with vegetation and structures removed.
-DTMs are commonly used for:
+A **Digital Terrain Model (DTM)** represents the bare-earth surface, with vegetation and structures
+removed. DTMs are essential for engineering analyses that require an accurate representation of ground
+surface geometry, including:
 
-- Earthwork calculations
-- Grading design
-- Hydrologic modeling
-- Infrastructure planning
+- Earthwork and grading design
+- Cut-and-fill calculations
+- Hydrologic and hydraulic modeling
 
-Both DEMs and DTMs can be generated from drone imagery or LiDAR data.
+Both DEMs and DTMs may be generated using photogrammetry or LiDAR, each with distinct advantages and
+limitations.
 
 ---
 
 ## Volumetric Measurements
 
-One of the most common engineering uses of drones is **volume estimation**. By creating 3D surface models,
-engineers can calculate volumes of:
+Drone-derived 3D models are widely used for **volumetric measurement** in civil engineering practice.
+These methods enable engineers to estimate volumes of:
 
 - Stockpiles
 - Excavations
 - Embankments
-- Material removal or placement over time
+- Material placement or removal over time
 
-Volume calculations depend heavily on data quality and surface visibility, making them an excellent
-example of how measurement accuracy directly affects engineering decisions.
-
----
-
-## Specialized Sensors and Measurement Types
-
-Drones can carry sensors beyond standard RGB cameras, enabling additional types of measurement:
-
-- **Thermal cameras** for detecting heat differences in structures, pavements, and utilities
-- **Multispectral sensors** for vegetation health, erosion monitoring, and environmental analysis
-- **LiDAR sensors** for high-accuracy 3D point clouds, especially in vegetated or complex terrain
-
-Each sensor provides different information and comes with its own accuracy, cost, and processing
-considerations.
+Accurate volume estimation requires careful attention to data resolution, surface visibility, and
+processing methods. Engineers must evaluate uncertainty and understand how measurement errors affect
+project decisions.
 
 ---
 
-## Measurement Tradeoffs in Engineering Practice
+## Specialized Sensors and Advanced Measurement Methods
 
-Civil engineers must constantly balance:
+Drones can carry specialized sensors that extend measurement capabilities beyond standard imagery:
 
-- Accuracy
-- Time
-- Cost
-- Safety
+- **Thermal sensors** for detecting temperature differences in pavements, structures, and utilities
+- **Multispectral sensors** for environmental assessment, vegetation analysis, and erosion monitoring
+- **LiDAR sensors** for high-resolution 3D point clouds, particularly in vegetated or complex terrain
 
-Not every task requires survey-grade precision, and not every problem can be solved with a simple
-measurement. Drones provide flexible tools that support both rapid assessments and high-accuracy
-engineering analyses — when used correctly.
+Each sensor type introduces tradeoffs in accuracy, cost, data volume, and processing complexity.
+Selecting the appropriate sensor requires engineering judgment and an understanding of project
+requirements.
 
 ---
 
-## Course Focus
+## Measurement Accuracy, Uncertainty, and Engineering Judgment
 
-In this course, you will learn:
+Civil engineers must balance multiple constraints when selecting measurement methods, including:
 
-- How drone-based measurements are collected
-- How different data products are created
-- What limits accuracy and reliability
-- How to decide whether a dataset is *good enough* for engineering use
+- Required accuracy and precision
+- Time and cost limitations
+- Safety considerations
+- Data processing and documentation requirements
 
-Today’s introduction sets the foundation for the rest of the course. In the coming weeks, you will
-gain hands-on experience planning flights, collecting data, and evaluating measurement quality.
+Not all engineering problems require the same level of measurement accuracy. A key objective of this
+course is developing the ability to assess **when data are sufficient** and **when higher-quality
+measurements are justified**.
 
+---
+
+## Course Emphasis and Learning Objectives
+
+By the end of this course, students will be able to:
+
+- Apply drone-based measurement techniques to civil engineering problems
+- Evaluate the accuracy and limitations of different measurement methods
+- Integrate drone-derived data into engineering analysis and design workflows
+- Make informed, ethical, and defensible engineering decisions based on measured data
+
+Today’s introduction establishes the measurement-focused framework that will guide the remainder of
+the course. Subsequent lessons will build practical skills in flight planning, data collection, data
+processing, and quality assessment.
