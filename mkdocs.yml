@@ -3,7 +3,7 @@ site_url: https://byu-cce_drone_measurements.readthedocs.io/en/latest/
 site_description: Course materials for the CCE class at BYU
 site_author: Instructors and TAs of the CCE class at BYU
 repo_url: https://github.com/gus-p-williams/byu-cce-drone_measurements/
-favicon: 'images/favicon.ico'
+#favicon: 'images/favicon.ico'
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
   - js/mathjax-config.js
@@ -21,7 +21,10 @@ markdown_extensions:
         clickable_checkbox: true
     - pymdownx.emoji:
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  logo: images/class_logo.png
+
 nav:
   - Home: index.md
   - Flight Checklist:
@@ -32,7 +35,8 @@ nav:
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
       - Fly DJI Mini Resources: week_01/DJI_Mini_Resources.md
-  - Week 2 - Drone Certification 1:
-      - Test Prep Part 1: week_02/Test_Prep_pt1.md
-  - Week 3 - Drone Certification 2:
-    - Test Prep Part 2: week_03/Test_Prep_pt2.md
+  - Week 2 - Software:
+      - Coming Soon: coming_soon.md
+  - Week 3 - Measurements:
+      - Lab: coming_soon.md
+      - Lab: week_03/lab_measurements.md
