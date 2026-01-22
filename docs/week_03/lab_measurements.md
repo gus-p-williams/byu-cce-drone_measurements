@@ -9,7 +9,7 @@ In engineering and construction, accurate measurement of distance and area is es
 In this lab, you will compare multiple methods for estimating area:
 
 - Human pacing
-- Visual counting from drone imagery
+- Using Drone-collected imagery
 - Google Maps measurement tools
 - GIS-based measurements using QGIS
 
