@@ -43,7 +43,7 @@ By completing this lab, students will:
 
 ### Part 1 – Pace Calibration
 
-For the first part of the lab you will be finding your pace length in feet per step. This will be used later to convert your pacing measurements into feet. If you have already completed a similar activity, you may use your previously calculated pace length, as long as it was done recently and you are confident in its accuracy. Follow these steps to calibrate your pace length:
+For the first part of the lab you will be finding your pace length in feet per step. This will be used later to convert your pacing measurements into feet. If you have already completed a similar activity, you may use your previously calculated pace length, as long as it was done recently, and you are confident in its accuracy. Follow these steps to calibrate your pace length:
 
 1. The TAs will already measure a straight 100‑ft distance on the ground using a tape or known reference.
 2. Walk the distance at a normal pace and count your steps. Try to be as consistent as possible with your stride.
