@@ -109,6 +109,10 @@ Using Google Maps, you will measure the area of the parking lot and a single par
 
 Using QGIS software, you will measure the area of the parking lot and a single parking stall from the provided drone imagery. This method is similar to the Google Maps method, but you will be using GIS software to perform the measurements. This allows for more precise tracing and area calculation since you can zoom in closely and use GIS tools to assist with the measurements.
 
+Download the follow .tif file: <a href="https://byu.sharepoint.com/:i:/s/CEDroneClass/IQBihTemBdyeQoa21AmGFfznAev9rZIMYF_WNmvkp7KsD3s?download=1">
+  Download EB-Parking-1-22-26-orthophoto.tif
+</a>
+
 1. Open QGIS and load the provided drone imagery of the parking lot.
 2. Using the polygon drawing tool, trace the outline of a single parking stall.
 3. Use the field calculator to compute the area of the polygon in square feet.
