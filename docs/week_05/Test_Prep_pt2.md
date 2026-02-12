@@ -44,6 +44,26 @@ It is important to understand when Part 107 applies versus other regulatory path
 ![Figure 3 — FAA Regulatory Structure](images/fig03_faa_structure.svg)
 *Figure 3: The FAA regulatory hierarchy — Part 107 sits within Title 14 of the Code of Federal Regulations under the FAA.*
 
+### Practice Questions — Regulations
+
+!!! note "Question 1.1"
+    A construction company hires you to photograph a building site from the air using a small drone. Under what regulatory authority must you operate?
+
+    - (A) Section 44809 (Recreational)
+    - (B) 14 CFR Part 107
+    - (C) No special authority is needed if the drone is under 55 lbs
+
+    **Answer: (B).** Any time you fly a drone for compensation or to further a business interest, Part 107 applies — even if someone else is paying you. Section 44809 is only for purely recreational flights with no business purpose.
+
+!!! note "Question 1.2"
+    Your neighbor offers to pay you $50 to take aerial photos of their house to post on a real estate listing. Do you need a Part 107 Remote Pilot Certificate?
+
+    - (A) No, because the flight is over private property
+    - (B) No, because the payment is under $100
+    - (C) Yes, because you are receiving compensation for the flight
+
+    **Answer: (C).** There is no minimum dollar threshold — any compensation makes the flight a commercial operation requiring Part 107 certification. The location of the flight (private vs. public property) does not change the regulatory requirement.
+
 ---
 
 ## II. Eligibility & Certification Process
@@ -100,6 +120,26 @@ Your Remote Pilot Certificate does not expire, but you must maintain **currency*
 
 If you let your currency lapse, you cannot legally operate under Part 107 until you complete recurrent training. There is no penalty for lapsing — just complete the training before your next flight.
 
+### Practice Questions — Eligibility & Certification
+
+!!! note "Question 2.1"
+    What is the minimum age to obtain a Remote Pilot Certificate under Part 107?
+
+    - (A) 14 years old
+    - (B) 16 years old
+    - (C) 18 years old
+
+    **Answer: (B).** Part 107 requires applicants to be at least 16 years old. There is no requirement for a medical certificate, but applicants must be able to read, speak, write, and understand English and be in a physical and mental condition to safely operate a small UAS.
+
+!!! note "Question 2.2"
+    A remote pilot passed the initial Part 107 knowledge test 30 months ago and has not completed any recurrent training. Can they legally conduct a commercial sUAS operation today?
+
+    - (A) Yes, the certificate never expires
+    - (B) No, they must complete recurrent training or retake the knowledge test before flying
+    - (C) Yes, but only if they fly below 200 ft AGL
+
+    **Answer: (B).** While the Remote Pilot Certificate itself does not expire, the pilot must maintain currency by completing recurrent training or retaking the knowledge test every 24 calendar months. At 30 months without recurrent training, this pilot's currency has lapsed and they cannot legally exercise Part 107 privileges until they complete training.
+
 ---
 
 ## III. Structure of the Part 107 Exam
@@ -147,9 +187,9 @@ Below is an example of the type of question you may encounter:
     **Refer to [FAA-CT-8080-2H](https://www.faa.gov/training_testing/testing/supplements), Figure 26, Area 2.**
     What is the floor of Class B airspace in the area surrounding Dallas/Fort Worth International Airport?
 
-    (A) Surface
-    (B) 3,000 ft MSL
-    (C) 4,000 ft MSL
+    - (A) Surface
+    - (B) 3,000 ft MSL
+    - (C) 4,000 ft MSL
 
     *Answer: The floor varies by sector. You must read the sectional chart excerpt in the testing supplement to determine the altitude shown for the specific area referenced.*
 
@@ -196,7 +236,12 @@ The figure below shows an excerpt of the Salt Lake City sectional chart. Notice 
 ![Figure 10 — Salt Lake City Sectional Chart Excerpt](images/fig10_slc_sectional_excerpt.jpg)
 *Figure 10: Excerpt from the FAA Salt Lake City Sectional Aeronautical Chart showing Class B airspace, restricted areas, airports, and terrain along the Wasatch Front. Source: [FAA VFR Raster Charts](https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/) (public domain). Not for navigation.*
 
-Practice reading the sectional chart legend and identifying these features before the exam. The FAA testing supplement provides the chart excerpts you will use during the test.
+The chart legend below shows the standard symbols used on all FAA sectional charts. Practice matching these symbols to what you see on the chart excerpt above — identify the airport types, airspace boundaries, obstruction markers, and communication frequencies.
+
+![Figure 10b — Sectional Chart Legend](images/fig10b_sectional_chart_legend.jpg)
+*Figure 10b: Sectional chart legend from the Salt Lake City chart showing airport symbols, airspace depictions, communication boxes, radio aids, obstructions, and topographic information. Source: [FAA VFR Raster Charts](https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/) (public domain).*
+
+Practice reading the legend and identifying these features on actual charts before the exam. The FAA testing supplement provides the chart excerpts you will use during the test.
 
 ### C. LAANC Authorization
 
@@ -207,6 +252,26 @@ Practice reading the sectional chart legend and identifying these features befor
 - See the maximum altitudes approved for specific grid cells near airports
 
 If you need to fly above the LAANC ceiling grid, you must submit a manual authorization request through the FAA DroneZone portal, which can take up to 90 days.
+
+### Practice Questions — Airspace
+
+!!! note "Question 4.1"
+    You want to fly your sUAS at 200 ft AGL near a small airport. On the sectional chart, the airport is surrounded by a dashed magenta line. What class of airspace are you in, and do you need ATC authorization?
+
+    - (A) Class D — yes, authorization required
+    - (B) Class E surface area — yes, authorization required
+    - (C) Class G — no authorization required
+
+    **Answer: (B).** A dashed magenta line on a sectional chart indicates a Class E surface area. Because this is controlled airspace extending to the surface, you must obtain ATC authorization (via LAANC or FAA DroneZone) before flying your sUAS there. Remember: dashed *blue* = Class D, solid *blue* = Class B, solid *magenta* = Class C.
+
+!!! note "Question 4.2"
+    A remote pilot plans to operate an sUAS in Class G airspace at 350 ft AGL. Which statement is correct?
+
+    - (A) No ATC authorization is needed, but all Part 107 operating rules still apply
+    - (B) ATC authorization is required for any flight above 200 ft AGL
+    - (C) Class G airspace does not exist below 1,200 ft AGL
+
+    **Answer: (A).** Class G is uncontrolled airspace — no ATC authorization is needed to fly there. However, the remote pilot must still comply with all Part 107 rules: VLOS, 400 ft AGL max altitude, 3 SM visibility, cloud clearance, daylight operations, yield right of way, etc.
 
 ---
 
@@ -257,6 +322,35 @@ The FAA may grant **waivers** for certain Part 107 restrictions if the applicant
 
 !!! warning "Important"
     A waiver does not guarantee approval. You must submit a detailed safety case explaining how you will mitigate risks. Waiver processing typically takes 90 days or more.
+
+### Practice Questions — Operating Rules
+
+!!! note "Question 5.1"
+    A remote PIC is conducting a Part 107 flight at 300 ft AGL. The current weather reports visibility of 2 statute miles. Is this operation legal?
+
+    - (A) Yes, as long as the pilot maintains VLOS with the sUAS
+    - (B) No, Part 107 requires a minimum visibility of 3 statute miles
+    - (C) Yes, visibility requirements only apply in controlled airspace
+
+    **Answer: (B).** Part 107.51 requires a minimum flight visibility of 3 statute miles from the control station, regardless of airspace class. At 2 SM visibility, the pilot must not fly unless they obtain a waiver for reduced visibility operations. This rule applies in both controlled and uncontrolled airspace.
+
+!!! note "Question 5.2"
+    You are hired to inspect a 500-foot-tall radio tower. What is the maximum altitude at which you may legally operate your sUAS near this structure without a waiver?
+
+    - (A) 400 ft AGL
+    - (B) 500 ft AGL (top of the tower)
+    - (C) 900 ft AGL
+
+    **Answer: (C).** Under Part 107.51, a drone may fly higher than 400 ft AGL if it remains within 400 ft of a structure. In this case, the tower is 500 ft tall, and you may fly up to 400 ft above the top of the structure — a maximum of 900 ft AGL. The sUAS must remain within a 400-foot horizontal radius of the structure at all times while above 400 ft AGL.
+
+!!! note "Question 5.3"
+    Which of the following Part 107 restrictions can the FAA grant a waiver for?
+
+    - (A) Operating beyond visual line of sight
+    - (B) Yielding right of way to manned aircraft
+    - (C) Requiring the remote PIC to hold a certificate
+
+    **Answer: (A).** BVLOS operations (107.31) are waiverable with an approved safety case. Yielding right of way to manned aircraft and the requirement for a Remote Pilot Certificate are **not** waiverable under any circumstances — these are fundamental safety and legal requirements that cannot be set aside.
 
 ---
 
@@ -312,6 +406,28 @@ METAR KSLC 121756Z 17010KT 10SM FEW080 SCT150 BKN250 27/06 A3012 RMK AO2
 !!! tip "Study Tip"
     The best way to learn METAR/TAF decoding is practice. Visit [AviationWeather.gov](https://www.aviationweather.gov) and decode several real METARs for airports in your area.
 
+### Practice Questions — Weather
+
+!!! note "Question 6.1"
+    Given the following METAR, what is the reported visibility and wind?
+
+    `METAR KPVU 151845Z 27015G25KT 4SM -RA BKN020 OVC040 18/15 A2985 RMK AO2`
+
+    - (A) 4 statute miles visibility; wind from 270 at 15 knots gusting to 25 knots
+    - (B) 4 nautical miles visibility; wind from 150 at 27 knots
+    - (C) 15 statute miles visibility; wind from 270 at 4 knots
+
+    **Answer: (A).** In a METAR, `4SM` means 4 statute miles visibility. The wind group `27015G25KT` decodes as: wind **from** 270 degrees (west) at 15 knots, **gusting** to 25 knots. Also note: `-RA` means light rain, `BKN020` means broken clouds at 2,000 ft AGL (the ceiling), and `18/15` shows the temperature/dew point spread is only 3C — conditions are moist and could deteriorate further.
+
+!!! note "Question 6.2"
+    On a clear, calm night, the surface temperature is 58F and the dew point is 56F. What weather phenomenon is most likely to develop by early morning?
+
+    - (A) Thunderstorms
+    - (B) Radiation fog
+    - (C) High-altitude turbulence
+
+    **Answer: (B).** Radiation fog forms on clear, calm nights when the ground cools by radiating heat, lowering the air temperature to the dew point. A temperature/dew point spread of only 2F means the air is nearly saturated. As the surface continues to cool overnight, the temperature will likely reach the dew point, producing ground-level fog. This could reduce visibility well below the 3 SM minimum required for Part 107 operations.
+
 ---
 
 ## VII. Loading, Performance & sUAS Limitations
@@ -357,6 +473,26 @@ The center of gravity is the point where the aircraft balances. For sUAS:
 - **Hot temperatures** can cause batteries to overheat, leading to thermal cutoffs or swelling
 - Store and transport batteries at room temperature
 - Warm batteries to at least 60F (15C) before flight in cold conditions
+
+### Practice Questions — Loading & Performance
+
+!!! note "Question 7.1"
+    A remote pilot is planning a flight at a field site at 6,500 ft elevation on a hot summer day (95F). Compared to flying the same sUAS at sea level on a standard day, the pilot should expect:
+
+    - (A) Increased battery life due to thinner air reducing drag
+    - (B) Decreased aircraft performance — reduced thrust and shorter flight time
+    - (C) No change, because sUAS performance is not affected by altitude
+
+    **Answer: (B).** High elevation and high temperature both increase density altitude, meaning the air is thinner. The drone's propellers produce less thrust in thinner air, the motors work harder to maintain hover, and battery consumption increases. At 6,500 ft on a 95F day, the density altitude could exceed 10,000 ft — a significant performance reduction. Always plan for shorter flights and reduced payload capacity in hot, high conditions.
+
+!!! note "Question 7.2"
+    A remote pilot attaches a heavy LiDAR sensor to the left side of a quadcopter without adding counterweight. What is the most likely effect?
+
+    - (A) The sUAS will fly faster due to reduced drag
+    - (B) The center of gravity shifts, causing the aircraft to drift or tilt and potentially become unstable
+    - (C) Battery life will increase because the motors compensate automatically
+
+    **Answer: (B).** An asymmetric payload shifts the center of gravity away from the aircraft's geometric center. The flight controller will attempt to compensate by increasing power to motors on the heavy side, but this reduces overall efficiency, shortens flight time, and may exceed the controller's ability to stabilize — especially in wind. Always mount payloads symmetrically or add counterweight to keep the CG within the manufacturer's limits.
 
 ---
 
@@ -427,6 +563,35 @@ The FAA identifies five hazardous attitudes that lead to poor decisions:
 
 *Figure 24: Recognize these attitudes in yourself and apply the antidotes before making flight decisions.*
 
+### Practice Questions — ADM & Safety
+
+!!! note "Question 8.1"
+    What does the "V" in the PAVE checklist stand for, and what factors does it address?
+
+    - (A) Velocity — groundspeed and wind limitations
+    - (B) enVironment — weather, airspace, terrain, obstacles, and NOTAMs
+    - (C) Visibility — minimum flight visibility requirements
+
+    **Answer: (B).** The "V" in PAVE stands for en**V**ironment and covers all external conditions affecting the flight: current and forecast weather, airspace classification and restrictions, terrain and obstacles at the operating site, and any active NOTAMs or TFRs. A thorough environmental assessment is critical — conditions that seem flyable on the ground may not be safe at altitude.
+
+!!! note "Question 8.2"
+    A remote pilot has a client deadline to deliver aerial survey data by tomorrow. The weather forecast calls for gusty winds and low visibility in the morning, but the pilot thinks, "I've flown in worse — I can handle it." Which hazardous attitude does this represent, and what is the antidote?
+
+    - (A) Resignation — "I'm not helpless, I can make a difference"
+    - (B) Anti-authority — "Follow the rules, they exist for a reason"
+    - (C) Macho — "Taking chances is foolish"
+
+    **Answer: (C).** The "macho" attitude leads pilots to take unnecessary risks to prove they can handle difficult conditions. The antidote is recognizing that "taking chances is foolish." This scenario also involves external pressure (the "E" in PAVE) — the client deadline is pushing the pilot toward a risky decision. The correct action is to delay the flight until conditions improve and communicate the delay to the client.
+
+!!! note "Question 8.3"
+    A remote pilot had three beers at dinner last night and stopped drinking at 10:00 PM. Their planned flight is at 5:30 AM the next morning. Under FAA regulations, can they legally fly?
+
+    - (A) Yes, as long as they feel fine
+    - (B) No, because the 8-hour "bottle-to-throttle" rule has not been met
+    - (C) Yes, the alcohol restriction only applies to manned aircraft pilots
+
+    **Answer: (B).** The FAA requires at least 8 hours between consuming alcohol and operating any aircraft, including sUAS ("8 hours bottle to throttle"). From 10:00 PM to 5:30 AM is only 7.5 hours — the pilot must wait until at least 6:00 AM. Additionally, the pilot must not have a blood alcohol content of 0.04% or higher, and the "F" in IMSAFE (Fatigue) should also be considered after a late night.
+
 ---
 
 ## IX. Maintaining Currency & Responsibilities
@@ -486,6 +651,26 @@ All sUAS weighing more than **0.55 lbs (250 grams)** and less than 55 lbs must b
 - Costs $5 for Part 107 (per aircraft)
 - Is valid for 3 years
 - Requires the registration number to be displayed on the aircraft
+
+### Practice Questions — Currency & Responsibilities
+
+!!! note "Question 9.1"
+    During an sUAS mapping operation, the drone strikes a parked car, causing $750 in damage to the vehicle. The drone is also damaged, but no one is injured. Is the remote PIC required to report this to the FAA?
+
+    - (A) No, because no one was injured
+    - (B) Yes, because property damage (other than to the sUAS) exceeds $500
+    - (C) No, because the total damage is under $1,000
+
+    **Answer: (B).** Under 14 CFR 107.9, the remote PIC must report any accident to the FAA within 10 days if it causes serious injury, loss of consciousness, or damage to property (other than the sUAS itself) exceeding $500. The $750 damage to the parked car triggers the reporting requirement. Damage to your own drone does not count toward the $500 threshold.
+
+!!! note "Question 9.2"
+    A remote pilot's sUAS does not have built-in Remote ID capability. Which of the following is a compliant way to operate under current regulations?
+
+    - (A) Operate normally — Remote ID is optional for Part 107 pilots
+    - (B) Attach an FAA-compliant Remote ID broadcast module to the sUAS
+    - (C) File a Remote ID exemption through IACRA before each flight
+
+    **Answer: (B).** As of March 16, 2024, all sUAS operating under Part 107 must comply with Remote ID. If the drone lacks built-in Standard Remote ID, the pilot can attach an FAA-compliant Remote ID broadcast module that transmits identification and location data. Remote ID is not optional — operating without it is a regulatory violation. There is no per-flight exemption process.
 
 ---
 
