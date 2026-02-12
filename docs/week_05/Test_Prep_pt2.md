@@ -191,6 +191,11 @@ Sectional charts are the standard visual flight rules (VFR) aeronautical charts.
 - **Obstructions**: Marked with tower symbols showing MSL and AGL heights
 - **Special-use airspace**: Restricted (R), Prohibited (P), MOAs, Warning areas
 
+The figure below shows an excerpt of the Salt Lake City sectional chart. Notice the SLC Class B airspace depicted by concentric solid blue lines with altitude labels, restricted areas R-6404 and R-6402 shown with hatched brown boundaries, towered airports in blue, non-towered airports in magenta, and terrain elevation contours across the Wasatch Front corridor from Ogden down to Provo.
+
+![Figure 10 — Salt Lake City Sectional Chart Excerpt](images/fig10_slc_sectional_excerpt.jpg)
+*Figure 10: Excerpt from the FAA Salt Lake City Sectional Aeronautical Chart showing Class B airspace, restricted areas, airports, and terrain along the Wasatch Front. Source: [FAA VFR Raster Charts](https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/) (public domain). Not for navigation.*
+
 Practice reading the sectional chart legend and identifying these features before the exam. The FAA testing supplement provides the chart excerpts you will use during the test.
 
 ### C. LAANC Authorization
