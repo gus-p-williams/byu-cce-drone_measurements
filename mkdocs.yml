@@ -41,6 +41,9 @@ nav:
   - Week 3 - Measurements:
       - Measurements Lab: week_03/lab_measurements.md
       - Metadata: week_03/metadata.md
+  - Week 4 - Mission Planning:
+      - SfM Workflow: week_04/SfM_Workflow.md
+      - Mission Planning (SfM): week_04/Mission_Planning_SfM.md
   - Week 5 - Part 107:
       - Part 1: week_05/Test_Prep_pt1.md
       - Part 2: week_05/Test_Prep_pt2.md
