@@ -34,7 +34,7 @@ nav:
           - General Checklist: flight_check_list/post_flight/post_general.md
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
-      - Fly DJI Mini Resources: week_01/DJI_Mini_Resources.md
+      - Flight Basics: week_01/DJI_Mini_Basics.md
   - Week 2 - Software:
       - Bentley iTwin: week_02/bentley_itwin.md
       - QGIS Measurements: week_02/qgis_measurements.md

@@ -1,16 +1,13 @@
 # Class Overview and Structure
 
+!!! abstract "Key Takeaways"
+    - **Drones are Tools for Measurement**: This course isn't just about flying; it's about using drones as professional engineering instruments.
+    - **Engineering Judgment is Primary**: Before collecting data, you must ask: Is this data appropriate, reliable, and defensible for the decision I need to make?
+    - **Accuracy vs. Effort**: Not every task requires centimeter-level precision. Choosing the right measurement method (pacing vs. GPS vs. drone) is a core engineering skill.
+
+---
+
 ## Introduction
-
-Welcome to the drone class.
-
-You will be accessing your before class readings and videos on GitHub throughout the semester. 
-These resources will be separated into two categories: PreClass Readings and Other Resources.
-You will have to read/watch all content under the PreClass Readings to receive full credit on your reading quizzes.
-The Other Resources are resources meant to be helpful to you while working on your assignment for the class.
-
-
-# Day 1 — Introduction to Drones for Measurement in Civil Engineering
 
 Welcome to **Drone Measurements**. This course is grounded in a fundamental principle of civil engineering:
 **engineering decisions are only as good as the measurements that support them**.
@@ -150,6 +147,21 @@ course is developing the ability to assess **when data are sufficient** and **wh
 measurements are justified**.
 
 ---
+
+!!! question "Activity: The Right Tool for the Job"
+    As an engineer, you must decide how much accuracy you actually need. Match the following scenarios to the most appropriate measurement method:
+
+    **Scenarios:**
+    1.  **Site Reconnaissance:** You need to see if a remote 100-acre field has large boulders or trees before sending a crew.
+    2.  **Structural Monitoring:** You are checking if a bridge support beam has settled by more than 5 millimeters in the last year.
+    3.  **Earthwork Volume:** You need to estimate the volume of a 50-foot tall dirt stockpile for a weekly billing report.
+
+    **Methods:**
+    - **A. Manual/Approximate:** Pacing or simple aerial photos.
+    - **B. High-Precision Drone Survey:** Orthomosaic and 3D reconstruction with ground control points.
+    - **C. Specialized Survey:** High-order GPS or total station.
+
+    *Think about it:* Why would using a high-precision drone survey for Scenario #1 be a waste of resources? Why would Scenario #2 require even more than a standard drone?
 
 ## Course Emphasis and Learning Objectives
 
