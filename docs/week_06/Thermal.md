@@ -1,109 +1,102 @@
 # Week 6 — Thermal Imaging Overview
 
-**Key resource:** [DJI — Thermal Drone Basics](https://enterprise-insights.dji.com/blog/thermal-drone-basics) — A concise, practical overview of thermal sensor types, common payloads, basic flight-planning tips, calibration and emissivity considerations, and typical operational use-cases. Read this to get a manufacturer perspective on common workflows and sensor capabilities.
-
-- Radiometric JPEG/TIFF, FLIR-specific formats. Software: FLIR Tools, QGIS (with plugins), Agisoft/Metashape (some support), and UAV-specific inspection tools.
-<!-- End Thermal.md -->
-
-- Placeholder for curated links to manufacturer guides and tutorials.
-## Further reading & resources
-## Tools & formats
-
-- Overlap: ensure sufficient overlap for mosaicking (forward & side overlap recommendations depend on sensor and altitude).
-- Altitude & resolution: thermal sensors often have coarser spatial resolution than RGB—lower altitude increases ground sampling distance (GSD) resolution but reduces coverage.
-- Emissivity and calibration: surfaces have different emissivities—knowing or estimating emissivity improves temperature accuracy.
-- Time of day: early morning or late evening often yields better thermal contrast for many inspection tasks.
-## Flight planning & best practices
-
-- Vegetation stress and irrigation monitoring (qualitative)
-- Search & rescue and first responder support
-- Electrical inspections (hotspots on panels, equipment)
-- Building inspections (heat loss, insulation defects)
-## Use cases
-
-- Time-series thermal datasets for monitoring changes
-- Thermal mosaics (stitched orthomosaics showing temperature distribution)
-- Radiometric TIFFs (temperature-stamped images)
-
-- Building inspections / HVAC / insulation
-  - Why this matters: Thermal images reveal heat loss, missing insulation, HVAC leaks, and rooftop issues. They are useful for teaching emissivity, and for comparing qualitative visual patterns to calibrated temperature data.
-  - Examples students may examine: roof heat loss, window/door thermal leaks, HVAC duct defects.
-
-- Electrical & powerline inspection
-  - Why this matters: Thermal hotspots on panels, transformers, circuit breakers or line hardware can indicate failing components, overloads, or poor connections and are commonly used for condition-based maintenance.
-  - Examples students may examine: transformer hotspots, solar panel cell anomalies, switchgear inspections.
-
-- Search & rescue / first responders
-  - Why this matters: Thermal imagery helps detect humans or warm objects in low-light or obscured conditions where visible imagery may fail; it illustrates operational constraints and detection limits.
-  - Examples students may examine: drone-assisted searches, night-time perimeter sweeps, locating warm bodies in collapsed structures.
-
-- Agriculture / vegetation stress
-  - Why this matters: Thermal contrasts can indicate irrigation stress, soil moisture differences, or animal presence and serve as qualitative indicators to complement multispectral indices.
-  - Examples students may examine: irrigation effectiveness, livestock detection, early-season crop stress.
-## Data products
-
-- Some cameras provide relative thermal imagery (for visual inspection), while higher-end units provide radiometrically calibrated images for quantitative temperature analysis.
-- Sensors detect emitted infrared radiation and convert it to temperature values, either as scaled pixel values or calibrated temperature measurements.
-## How thermal sensors work
-
-Thermal sensors measure long-wave infrared radiation emitted by objects, producing images that represent surface temperature differences rather than visible light reflectance.
-## What is thermal imaging?
-
 This page outlines thermal (infrared) sensors on drones: how they capture thermal information, typical data products, use cases, and practical flight considerations.
 
-## Example images and suggested activities
+## Key Takeaways
+- **Heat, not light:** Thermal sensors measure emitted infrared radiation (heat), not reflected visible light.
+- **Surface variation:** Different materials emit heat differently (emissivity), which affects temperature readings.
+- **Timing matters:** Early morning or late evening often provides the best thermal contrast for inspections.
+- **Applications:** Used widely in building inspections, search and rescue, and precision agriculture.
 
-Below are three representative thermal images included in the course `docs/week_06/images/` directory. Each figure links to the original Wikimedia Commons file page (see the file page for license and author information). Use the examples below for the suggested student activities.
+---
+
+**Key resource:** [DJI — Thermal Drone Basics](https://enterprise-insights.dji.com/blog/thermal-drone-basics){target='_blank'} — A concise, practical overview of thermal sensor types, common payloads, basic flight-planning tips, calibration and emissivity considerations, and typical operational use-cases.
+
+---
+
+## What is thermal imaging?
+Thermal sensors measure long-wave infrared radiation emitted by objects, producing images that represent surface temperature differences rather than visible light reflectance.
+
+## How thermal sensors work
+- **Infrared Detection:** Sensors detect emitted infrared radiation and convert it to temperature values, either as scaled pixel values or calibrated temperature measurements.
+- **Radiometric vs. Non-radiometric:** Some cameras provide relative thermal imagery (for visual inspection), while higher-end units provide radiometrically calibrated images for quantitative temperature analysis.
+- **Emissivity:** Surfaces have different emissivities—knowing or estimating emissivity improves temperature accuracy.
+
+## Common data products
+- **Radiometric TIFFs:** Temperature-stamped images where each pixel contains a temperature value.
+- **Thermal Mosaics:** Stitched orthomosaics showing temperature distribution over a large area.
+- **Time-series datasets:** Comparisons of thermal maps over time to monitor changes.
+- **File Formats:** Radiometric JPEG/TIFF, FLIR-specific formats.
+
+## Use cases & applications
+
+### 1) Building & Infrastructure Inspection
+Thermal images reveal heat loss, missing insulation, HVAC leaks, and rooftop issues.
+- **Examples:** Roof heat loss, window/door thermal leaks, HVAC duct defects.
+
+### 2) Electrical & Powerline Inspection
+Thermal hotspots on panels, transformers, or circuit breakers can indicate failing components or overloads.
+- **Examples:** Transformer hotspots, solar panel cell anomalies, switchgear inspections.
+
+### 3) Search & Rescue / First Responders
+Thermal imagery helps detect humans or warm objects in low-light or obscured conditions.
+- **Examples:** Drone-assisted searches, night-time perimeter sweeps.
+
+### 4) Agriculture / Vegetation Stress
+Thermal contrasts can indicate irrigation stress, soil moisture differences, or animal presence.
+- **Examples:** Irrigation effectiveness, livestock detection.
+
+## Flight planning & best practices
+- **Overlap:** Ensure high overlap (~80% forward and side) for successful mosaicking, as thermal images often lack distinct features.
+- **Altitude & Resolution:** Thermal sensors often have coarser spatial resolution than RGB; flying lower increases ground sampling distance (GSD) but reduces coverage.
+- **Time of Day:** Early morning or late evening often yields better thermal contrast for many inspection tasks.
+- **Environmental Conditions:** Avoid high winds or recent rain, which can "wash out" thermal signatures.
+
+## Tools & software
+- **Processing:** FLIR Tools, QGIS (with plugins), Agisoft Metashape, Pix4D, and UAV-specific inspection tools.
+
+## Example images & student activities
+
+Below are representative thermal images. Use these examples for the suggested activities.
 
 ### 1) Lakeshore Geyser — thermal image
-
 <a href="https://commons.wikimedia.org/wiki/File:Thermal_image_of_Lakeshore_Geyser_(early_evening,_1_August_2016).jpg" target="_blank">
-  <img src="/en/latest/week_06/images/lakeshore_geyser_thermal.jpg" alt="Thermal image of Lakeshore Geyser" width="720">
+  <img src="../images/lakeshore_geyser_thermal.jpg" alt="Thermal image of Lakeshore Geyser" width="720">
 </a>
 
-Figure: Thermal image of Lakeshore Geyser — see the linked file page for full attribution and license details.
+*Description: Notice the strong temperature gradients between hot water/steam and the cooler surrounding ground. This highlights how geothermal heat is expressed.*
 
-Description: This thermal image captures geothermal heat expression and temperature contrasts between hot water/steam and surrounding cooler ground in the early evening. Notice the strong temperature gradients and how emissive surfaces (wet ground, steam) appear compared to dry terrain.
-
-Suggested student activities:
-- Compare thermal contrast at different times of day and explain when thermal surveys are most informative.
+**Activity:**
 - Discuss how surface state (wet vs dry) and emissivity affect apparent temperatures.
-- Practice qualitative interpretation: identify regions of interest and explain likely causes of observed thermal patterns.
 
 ---
 
 ### 2) Coronation Reserve — paired visual + thermal
-
 <a href="https://commons.wikimedia.org/wiki/File:Thermal_image_and_visual_image_of_Coronation_Reserve.png" target="_blank">
-  <img src="/en/latest/week_06/images/coronation_reserve_thermal_rgb.png" alt="Thermal and visual image of Coronation Reserve" width="960">
+  <img src="../images/coronation_reserve_thermal_rgb.png" alt="Thermal and visual image of Coronation Reserve" width="960">
 </a>
 
-Figure: Side-by-side thermal and visual images — see the linked file page for full attribution and license details.
+*Description: Side-by-side comparison helps correlate thermal anomalies with visible features like buildings or vegetation patches.*
 
-Description: This file contains a thermal image alongside the corresponding visual (RGB) image. Side-by-side comparisons help correlate thermal anomalies with visible features (e.g., buildings, water bodies, vegetation patches).
-
-Suggested student activities:
-- Co-registration exercise: mark features on the RGB image and locate corresponding thermal signatures.
-- Overlay/mosaicking discussion: describe how to align thermal orthomosaics with RGB basemaps.
-- Annotate anomalies and propose hypotheses for observed thermal differences.
+**Activity:**
+- **Co-registration:** Identify a feature in the RGB image and locate its corresponding thermal signature.
 
 ---
 
-### 3) Large temperature-differential example (29 °C)
-
+### 3) Large temperature-differential example
 <a href="https://commons.wikimedia.org/wiki/File:Thermal_and_visual_image_showing_29_degree_C._temperature_differential.png" target="_blank">
-  <img src="/en/latest/week_06/images/temp_29deg_differential_thermal.png" alt="Thermal and visual image showing 29°C differential" width="1280">
+  <img src="../images/temp_29deg_differential_thermal.png" alt="Thermal and visual image showing 29°C differential" width="1280">
 </a>
 
-Figure: Thermal + visual image showing a ~29 °C differential — see the linked file page for full attribution and license details.
+*Description: This example shows a ~29°C differential, demonstrating the dynamic range of thermal sensors.*
 
-Description: This example highlights a large measured temperature differential between two adjacent surfaces. It demonstrates the dynamic range of thermal data and the importance of calibration when extracting absolute temperatures.
-
-Suggested student activities:
-- If radiometric TIFFs are available, practice extracting temperature values and compare sensor limitations.
-- Discuss how color maps influence interpretation and document the units and calibration metadata required for quantitative analysis.
-- Compare relative contrasts across scenes and consider factors that may produce apparent differences (emissivity, viewing angle, atmospheric effects).
+**Activity:**
+- Discuss how color maps (palettes) influence interpretation and what metadata is needed for absolute temperature extraction.
 
 ---
 
-Each figure links to the original Wikimedia Commons file page; review the file page for author and license information if you plan to reuse the images beyond course materials.
+## Further reading & resources
+- [FLIR — How Do Thermal Cameras Work?](https://www.flir.com/discover/otm-ii/how-do-thermal-cameras-work/){target='_blank'}
+- [NASA — Infrared Waves](https://science.nasa.gov/ems/07_infraredwaves){target='_blank'}
+
+<!-- End Thermal.md -->
