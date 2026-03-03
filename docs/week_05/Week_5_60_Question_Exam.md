@@ -89,7 +89,7 @@ Given TAF: TAF KSLC 121720Z 1218/1324 32010KT P6SM SCT050 FM130300 35015KT P6SM 
 - (D) Ceiling lowers below 1,000 ft
 
 ### Question 10
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q10)
+(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required?
 
 - (A) ATC authorization required
 - (B) No authorization required (below 4,000 MSL floor)
@@ -97,466 +97,411 @@ Given TAF: TAF KSLC 121720Z 1218/1324 32010KT P6SM SCT050 FM130300 35015KT P6SM 
 - (D) Must remain below 200 ft
 
 ### Question 11
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q11)
+What is the maximum groundspeed allowed for a small UAS under Part 107?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 100 mph (87 knots)
+- (B) 100 knots (115 mph)
+- (C) 80 mph (70 knots)
+- (D) 60 mph (52 knots)
 
 ### Question 12
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q12)
+According to Part 107, what is the minimum visibility required for flight from the control station?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 1 statute mile
+- (B) 2 statute miles
+- (C) 3 statute miles
+- (D) 5 statute miles
 
 ### Question 13
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q13)
+(Refer to Figure 10) What is the ceiling of the Class D airspace surrounding Provo Airport (KPVU)?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 2,500 ft MSL
+- (B) 4,535 ft MSL
+- (C) 7,000 ft MSL
+- (D) Surface
 
 ### Question 14
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q14)
+Which of the following is a "hazardous attitude" as defined by the FAA?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Complacency
+- (B) Anti-authority
+- (C) Professionalism
+- (D) Vigilance
 
 ### Question 15
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q15)
+Under Part 107, how many days do you have to report an accident that results in serious injury or property damage over $500?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 5 days
+- (B) 10 days
+- (C) 30 days
+- (D) 48 hours
 
 ### Question 16
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q16)
+What mnemonic helps a pilot assess their physical and mental fitness to fly?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) PAVE
+- (B) METAR
+- (C) IMSAFE
+- (D) LAANC
 
 ### Question 17
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q17)
+A small UAS must be registered with the FAA if it weighs more than:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 0.55 lbs
+- (B) 1.0 lbs
+- (C) 2.0 lbs
+- (D) 5.5 lbs
 
 ### Question 18
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q18)
+When must a remote pilot yield the right-of-way to all other aircraft?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Only in controlled airspace
+- (B) Only during takeoff and landing
+- (C) At all times
+- (D) Only when the other aircraft is flying at a lower altitude
 
 ### Question 19
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q19)
+What is the "structure exception" to the 400 ft AGL altitude limit?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) You can fly 400 ft above the structure if you stay within 400 ft horizontally
+- (B) You can fly 1,000 ft above any structure
+- (C) There is no exception for structures
+- (D) You can fly twice the height of the structure
 
 ### Question 20
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q20)
+Which weather product provides current observed conditions at an airport?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) TAF
+- (B) METAR
+- (C) SIGMET
+- (D) NOTAM
 
 ### Question 21
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q21)
+What is "density altitude"?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Pressure altitude corrected for non-standard temperature
+- (B) The altitude shown on the altimeter
+- (C) The height above the ground (AGL)
+- (D) The altitude above Mean Sea Level (MSL)
 
 ### Question 22
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q22)
+How often must a remote pilot complete recurrent training to maintain currency?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Every 12 months
+- (B) Every 24 months
+- (C) Every 36 months
+- (D) Every 5 years
 
 ### Question 23
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q23)
+(Refer to Figure 10) The area marked R-6404 is a:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Restricted Area
+- (B) Prohibited Area
+- (C) Warning Area
+- (D) Military Operations Area (MOA)
 
 ### Question 24
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q24)
+What are the standard cloud clearance requirements for Part 107?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 500' below, 2,000' horizontal
+- (B) 1,000' below, 1,000' horizontal
+- (C) Clear of clouds only
+- (D) 2,000' below, 500' horizontal
 
 ### Question 25
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q25)
+The center of gravity (CG) of an aircraft is:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) The point where it would balance if suspended
+- (B) Always at the exact geometric center
+- (C) Not important for multi-rotor drones
+- (D) Fixed by the manufacturer and cannot be changed
 
 ### Question 26
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q26)
+Which of these involves the "PAVE" checklist?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Pilot, Aircraft, enVironment, External pressures
+- (B) Pressure, Altitude, Velocity, Energy
+- (C) Plan, Act, Verify, Evaluate
+- (D) People, Airspace, Vehicles, Equipment
 
 ### Question 27
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q27)
+Under Part 107, night operations are permitted if the drone is equipped with:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) High-definition cameras
+- (B) Anti-collision lights visible for 3 statute miles
+- (C) Radar altimeters
+- (D) Red and green navigation lights only
 
 ### Question 28
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q28)
+Which source is used to obtain authorizations for controlled airspace in near-real-time?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) FAA DroneZone
+- (B) LAANC
+- (C) Calling the tower directly
+- (D) 1-800-WX-BRIEF
 
 ### Question 29
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q29)
+A "TAF" is typically valid for what period of time?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 1 hour
+- (B) 12 to 24 hours (sometimes 30)
+- (C) 5 days
+- (D) Indefinitely until updated
 
 ### Question 30
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q30)
+What type of fog forms on clear, calm nights when the ground cools rapidly?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Advection fog
+- (B) Steam fog
+- (C) Radiation fog
+- (D) Upslope fog
 
 ### Question 31
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q31)
+What is the primary purpose of a "Visual Observer" (VO)?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) To pilot the aircraft when the PIC is tired
+- (B) To maintain situational awareness and scan the area for potential hazards or traffic
+- (C) To operate the camera payload
+- (D) To record the flight logs
 
 ### Question 32
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q32)
+(Refer to Figure 10) The "80/40" label on the Class B shelf east of KSLC indicates a floor of:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 4,000 ft MSL
+- (B) 4,000 ft AGL
+- (C) 8,000 ft MSL
+- (D) 800 ft AGL
 
 ### Question 33
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q33)
+What is the effect of high humidity on sUAS performance?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) It increases lift because water vapor is more dense than dry air
+- (B) It decreases performance because moist air is less dense than dry air
+- (C) It has no effect on multi-rotor drones
+- (D) It improves battery cooling
 
 ### Question 34
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q34)
+Which document must be available for inspection upon request by the FAA?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) The remote pilot's birth certificate
+- (B) The Remote Pilot Certificate and aircraft registration
+- (C) The pilot's high school diploma
+- (D) A letter of recommendation from a client
 
 ### Question 35
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q35)
+If a remote pilot changes their permanent mailing address, how long do they have to update it with the FAA?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 10 days
+- (B) 30 days
+- (C) 60 days
+- (D) 90 days
 
 ### Question 36
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q36)
+What is the definition of a "Small UAS" under Part 107?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) An unmanned aircraft weighing less than 55 lbs
+- (B) An unmanned aircraft weighing exactly 55 lbs
+- (C) A drone used only for hobby purposes
+- (D) Any aircraft without a cockpit
 
 ### Question 37
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q37)
+"Stable air" is typically associated with which of the following?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Smooth air and poor visibility (fog/haze)
+- (B) Turbulent air and good visibility
+- (C) Thunderstorms and heavy rain
+- (D) Strong vertical development and updrafts
 
 ### Question 38
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q38)
+What should a pilot do if they experience a "flyaway" or lost link in controlled airspace?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Wait for the battery to die
+- (B) Immediately notify ATC if the aircraft poses a hazard to other traffic
+- (C) Go home and file a report the next day
+- (D) Try to shoot the drone down
 
 ### Question 39
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q39)
+A "Military Operations Area" (MOA) is depicted on a sectional chart by:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Solid blue lines
+- (B) Hatched magenta lines
+- (C) Dashed blue lines
+- (D) Solid magenta lines
 
 ### Question 40
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q40)
+According to ADM principles, if you feel "impulsive" during a flight, the antidote is:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) "Not so fast—think first"
+- (B) "Follow the rules"
+- (C) "It could happen to me"
+- (D) "I am not helpless"
 
 ### Question 41
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q41)
+What is the "standard" lapse rate in the atmosphere?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 2°C per 1,000 feet
+- (B) 5°C per 1,000 feet
+- (C) 1°C per 100 feet
+- (D) 10°C per mile
 
 ### Question 42
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q42)
+Under Part 107, can a remote pilot operate from a moving vehicle?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Yes, but only in sparsely populated areas and without transporting property for hire
+- (B) Yes, at any time
+- (C) No, never
+- (D) Only if the vehicle is another aircraft
 
 ### Question 43
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q43)
+What type of cloud has the most significant vertical development and is associated with thunderstorms?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Stratus
+- (B) Cirrus
+- (C) Cumulonimbus
+- (D) Altocumulus
 
 ### Question 44
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q44)
+(Refer to Figure 10) The blue "tower" symbol with the number (512) next to it represents:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) An obstruction with a height of 512 ft AGL
+- (B) A radio frequency
+- (C) A runway length
+- (D) An airport elevation
 
 ### Question 45
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q45)
+What does the "A" in the IMSAFE checklist stand for?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Airspace
+- (B) Altitude
+- (C) Alcohol
+- (D) Aircraft
 
 ### Question 46
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q46)
+A remote pilot must perform a pre-flight inspection of the UAS:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Once a week
+- (B) Once a month
+- (C) Before every flight
+- (D) Only after a crash
 
 ### Question 47
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q47)
+"Load factor" increases during:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Straight and level flight
+- (B) Constant altitude turns
+- (C) Descent at a constant speed
+- (D) Hovering in no wind
 
 ### Question 48
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q48)
+Which of the following is true regarding Remote ID?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) It is optional for commercial pilots
+- (B) It allows the drone to broadcast its identity and location in real-time
+- (C) It is only required for drones over 55 lbs
+- (D) It replaces the need for FAA registration
 
 ### Question 49
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q49)
+What is the floor of Class E airspace in most of the United States (unless otherwise marked)?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Surface
+- (B) 700 ft or 1,200 ft AGL
+- (C) 14,500 ft MSL
+- (D) 18,000 ft MSL
 
 ### Question 50
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q50)
+If the temperature and dew point are within 3 degrees of each other, what is likely to form?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Thunderstorms
+- (B) Clear skies
+- (C) Fog or low clouds
+- (D) High winds
 
 ### Question 51
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q51)
+Who is ultimately responsible for the safe operation of a small UAS?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) The drone manufacturer
+- (B) The FAA
+- (C) The Remote Pilot in Command (PIC)
+- (D) The Visual Observer
 
 ### Question 52
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q52)
+What is the risk of "spatial disorientation"?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) The drone's GPS failing
+- (B) The pilot losing track of the aircraft's orientation or position relative to the horizon
+- (C) Running out of battery
+- (D) Flying into a cloud
 
 ### Question 53
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q53)
+(Refer to Figure 10) The "hatched brown" boundary labeled R-6402A indicates:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Restricted Airspace
+- (B) A National Park
+- (C) A Wildlife Refuge
+- (D) A State Border
 
 ### Question 54
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q54)
+"Thermal plumes" (updrafts) are caused by:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Uneven heating of the Earth's surface
+- (B) High pressure systems
+- (C) Low humidity
+- (D) The drone's propellers
 
 ### Question 55
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q55)
+A "Waiver" from the FAA allows you to:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Break any rule you want
+- (B) Operate in a way that deviates from certain Part 107 regulations if you prove it can be done safely
+- (C) Fly without a license
+- (D) Avoid registering your drone
 
 ### Question 56
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q56)
+Which frequency should a pilot use to announce their position at a non-towered airport?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) CTAF
+- (B) 121.5 (Emergency)
+- (C) 911
+- (D) The local AM radio station
 
 ### Question 57
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q57)
+Under Part 107, "Civil Twilight" is defined as:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) 30 minutes before sunrise and 30 minutes after sunset
+- (B) 1 hour before sunrise
+- (C) Any time it is dark outside
+- (D) Between 6:00 PM and 6:00 AM
 
 ### Question 58
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q58)
+What is the primary risk of flying with a "Macho" attitude?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Taking unnecessary risks to impress others or prove yourself
+- (B) Following the rules too strictly
+- (C) Flying too slowly
+- (D) Falling asleep at the controls
 
 ### Question 59
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q59)
+In the "PAVE" checklist, the "E" stands for:
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
+- (A) Energy (Battery)
+- (B) External Pressures
+- (C) Elevation
+- (D) Emergency
 
 ### Question 60
-(Refer to Figure 10) You plan to operate at 350 ft AGL beneath the Class B shelf marked 100/40. What is required? (Q60)
+What should a pilot do if they encounter a manned aircraft while flying their drone?
 
-- (A) ATC authorization required
-- (B) No authorization required (below 4,000 MSL floor)
-- (C) Waiver required
-- (D) Must remain below 200 ft
-
+- (A) Yield the right-of-way immediately and ensure the drone does not interfere with the manned aircraft
+- (B) Maintain altitude and course
+- (C) Fly closer to get a better look
+- (D) Signal the other pilot with a laser
 
 ---
 # Answer Key
 
-1) B
-2) A
-3) B
-4) C
-5) B
-6) A
-7) B
-8) A
-9) A
-10) B
-11) B
-12) B
-13) B
-14) B
-15) B
-16) B
-17) B
-18) B
-19) B
-20) B
-21) B
-22) B
-23) B
-24) B
-25) B
-26) B
-27) B
-28) B
-29) B
-30) B
-31) B
-32) B
-33) B
-34) B
-35) B
-36) B
-37) B
-38) B
-39) B
-40) B
-41) B
-42) B
-43) B
-44) B
-45) B
-46) B
-47) B
-48) B
-49) B
-50) B
-51) B
-52) B
-53) B
-54) B
-55) B
-56) B
-57) B
-58) B
-59) B
-60) B
+1) B, 2) A, 3) B, 4) C, 5) B, 6) A, 7) B, 8) A, 9) A, 10) B, 
+11) A, 12) C, 13) B, 14) B, 15) B, 16) C, 17) A, 18) C, 19) A, 20) B, 
+21) A, 22) B, 23) A, 24) A, 25) A, 26) A, 27) B, 28) B, 29) B, 30) C, 
+31) B, 32) A, 33) B, 34) B, 35) B, 36) A, 37) A, 38) B, 39) B, 40) A, 
+41) A, 42) A, 43) C, 44) A, 45) C, 46) C, 47) B, 48) B, 49) B, 50) C, 
+51) C, 52) B, 53) A, 54) A, 55) B, 56) A, 57) A, 58) A, 59) B, 60) A
