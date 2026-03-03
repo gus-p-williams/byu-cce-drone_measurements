@@ -13,17 +13,17 @@ LiDAR (Light Detection and Ranging) uses rapid pulses of laser light to measure 
 ### Direct example airborne/jungle mapping videos (Wikimedia file pages)
 Below are links to Wikimedia/Wikipedia file pages for several LiDAR videos. Open the links to view the media and to read the file-page license and attribution details.
 
-- 50 Kilometers of Brazilian Forest Canopy — https://en.wikipedia.org/wiki/File:50_Kilometers_of_Brazilian_Forest_Canopy.webm
-  - What to look for: airborne LiDAR swath, platform motion, and canopy penetration visible in the scan.
+- [50 Kilometers of Brazilian Forest Canopy](https://en.wikipedia.org/wiki/File:50_Kilometers_of_Brazilian_Forest_Canopy.webm)
+    - What to look for: airborne LiDAR swath, platform motion, and canopy penetration visible in the scan.
 
-- Flying Through LIDAR Canopy Data — https://en.wikipedia.org/wiki/File:Flying_Through_LIDAR_Canopy_Data.webm
-  - What to look for: a fly-through of a processed point cloud illustrating canopy and ground structure in 3D.
+- [Flying Through LIDAR Canopy Data](https://en.wikipedia.org/wiki/File:Flying_Through_LIDAR_Canopy_Data.webm)
+    - What to look for: a fly-through of a processed point cloud illustrating canopy and ground structure in 3D.
 
-- Amazon Canopy Comes to Life through Laser Data — https://en.wikipedia.org/wiki/File:Amazon_Canopy_Comes_to_Life_through_Laser_Data.webm
-  - What to look for: canopy-penetration and ground features revealed beneath dense vegetation.
+- [Amazon Canopy Comes to Life through Laser Data](https://en.wikipedia.org/wiki/File:Amazon_Canopy_Comes_to_Life_through_Laser_Data.webm)
+    - What to look for: canopy-penetration and ground features revealed beneath dense vegetation.
 
-- Collecting LIDAR data over the Ganges and Brahmaputra River Basin — https://en.wikipedia.org/wiki/File:Collecting_LIDAR_data_over_the_Ganges_and_Brahmaputra_River_Basin.ogv
-  - What to look for: field and airborne data-collection operations for large-area surveys.
+- [Collecting LIDAR data over the Ganges and Brahmaputra River Basin](https://en.wikipedia.org/wiki/File:Collecting_LIDAR_data_over_the_Ganges_and_Brahmaputra_River_Basin.ogv)
+    - What to look for: field and airborne data-collection operations for large-area surveys.
 
 What to notice when watching these clips:
 - Platform motion and scanning swath alignment with flight lines.
@@ -84,7 +84,7 @@ How it was generated: ground classification (filtering non-ground returns), DTM 
 
 Uses: Archaeology, landscape analysis, site preservation planning.
 
-Attribution: Source — Wikimedia Commons: File:A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg (public domain). https://commons.wikimedia.org/wiki/File:A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg
+Attribution: Source — [Wikimedia Commons: File:A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg (public domain)](https://commons.wikimedia.org/wiki/File:A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg).
 
 ---
 
@@ -98,7 +98,7 @@ How it was generated: filter to ground returns, interpolate a DTM, and apply vis
 
 Uses: Archaeological site mapping, conservation planning, and ground-truthing of features that are not visible in aerial photographs.
 
-Attribution: Source — Wikimedia Commons: File:Effigy_mounds_lidar.jpg (public domain). https://commons.wikimedia.org/wiki/File:Effigy_mounds_lidar.jpg
+Attribution: Source — [Wikimedia Commons: File:Effigy_mounds_lidar.jpg (public domain)](https://commons.wikimedia.org/wiki/File:Effigy_mounds_lidar.jpg).
 
 ---
 
@@ -112,7 +112,7 @@ How it was generated: LiDAR point cloud → ground classification → DTM/DEM ge
 
 Uses: Precision agriculture (zoning, drainage planning, yield modeling), soil and water-management decisions, and site-specific variable-rate applications.
 
-Attribution: Source — Wikimedia Commons: File:LIDAR_field_yield.jpg (public domain). https://commons.wikimedia.org/wiki/File:LIDAR_field_yield.jpg
+Attribution: Source — [Wikimedia Commons: File:LIDAR_field_yield.jpg (public domain)](https://commons.wikimedia.org/wiki/File:LIDAR_field_yield.jpg).
 
 ---
 
@@ -126,7 +126,7 @@ How it was generated: Classify returns into ground / non-ground; generate DSM (e
 
 Uses: Forestry inventory (tree height, stand structure), biomass estimation, habitat mapping, and forest health monitoring.
 
-Attribution: Source — Wikimedia Commons: File:Lidar_forestry.png (public domain). https://commons.wikimedia.org/wiki/File:Lidar_forestry.png
+Attribution: Source — [Wikimedia Commons: File:Lidar_forestry.png (public domain)](https://commons.wikimedia.org/wiki/File:Lidar_forestry.png).
 
 ---
 
@@ -145,16 +145,16 @@ Note for this class: we will primarily use Bentley software to generate and visu
   - Why visit: good quick primer for students who want a broad, well-referenced overview; useful for finding further reading, citations, and links to more specific topics (e.g., LAS format, bathymetric LiDAR, LiDAR processing techniques).
 
 ### Tools & sensors (selected links)
-- PDAL (Point Data Abstraction Library) — https://pdal.io/ — Open-source library for translating and processing point cloud data; great for scripting LiDAR workflows.
-- CloudCompare — https://www.cloudcompare.org/ — Open-source 3D point cloud processing and visualization tool (manual analysis, comparisons, segmentation).
-- LAStools — https://rapidlasso.com/lastools/ — Fast tools for LiDAR processing (note licensing for some components).
-- Potree — https://potree.org/ — Web-based point cloud viewer for publishing large point clouds in the browser.
+- [PDAL (Point Data Abstraction Library)](https://pdal.io/) — Open-source library for translating and processing point cloud data; great for scripting LiDAR workflows.
+- [CloudCompare](https://www.cloudcompare.org/) — Open-source 3D point cloud processing and visualization tool (manual analysis, comparisons, segmentation).
+- [LAStools](https://rapidlasso.com/lastools/) — Fast tools for LiDAR processing (note licensing for some components).
+- [Potree](https://potree.org/) — Web-based point cloud viewer for publishing large point clouds in the browser.
 
 Selected UAV LiDAR sensors / vendors (examples)
-- RIEGL miniVUX series — https://www.riegl.com/products/airborne-laser-scanners/miniature-scanners/miniVUX-1-series/ — Proven small-form-factor LiDAR for UAVs.
-- Velodyne Puck series (and Velodyne sensors) — https://velodynelidar.com/ — Lightweight scanning LiDAR sensors used on many platforms.
-- Livox (Horizon / Avia) — https://www.livoxtech.com/ — Low-cost, high-performance solid-state LiDAR sensors now used in some UAV payloads.
-- YellowScan — https://www.yellowscan-lidar.com/ — UAV-dedicated LiDAR systems and integrated platforms for surveying.
-- DJI Zenmuse L1 — https://www.dji.com/zenmuse-l1 — Integrated LiDAR + RGB sensor for DJI platforms (example of an off-the-shelf UAV LiDAR payload).
+- [RIEGL miniVUX series](https://www.riegl.com/products/airborne-laser-scanners/miniature-scanners/miniVUX-1-series/) — Proven small-form-factor LiDAR for UAVs.
+- [Velodyne Puck series (and Velodyne sensors)](https://velodynelidar.com/) — Lightweight scanning LiDAR sensors used on many platforms.
+- [Livox (Horizon / Avia)](https://www.livoxtech.com/) — Low-cost, high-performance solid-state LiDAR sensors now used in some UAV payloads.
+- [YellowScan](https://www.yellowscan-lidar.com/) — UAV-dedicated LiDAR systems and integrated platforms for surveying.
+- [DJI Zenmuse L1](https://www.dji.com/zenmuse-l1) — Integrated LiDAR + RGB sensor for DJI platforms (example of an off-the-shelf UAV LiDAR payload).
 
 <!-- End LiDAR.md -->
