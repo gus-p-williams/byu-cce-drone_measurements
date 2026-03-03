@@ -5,10 +5,35 @@ This page introduces LiDAR sensors on drones: how they work, the primary data pr
 ## What is LiDAR?
 LiDAR (Light Detection and Ranging) uses rapid pulses of laser light to measure distances to surfaces. A LiDAR sensor records time-of-flight measurements and returns a dense set of 3D points (a point cloud) representing the scanned surfaces.
 
-## How LiDAR works (short)
+## How LiDAR works
 - The sensor emits laser pulses and measures the time until reflected light returns.
 - Each return is georeferenced using GNSS/IMU data; multiple returns per pulse can capture vegetation structure.
 - Post-processing filters, classifies, and creates products such as classified point clouds, digital surface models (DSM), digital terrain models (DTM), and intensity rasters.
+
+### Direct example airborne/jungle mapping videos (Wikimedia file pages)
+Below are links to Wikimedia/Wikipedia file pages for several LiDAR videos. Open the links to view the media and to read the file-page license and attribution details.
+
+- 50 Kilometers of Brazilian Forest Canopy — https://en.wikipedia.org/wiki/File:50_Kilometers_of_Brazilian_Forest_Canopy.webm
+  - What to look for: airborne LiDAR swath, platform motion, and canopy penetration visible in the scan.
+
+- Flying Through LIDAR Canopy Data — https://en.wikipedia.org/wiki/File:Flying_Through_LIDAR_Canopy_Data.webm
+  - What to look for: a fly-through of a processed point cloud illustrating canopy and ground structure in 3D.
+
+- Amazon Canopy Comes to Life through Laser Data — https://en.wikipedia.org/wiki/File:Amazon_Canopy_Comes_to_Life_through_Laser_Data.webm
+  - What to look for: canopy-penetration and ground features revealed beneath dense vegetation.
+
+- Collecting LIDAR data over the Ganges and Brahmaputra River Basin — https://en.wikipedia.org/wiki/File:Collecting_LIDAR_data_over_the_Ganges_and_Brahmaputra_River_Basin.ogv
+  - What to look for: field and airborne data-collection operations for large-area surveys.
+
+What to notice when watching these clips:
+- Platform motion and scanning swath alignment with flight lines.
+- Differences between canopy (higher returns) and ground (lower returns).
+- Transitions from raw point cloud to derived products (hillshades, DTMs, CHMs) in some visualizations.
+
+### Suggested student activities (videos & examples)
+- Identify flight-line patterns and explain how swath overlap affects ground coverage.
+- Compare canopy returns vs ground returns and describe which returns are used to build a DTM.
+- Note any visualization steps shown (color by height, intensity hillshade) and explain their purpose.
 
 ## Common data products
 - Raw/processed point cloud (LAS/LAZ)
