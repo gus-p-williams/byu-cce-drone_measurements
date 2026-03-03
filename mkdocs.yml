@@ -52,3 +52,7 @@ nav:
       - Exam Key with discussion: week_05/Week_5_Mini_Exam_Instructor_Version.md
       - Full Practice Exam (60 Q): week_05/Week_5_60_Question_Exam.md
       - Full Exam Key (Instructor): week_05/Week_5_60_Question_Exam_Instructor_Key.md
+  - Week 6 - Sensors (LiDAR, Thermal, Multispectral):
+      - LiDAR Overview: week_06/LiDAR.md
+      - Thermal Imaging Overview: week_06/Thermal.md
+      - Multispectral Imaging Overview: week_06/Multispectral.md
