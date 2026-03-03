@@ -71,28 +71,40 @@ When chlorophyll-rich leaves are illuminated, they absorb much of the blue and r
 ### 1) Electromagnetic spectrum (visual + NIR)
 <img src="../images/electromagnetic-spectrum-jpg-1536x655.webp" alt="Electromagnetic spectrum" width="600" />
 
-*Description: Illustration of where multispectral bands sit relative to human vision (visible spectrum).*
+*Description: This diagram shows the electromagnetic spectrum, highlighting the narrow range of visible light (RGB) compared to the near-infrared (NIR) region that multispectral sensors capture. Understanding where these bands sit helps us select the right sensor for the task.*
+
+**Activity:**
+- Identify the wavelength range of the Red-edge band. Why might it be located specifically between Red and NIR?
 
 ---
 
 ### 2) Leaf reflectance & spectral bands
 <img src="../images/mulitspectral-leaf-jpg-1536x847.webp" alt="Leaf reflectance" width="600" />
 
-*Description: Shows how healthy leaves reflect very little red light but a huge amount of Near-Infrared light.*
+*Description: This graph shows how a healthy green leaf reflects light. Notice the "green bump" (why leaves look green) and the massive "NIR plateau." Healthy vegetation absorbs red light for photosynthesis but reflects NIR to avoid overheating.*
+
+**Activity:**
+- Look at the "Red" and "NIR" sections of the graph. If a leaf becomes stressed and loses chlorophyll, how would you expect the Red reflectance to change?
 
 ---
 
 ### 3) NDVI / crop health map
 <img src="../images/Screenshot-2019-04-09-14.04.41.webp" alt="NDVI map example" width="600" />
 
-*Description: An NDVI map showing variation in plant vigor across a field. Greener areas typically indicate higher vigor.*
+*Description: An NDVI (Normalized Difference Vegetation Index) map. By calculating the ratio between Red and NIR reflectance, we can create a "heat map" of plant vigor. Greener areas indicate high biomass and healthy chlorophyll levels.*
+
+**Activity:**
+- Find the areas of the field with the lowest NDVI values (red/yellow). What are three possible real-world reasons (e.g., water, soil, pests) that might cause this?
 
 ---
 
 ### 4) Orchard disease detection
 <img src="../images/1_AQtOQh_X4O0JKZg9tGzOmA.webp" alt="Orchard disease multispectral" width="600" />
 
-*Description: Highlights low-health trees in an orchard that might be invisible in standard RGB photos.*
+*Description: This example shows how multispectral indices can "see" disease before it is visible to the human eye. The colored overlays highlight specific trees that are under stress, allowing for targeted treatment.*
+
+**Activity:**
+- Compare this to a standard RGB photo in your mind. Why is it more efficient for a farmer to use this map than to walk every row of the orchard?
 
 ---
 

@@ -56,21 +56,30 @@ This diagram shows how LiDAR returns are used to separate the "ground" from "veg
 
 ![Stylized LiDAR point cloud and terrain model](images/lidar_pointcloud.svg)
 
-*Description: Ground returns (last returns) form the DTM, while first returns contribute to the DSM.*
+*Description: Ground returns (last returns) form the DTM, while first returns contribute to the DSM. This filtering process is what allows LiDAR to "see" the ground under trees.*
+
+**Activity:**
+- If you were looking for an old stone wall buried under a forest, which data product would you use: the DSM or the DTM? Why?
 
 ---
 
 ### 2) Archaeology — Ferrybridge Henge
 ![Ferrybridge Henge LiDAR hillshade](images/A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg)
 
-*Description: A "hillshade" rendering of a DTM reveals subtle earthworks invisible to the naked eye.*
+*Description: A "hillshade" rendering of a DTM. By removing the trees and buildings and simulating sunlight from the side, archaeologists can find subtle earthworks that are invisible from the ground.*
+
+**Activity:**
+- Examine the circular features in the image. How might these be different if we were looking at a standard aerial photograph instead of a LiDAR hillshade?
 
 ---
 
 ### 3) Forestry — Canopy Heights
 ![LiDAR forestry canopy heights](images/Lidar_forestry.png)
 
-*Description: Points colored by height. By subtracting the ground (DTM) from the tops (DSM), we calculate the Canopy Height Model (CHM).*
+*Description: Points colored by height. This visualization is a powerful tool for foresters to estimate timber volume and monitor forest health.*
+
+**Activity:**
+- Explain the calculation for a Canopy Height Model (CHM). If the DSM value at a point is 45 meters and the DTM value is 32 meters, how tall is the tree?
 
 ---
 

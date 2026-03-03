@@ -64,10 +64,11 @@ Below are representative thermal images. Use these examples for the suggested ac
   <img src="../images/lakeshore_geyser_thermal.jpg" alt="Thermal image of Lakeshore Geyser" width="720">
 </a>
 
-*Description: Notice the strong temperature gradients between hot water/steam and the cooler surrounding ground. This highlights how geothermal heat is expressed.*
+*Description: This image captures the dramatic temperature difference between boiling geothermal water and the cooler surrounding soil. Notice how the steam also carries heat, creating a "soft" glow around the water. In thermal imaging, the bright white areas represent the highest temperatures, while dark purple/black areas are the coolest.*
 
 **Activity:**
-- Discuss how surface state (wet vs dry) and emissivity affect apparent temperatures.
+- **Emissivity Exploration:** Water and soil have different "emissivity" (how efficiently they emit heat). If the water and the soil were exactly the same temperature, would they look the same in this thermal image? Why or why not?
+- **Timing:** This was taken in the early evening. How would the contrast change if it were taken at 2:00 PM on a sunny day?
 
 ---
 
@@ -76,10 +77,11 @@ Below are representative thermal images. Use these examples for the suggested ac
   <img src="../images/coronation_reserve_thermal_rgb.png" alt="Thermal and visual image of Coronation Reserve" width="960">
 </a>
 
-*Description: Side-by-side comparison helps correlate thermal anomalies with visible features like buildings or vegetation patches.*
+*Description: This side-by-side view demonstrates why "co-registration" (matching the two images) is so important. A thermal "hotspot" might look like a fire or a leak, but when compared to the RGB image, you might realize it's just a metal roof reflecting the sun. Notice how the paved paths and buildings retain more heat than the grass.*
 
 **Activity:**
-- **Co-registration:** Identify a feature in the RGB image and locate its corresponding thermal signature.
+- **Thermal Inertia:** Look at the large building in both images. Metals and concrete have high "thermal inertia," meaning they hold onto heat long after the sun goes down. Based on the thermal signatures, which materials in this park seem to be cooling down the fastest?
+- **Feature Matching:** Identify three specific objects (e.g., a tree, a path, a building corner) that are clearly visible in both sensors.
 
 ---
 
@@ -88,10 +90,11 @@ Below are representative thermal images. Use these examples for the suggested ac
   <img src="../images/temp_29deg_differential_thermal.png" alt="Thermal and visual image showing 29°C differential" width="1280">
 </a>
 
-*Description: This example shows a ~29°C differential, demonstrating the dynamic range of thermal sensors.*
+*Description: This example shows a massive 29°C (84°F) difference within a single scene. Thermal cameras use "palettes" (like Ironbow, Rainbow, or White Hot) to map these temperature ranges to colors. Choosing the right palette can make a subtle leak look obvious or a dangerous hotspot stand out.*
 
 **Activity:**
-- Discuss how color maps (palettes) influence interpretation and what metadata is needed for absolute temperature extraction.
+- **Palette Choice:** The current palette uses "White Hot" for the highest temperatures. If you were searching for a lost hiker in a cold forest, would you prefer "White Hot" or a rainbow-colored palette? Why?
+- **Metadata:** To know that the difference is exactly 29°C, we need a "radiometric" sensor. What kind of metadata must the drone record for every pixel to give us an actual temperature instead of just a pretty picture?
 
 ---
 
