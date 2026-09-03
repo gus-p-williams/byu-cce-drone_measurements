@@ -34,7 +34,7 @@ nav:
       - Post-Flight Checklist: flight_check_list/post_flight/post_general.md
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
-      - What a Flight Produces: week_01/data_products.md
+      - Aerial Measurement Products: week_01/data_products.md
       - Flight Basics: week_01/flight_basics.md
       - Common Flight Issues: week_01/flight_issues.md
   - Week 2 - Software:

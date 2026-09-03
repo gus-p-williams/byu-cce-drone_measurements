@@ -142,6 +142,65 @@ def build_example(label, hint) -> Figure:
     return fig
 
 
+# The ground profile and the things standing on it, relative to (cx, gy).
+# Both panels share them, so the two surfaces are directly comparable, and the
+# DSM steps are derived from the object outlines rather than typed in by hand.
+GROUND = ((-150, 0), (-60, -34), (30, -22), (150, -58))
+TREES = ((-108, 46), (92, 38))      # centre offset, overall height
+BUILDING = (-26, 26, 44)            # left edge, right edge, height
+
+
+def ground_at(dx):
+    """Height of the bare ground at a given offset from the panel centre."""
+    for (x0, y0), (x1, y1) in zip(GROUND, GROUND[1:]):
+        if x0 <= dx <= x1:
+            return y0 + (y1 - y0) * (dx - x0) / (x1 - x0)
+    return GROUND[-1][1]
+
+
+def tree_shape(dx, th):
+    """Trunk and crown geometry for a tree standing on the ground at dx."""
+    base = ground_at(dx)
+    crown_r = th * 0.42
+    crown_cy = base - th * 0.62
+    return dict(base=base, trunk_top=base - th * 0.4, crown_cy=crown_cy,
+                crown_r=crown_r, left=dx - crown_r, right=dx + crown_r,
+                top=crown_cy - crown_r)
+
+
+def building_shape():
+    x0, x1, h = BUILDING
+    base = max(ground_at(x0), ground_at(x1))    # the downhill corner
+    return dict(x0=x0, x1=x1, base=base, top=base - h)
+
+
+def standing_outlines():
+    """Every object as (left, right, top), in order across the site."""
+    b = building_shape()
+    out = [(t["left"], t["right"], t["top"])
+           for t in (tree_shape(*TREES[0]),)]
+    out.append((b["x0"], b["x1"], b["top"]))
+    out += [(t["left"], t["right"], t["top"])
+            for t in (tree_shape(*TREES[1]),)]
+    return out
+
+
+def dsm_path(cx, gy, lift=2):
+    """A DSM steps: it jumps vertically at an edge and runs flat over the top.
+
+    Held a couple of units above the bare ground so the line stays visible
+    where nothing is standing on it, and tight to each object elsewhere.
+    """
+    pts = [(GROUND[0][0], ground_at(GROUND[0][0]) - lift)]
+    for x0, x1, top in standing_outlines():
+        pts.append((x0, ground_at(x0) - lift))   # follow the ground to the edge
+        pts.append((x0, top))                    # step up the near face
+        pts.append((x1, top))                    # flat across the top
+        pts.append((x1, ground_at(x1) - lift))   # step back down
+    pts.append((GROUND[-1][0], ground_at(GROUND[-1][0]) - lift))
+    return "M" + " L".join(f"{cx + dx:.1f},{gy + dy:.1f}" for dx, dy in pts)
+
+
 # ---------------------------------------------------------------------------
 # Surface model against terrain model (moved here from the overview page)
 # ---------------------------------------------------------------------------
@@ -163,29 +222,28 @@ def build_surface_vs_terrain() -> Figure:
                      text_anchor="middle", font_size=11.5, fill=P["muted"]))
 
         op = "1" if keep else "0.22"
-        fig.add(g(rect(cx - 26, gy - 74, 52, 42, fill="#c2cad2",
+        b = building_shape()
+        fig.add(g(rect(cx + b["x0"], gy + b["top"], b["x1"] - b["x0"],
+                       b["base"] - b["top"], fill="#c2cad2",
                        stroke=P["line"], stroke_width=1.5), opacity=op))
-        for tx, th in ((cx - 108, 46), (cx + 92, 38)):
-            base = gy - 30 if tx < cx else gy - 44
-            fig.add(g(line(tx, base, tx, base - th * 0.4, stroke="#8a6a45",
+        for dx, th in TREES:
+            t = tree_shape(dx, th)
+            fig.add(g(line(cx + dx, gy + t["base"], cx + dx,
+                           gy + t["trunk_top"], stroke="#8a6a45",
                            stroke_width=4),
-                      circle(tx, base - th * 0.62, th * 0.42, fill="#7fa87f",
-                             stroke="#5f855f", stroke_width=1.5), opacity=op))
+                      circle(cx + dx, gy + t["crown_cy"], t["crown_r"],
+                             fill="#7fa87f", stroke="#5f855f",
+                             stroke_width=1.5), opacity=op))
 
-        fig.add(path(f"M{cx - 150},{gy} L{cx - 60},{gy - 34} "
-                     f"L{cx + 30},{gy - 22} L{cx + 150},{gy - 58}",
+        fig.add(path("M" + " L".join(f"{cx + dx},{gy + dy}"
+                                     for dx, dy in GROUND),
                      fill="none", stroke="#9a8f78", stroke_width=3))
         if keep:
-            fig.add(path(f"M{cx - 150},{gy - 4} L{cx - 130},{gy - 12} "
-                         f"L{cx - 108},{gy - 62} L{cx - 86},{gy - 22} "
-                         f"L{cx - 26},{gy - 78} L{cx + 26},{gy - 74} "
-                         f"L{cx + 70},{gy - 32} L{cx + 92},{gy - 70} "
-                         f"L{cx + 114},{gy - 40} L{cx + 150},{gy - 62}",
-                         fill="none", stroke=P["accent"], stroke_width=3,
-                         stroke_linejoin="round"))
+            fig.add(path(dsm_path(cx, gy), fill="none", stroke=P["accent"],
+                         stroke_width=3, stroke_linejoin="round"))
         else:
-            fig.add(path(f"M{cx - 150},{gy} L{cx - 60},{gy - 34} "
-                         f"L{cx + 30},{gy - 22} L{cx + 150},{gy - 58}",
+            fig.add(path("M" + " L".join(f"{cx + dx},{gy + dy}"
+                                         for dx, dy in GROUND),
                          fill="none", stroke=P["accent"], stroke_width=3,
                          stroke_dasharray="9 6"))
 

@@ -88,7 +88,7 @@ A drone flight produces photographs. Software turns those photographs into thing
 *The same set of photos becomes a map, then a surface, then a number you can put in a report.*
 
 Each of those has a name, a file format, and a question it is good at answering.
-[What a Flight Produces](data_products.md) is the reference page for all of them, and you will come
+[Aerial Measurement Products](data_products.md) is the reference page for all of them, and you will come
 back to it through the rest of the course.
 
 ---
