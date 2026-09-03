@@ -1,6 +1,6 @@
-"""Proposed figures for Week 4: SfM workflow and mission planning.
+"""Proposed figures for Topic 4: SfM workflow and mission planning.
 
-Numbered per the Week 4 convention: the week runs straight through in nav
+Numbered per the Topic 4 convention: the topic runs straight through in nav
 order, so SfM Workflow takes 1 to 3 and Mission Planning takes 4 to 9. Figure 3
 is the existing pipeline drawing, renamed.
 

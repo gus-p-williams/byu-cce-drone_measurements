@@ -1,4 +1,4 @@
-"""Week 4 Figures 3 and 3b: the reconstruction pipeline and its outputs.
+"""Topic 4 Figures 3 and 3b: the reconstruction pipeline and its outputs.
 
 Both draw one recognizable building rather than an abstract scatter, because
 the point of Figure 3 is that every stage is the *same scene* at a different

@@ -1,4 +1,4 @@
-"""Illustrations for the Week 1 overview page.
+"""Illustrations for the Topic 1 overview page.
 
 These carry captions but no figure numbers, because nothing refers to them by
 number. That keeps the numbered sequence on Flight Basics and Common Flight
