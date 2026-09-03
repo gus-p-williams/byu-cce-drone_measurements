@@ -10,8 +10,10 @@ and the same aircraft in every figure across the course.
 """
 from __future__ import annotations
 
+import math
+
 from svgkit import PALETTE as P
-from svgkit import circle, comment, g, line, path, rect, text
+from svgkit import El, circle, comment, g, line, path, polygon, rect, text
 
 
 # ---------------------------------------------------------------------------
@@ -119,3 +121,141 @@ def controller(screen: str = "phone", mode_labels: bool = True):
 def shift(anchors: dict, dx: float, dy: float) -> dict:
     """Return anchors moved by (dx, dy), skipping None entries."""
     return {k: (v[0] + dx, v[1] + dy) for k, v in anchors.items() if v}
+
+
+# ---------------------------------------------------------------------------
+# Rotation arrow, used to show which way a propeller turns
+# ---------------------------------------------------------------------------
+def rotation_arrow(cx: float, cy: float, r: float, clockwise: bool = True,
+                   start_deg: float = 150, sweep_deg: float = 210,
+                   color: str | None = None, width: float = 2.5) -> El:
+    """A circular arrow around (cx, cy). Angles are in screen coordinates,
+    where y grows downward, so increasing angle reads as clockwise."""
+    color = color or P["accent"]
+    a0 = math.radians(start_deg)
+    a1 = math.radians(start_deg + (sweep_deg if clockwise else -sweep_deg))
+    p0 = (cx + r * math.cos(a0), cy + r * math.sin(a0))
+    p1 = (cx + r * math.cos(a1), cy + r * math.sin(a1))
+    large = 1 if sweep_deg > 180 else 0
+    sweep = 1 if clockwise else 0
+
+    # tangent at the end of the arc, then a triangular head on it
+    tx, ty = (-math.sin(a1), math.cos(a1)) if clockwise else (math.sin(a1), -math.cos(a1))
+    nx, ny = -ty, tx
+    tip = (p1[0] + tx * 10, p1[1] + ty * 10)
+    left = (p1[0] + nx * 5, p1[1] + ny * 5)
+    right = (p1[0] - nx * 5, p1[1] - ny * 5)
+
+    return g(
+        path(f"M{p0[0]:.1f},{p0[1]:.1f} A{r},{r} 0 {large},{sweep} "
+             f"{p1[0]:.1f},{p1[1]:.1f}",
+             fill="none", stroke=color, stroke_width=width,
+             stroke_linecap="round"),
+        polygon([tip, left, right], fill=color),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Aircraft, top view
+# ---------------------------------------------------------------------------
+def aircraft_top(show_rotation: bool = True, prop_style: str = "blades"):
+    """A generic quadcopter seen from above, nose pointing up.
+
+    Origin (0, 0) is the centre of the aircraft. Roughly 400 wide by 330 tall
+    including the propeller discs.
+
+    prop_style: "blades" draws a disc plus a two-blade propeller
+                "disc"   draws the disc only, for small or busy figures
+    """
+    grp = g(comment("generic quadcopter, top view"))
+
+    motors = {
+        "fl": (-130, -100), "fr": (130, -100),
+        "rl": (-130, 100), "rr": (130, 100),
+    }
+    # diagonally opposite motors turn the same way
+    spin = {"fl": True, "rr": True, "fr": False, "rl": False}
+    blade_angle = {"fl": 30, "fr": -25, "rl": -15, "rr": 35}
+
+    # arms, drawn first so the body and motors sit on top
+    arms = g(stroke=P["line"], stroke_width=15, stroke_linecap="round")
+    arms_fill = g(stroke=P["body"], stroke_width=11, stroke_linecap="round")
+    for key, (mx, my) in motors.items():
+        bx = 32 * (1 if mx > 0 else -1)
+        by = 46 * (1 if my > 0 else -1)
+        arms.add(line(bx, by, mx, my))
+        arms_fill.add(line(bx, by, mx, my))
+    grp.add(arms, arms_fill)
+
+    # landing feet, under the rear of the body
+    for fx in (-35, 35):
+        grp.add(rect(fx - 7, 66, 14, 22, rx=5, fill=P["dark"],
+                     stroke=P["line"], stroke_width=1.5))
+
+    # propeller discs and blades
+    discs = g(fill="#e8edf2", stroke="#b6c2cc", stroke_width=1,
+              stroke_dasharray="4 4")
+    for mx, my in motors.values():
+        discs.add(circle(mx, my, 64))
+    grp.add(discs)
+
+    if prop_style == "blades":
+        blades = g(fill="#9aa7b2", stroke=P["line"], stroke_width=1.2)
+        for key, (mx, my) in motors.items():
+            blades.add(El("ellipse", cx=0, cy=0, rx=60, ry=8,
+                          transform=f"translate({mx},{my}) rotate({blade_angle[key]})"))
+        grp.add(blades)
+
+    # motors
+    for mx, my in motors.values():
+        grp.add(circle(mx, my, 17, fill=P["dark"], stroke=P["line"],
+                       stroke_width=1.5))
+        grp.add(circle(mx, my, 6, fill="#888888"))
+
+    # body
+    grp.add(rect(-45, -75, 90, 150, rx=18, fill=P["body"], stroke=P["line"],
+                 stroke_width=2))
+
+    # satellite receiver and compass, inside the body
+    grp.add(rect(-26, -40, 52, 38, rx=5, fill="none", stroke=P["muted"],
+                 stroke_width=1.2, stroke_dasharray="4 3"))
+    grp.add(text(0, -17, "GNSS", text_anchor="middle", font_size=10,
+                 fill=P["muted"]))
+
+    # battery, in the rear half
+    grp.add(rect(-30, 8, 60, 52, rx=6, fill="#c2cad2", stroke=P["line"],
+                 stroke_width=1.5))
+    grp.add(g(*[line(-20 + i * 13, 20, -20 + i * 13, 48) for i in range(4)],
+              stroke="#96a1ab", stroke_width=2))
+
+    # camera and gimbal, hanging off the nose
+    grp.add(rect(-16, -96, 32, 26, rx=7, fill=P["dark"], stroke=P["line"],
+                 stroke_width=1.5))
+    grp.add(circle(0, -83, 8, fill="#1b2733", stroke="#6b7c8c",
+                   stroke_width=1.5))
+
+    # forward obstacle sensors
+    for sx in (-30, 30):
+        grp.add(circle(sx, -70, 5, fill="#2b3a47", stroke=P["line"],
+                       stroke_width=1))
+
+    # status light at the tail
+    grp.add(circle(0, 66, 6, fill=P["bad"], stroke=P["line"], stroke_width=1))
+
+    if show_rotation:
+        for key, (mx, my) in motors.items():
+            grp.add(rotation_arrow(mx, my, 40, clockwise=spin[key]))
+
+    anchors = {
+        "propeller": (-130 - 58, -100 - 26),   # upper-left blade tip
+        "motor": (-130, -100),
+        "arm": (-80, -74),
+        "camera": (0, -96),
+        "sensors": (30, -70),
+        "gnss": (26, -30),
+        "battery": (30, 34),
+        "status_light": (0, 72),
+        "feet": (35, 88),
+        "rotation": (130 + 40, -100 + 30),     # near the front-right arrow
+    }
+    return grp, anchors

@@ -7,8 +7,8 @@ Usage:
     python fig_tools/fig_controller.py --screen builtin
 
 Outputs:
-    controller_labeled.svg   names on every callout (for the page)
-    controller_numbered.svg  number badges only (for the homework)
+    fig07_controller.svg            names on every callout (for the page)
+    fig07b_controller_numbered.svg  number badges only (for the homework)
 """
 from __future__ import annotations
 
@@ -73,8 +73,8 @@ def main() -> None:
     args = ap.parse_args()
 
     outputs = {
-        "names": os.path.join(args.out, "controller_labeled.svg"),
-        "numbers": os.path.join(args.out, "controller_numbered.svg"),
+        "names": os.path.join(args.out, "fig07_controller.svg"),
+        "numbers": os.path.join(args.out, "fig07b_controller_numbered.svg"),
     }
     for mode, fname in outputs.items():
         build(mode, args.screen).save(fname)

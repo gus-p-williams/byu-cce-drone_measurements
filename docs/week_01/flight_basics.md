@@ -22,12 +22,26 @@
 
 ## Parts of the Aircraft
 
-*[Figure 1 — quadcopter anatomy, top view. Airframe and folding arms, motors, propellers in
-opposite-spinning pairs, battery, camera and gimbal, obstacle sensors, satellite antenna, landing
-feet, status light.]*
+![Parts of a quadcopter](images/fig01_aircraft_parts.svg){ width="100%" }
 
-*[Figure 2 (optional) — underside view. Gimbal and camera, downward sensors, battery release,
-memory card slot, landing feet.]*
+*Figure 1: The main parts of a small quadcopter, seen from above. Propellers on opposite corners
+spin the same direction, which is what lets the aircraft turn without tipping.*
+
+| Part | What it does | What happens when it fails |
+|------|--------------|----------------------------|
+| Propellers | Push air downward to create lift | A chipped or bent blade causes vibration, which blurs photos and shortens flight time |
+| Motors | Spin the propellers; changing their speeds steers the aircraft | The aircraft cannot hold a level hover |
+| Battery | Powers everything, and usually sets the limit on flight time | Sudden power loss, or a forced landing somewhere you did not choose |
+| Camera and gimbal | Collect the data; the gimbal holds the camera steady and level | Tilted horizons and motion blur, which make measurements unusable |
+| Satellite receiver and compass | Tell the aircraft where it is and which way it is facing | The aircraft drifts, or flies the wrong direction during Return to Home |
+| Obstacle sensors | Detect objects in the flight path and stop or steer around them | Collisions with obstacles the pilot did not notice |
+| Status light | Reports what the aircraft is doing: ready, waiting, or in an error state | You take off before the drone is actually ready |
+
+!!! tip "Which parts decide your data quality"
+    Three parts do most of the work for engineering measurements. The **camera** sets how much
+    detail you capture, the **gimbal** keeps that detail sharp and level, and the **satellite
+    receiver** records where each photo was taken. Everything else exists to hold those three
+    steady in the air.
 
 ---
 
@@ -51,7 +65,26 @@ shown by arrow size.]*
 
 ## The Controller
 
-*[Figure 7 — generic controller, labeled. Built in Phase 0; see `review/controller_labeled.svg`.]*
+![A typical drone controller](images/fig07_controller.svg){ width="100%" }
+
+*Figure 7: A typical controller. The two sticks work the same way on nearly every aircraft. Buttons
+and switches are named differently from one manufacturer to the next.*
+
+| Control | What it does | Also called |
+|---------|--------------|-------------|
+| Left stick | Climbs, descends, and turns the nose left or right | Throttle and yaw |
+| Right stick | Moves the aircraft forward, back, left, and right | Pitch and roll |
+| Power button | Turns the controller on and shows its battery level | — |
+| Return to Home | Pauses the flight, or sends the aircraft back to where it took off | RTH, Home, or the house symbol |
+| Flight mode switch | Changes the speed limit and how much the aircraft helps you | Cine / Normal / Sport, or Beginner / Normal |
+| Gimbal tilt dial | Tilts the camera up and down during flight | Gimbal wheel, camera dial |
+| Shutter and record | Takes a photo, or starts and stops video | — |
+| Antennas | Carry the radio link to the aircraft; point the flat face toward the drone | — |
+
+!!! note "Phone or built-in screen"
+    Some controllers clamp your phone and run the flight app on it. Others have a screen built in
+    and need no phone at all. The sticks and buttons work the same way in both cases; only the
+    display is different.
 
 ---
 
