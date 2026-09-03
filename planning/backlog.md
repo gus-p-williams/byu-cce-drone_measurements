@@ -20,6 +20,31 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 - [ ] Neither flight checklist links to drone-specific lists yet. Both pages now say those will be
       added rather than promising links that do not exist. Write them when the fleet is settled.
 
+## Topic 6 images — revisit
+
+Instructor decision, September 2026: keep the current images for now and revisit later.
+
+- [ ] **Licensing on the four Multispectral images.** `electromagnetic-spectrum-jpg-1536x655.webp`
+      and `mulitspectral-leaf-jpg-1536x847.webp` carry WordPress thumbnail suffixes,
+      `Screenshot-2019-04-09-14.04.41.webp` is a screenshot, and `1_AQtOQh_X4O0JKZg9tGzOmA.webp` is
+      a Medium CDN filename. No source, no author, no licence stated, on a public site. The spectrum
+      chart and the leaf reflectance curve would both be better as drawn diagrams anyway, which
+      sidesteps the question entirely.
+- [ ] **Attribution on the LiDAR photos.** `A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg`
+      and `Lidar_forestry.png` are Wikimedia originals with no link, author, or licence in the
+      caption. The Thermal page links each image to its Commons page and is a good pattern to copy,
+      though it still needs author and licence in visible text.
+- [ ] **The LiDAR examples are off-topic for this course.** Archaeology and forestry, in a civil
+      engineering and construction management class. The captions now point at the civil parallel,
+      but the right fix is examples from actual project work: an earthwork site, a stockpile, a
+      corridor.
+- [ ] **4.4 MB of byte-identical duplicates.** Three thermal images exist twice under different
+      names; the Wikimedia-named copies are never displayed. Also unused:
+      `Effigy_mounds_lidar.jpg`, `Infrared_thermal_imaging_during_a_yacht_survey.jpg`,
+      `LIDAR_field_yield.jpg`, `Tank-DSM-filled.webp`, and both files in `week_06/media/`.
+- [ ] **Seven raw `<img>` tags** on the Thermal and Multispectral pages, which work only because
+      clean URLs are on. Convert to Markdown with `attr_list`.
+
 ## Housekeeping
 
 

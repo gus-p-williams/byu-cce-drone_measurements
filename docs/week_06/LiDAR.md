@@ -32,11 +32,29 @@ Below are links to several LiDAR visualizations. Notice the platform motion and 
 - **Canopy Height Model (CHM):** The difference between DSM and DTM, showing actual tree heights.
 - **Intensity Imagery:** A raster showing how strongly different materials reflected the laser.
 
-## Use cases & applications
-- **Archaeology:** Finding ruins hidden under dense jungle canopies.
-- **Forestry:** Measuring tree height, density, and biomass.
-- **Infrastructure:** Mapping powerlines and road corridors with high precision.
-- **Floodplain Modeling:** Creating accurate ground models for water flow analysis.
+## Where it earns its cost on a project
+
+LiDAR is expensive. Reach for it when one of its specific advantages matters, and use photographs
+when it does not.
+
+| Use case | What you produce | Why LiDAR rather than photos |
+|----------|------------------|------------------------------|
+| **Existing conditions for design** | A bare-earth DTM of the site before anything is built | Brush and trees hide the ground. LiDAR gets ground returns through roughly 90% vegetation cover; photogrammetry manages closer to 60% |
+| **Earthwork cut and fill** | Volumes between a baseline surface and today's surface | Repeat flights give weekly quantities for progress and payment, and the vertical accuracy holds up when the site is partly vegetated |
+| **Drainage and floodplain modeling** | A DTM the hydraulic model runs on | Water flows over the ground, not over the tree canopy. A DSM gives confidently wrong answers here |
+| **As-built verification** | The built surface compared against the design surface | Documents what was actually constructed, including areas a camera cannot see into |
+| **Corridor mapping: road, rail, utility** | Classified point cloud of pavement, drainage, right of way, poles and wires | Thin features survive. Photogrammetry meshes wires and railings away because too few points define them |
+| **Slope and embankment monitoring** | Repeat surfaces, differenced over time | Millimeter-to-centimeter change detection through vegetation, which is where slope movement usually hides |
+
+!!! tip "Stockpiles are the honest case"
+    Both methods measure a clean, open stockpile to within a couple of centimeters, and photographs
+    are far cheaper. LiDAR wins when the pile is overgrown, the site is deep in shadow, or you need
+    the survey at night while the plant is idle. If someone specifies LiDAR for bare aggregate piles
+    in good light, ask what it is buying.
+
+Other fields use LiDAR heavily for their own reasons: archaeology to find earthworks under forest,
+forestry to measure canopy height and biomass. Both rest on the same trick you need for drainage,
+which is stripping the vegetation away to get at the ground.
 
 ## Flight planning & best practices
 - **Point Density:** This is the number of points per square meter. Flying lower or slower increases density, allowing you to see smaller details (like thin powerlines).
@@ -63,13 +81,18 @@ This diagram shows how LiDAR returns are used to separate the "ground" from "veg
 
 ---
 
-### 2) Archaeology — Ferrybridge Henge
+### 2) Seeing the ground through vegetation
 ![Ferrybridge Henge LiDAR hillshade](images/A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg)
 
-*Description: A "hillshade" rendering of a DTM. By removing the trees and buildings and simulating sunlight from the side, archaeologists can find subtle earthworks that are invisible from the ground.*
+*Description: A "hillshade" rendering of a DTM: the vegetation has been stripped out and the bare
+ground lit from one side to reveal its shape. Archaeologists use this to find earthworks, but it is
+the same operation you need to find an old ditch, a buried foundation, or the fall of the land
+across a brushy site.*
 
 **Activity:**
-- Examine the circular features in the image. How might these be different if we were looking at a standard aerial photograph instead of a LiDAR hillshade?
+- These features are invisible in an ordinary aerial photograph. Why?
+- You are asked to model drainage across a site covered in scrub. Explain, in one sentence, why a
+  DSM would give you the wrong answer.
 
 ---
 
