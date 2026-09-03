@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif" font-size="14">
   <rect x="0" y="0" width="900" height="620" fill="#f9f9f9" rx="8"/>
-  <text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Figure 1: Parts of a quadcopter</text>
-  <text x="450.0" y="46" text-anchor="middle" font-size="11" fill="#555555">Layout varies by model. Lighter aircraft often have fewer sensors, and some have no gimbal at all.</text>
+  <text x="450.0" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Figure 1: Parts of a quadcopter</text>
+  <text x="450.0" y="46" text-anchor="middle" font-size="12" fill="#555555">Layout varies by model. Lighter aircraft often have fewer sensors, and some have no gimbal at all.</text>
   <g transform="translate(450,340)">
     <g>
       <!-- generic quadcopter, top view -->

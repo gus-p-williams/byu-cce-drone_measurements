@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 630" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 630" font-family="Arial, Helvetica, sans-serif" font-size="14">
   <rect x="0" y="0" width="900" height="630" fill="#f9f9f9" rx="8"/>
-  <text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Figure 3: A typical drone controller</text>
-  <text x="450.0" y="46" text-anchor="middle" font-size="11" fill="#555555">Only the two sticks work the same on every controller. Buttons, switches, labels, and screens vary by model.</text>
+  <text x="450.0" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Figure 7: A typical drone controller</text>
+  <text x="450.0" y="46" text-anchor="middle" font-size="12" fill="#555555">Only the two sticks work the same on every controller. Buttons, switches, labels, and screens vary by model.</text>
   <g transform="translate(240,330)">
     <g>
       <!-- generic controller -->
@@ -83,11 +83,11 @@
     <text x="200" y="245" text-anchor="end">Antenna</text>
     <text x="200" y="330" text-anchor="end">Return-to-Home / pause</text>
     <text x="200" y="422" text-anchor="end" font-weight="bold">Left stick</text>
-    <text x="200" y="438" text-anchor="end" font-size="11" fill="#555555">climb / descend, turn left / right</text>
+    <text x="200" y="438" text-anchor="end" font-size="12" fill="#555555">climb / descend, turn left / right</text>
     <text x="700" y="245" text-anchor="start">Antenna</text>
     <text x="700" y="330" text-anchor="start">Flight mode switch</text>
     <text x="700" y="422" text-anchor="start" font-weight="bold">Right stick</text>
-    <text x="700" y="438" text-anchor="start" font-size="11" fill="#555555">forward / back, slide left / right</text>
+    <text x="700" y="438" text-anchor="start" font-size="12" fill="#555555">forward / back, slide left / right</text>
     <text x="380" y="570" text-anchor="end">Power button</text>
     <text x="520" y="570" text-anchor="start">Battery level lights</text>
     <text x="450" y="610" text-anchor="middle">Charging / data port</text>

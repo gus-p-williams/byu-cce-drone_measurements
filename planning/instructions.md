@@ -37,7 +37,7 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
   `fig_tools/` when parts repeat or a numbered homework variant is needed. Scripts write their SVG
   into `docs/week_NN/images/`, and both the script and the SVG are committed.
 - Style is fixed so every week matches: light gray background with rounded corners, Arial font
-  stack, 13 px labels, 16 px bold title at the top of the figure, 11 px subtitle for caveats,
+  stack, 14 px labels, 17 px bold title at the top of the figure, 12 px subtitle for caveats,
   blue leader lines ending in a dot on the part. Palette and sizes live in `fig_tools/svgkit.py`.
 - Drawings are generic. Brand names go in captions or tables, not in the picture. Where hardware
   varies between models, say so in the subtitle or caption.

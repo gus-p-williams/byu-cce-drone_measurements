@@ -33,9 +33,9 @@ def panel(cx, top, side, dx, dy, label, sub, motion):
                  fill=P["white"], stroke="#dde3e9", stroke_width=1.5))
     grp.add(translate(cx - 92, top + 62, stick_pair(side, dx, dy, 17, 32)))
     grp.add(translate(cx + 88, top + 62, motion))
-    grp.add(text(cx, top + 128, label, text_anchor="middle",
+    grp.add(text(cx, top + 128, label, text_anchor="middle", font_size=16,
                  font_weight="bold", fill=P["ink"]))
-    grp.add(text(cx, top + 148, sub, text_anchor="middle", font_size=11,
+    grp.add(text(cx, top + 149, sub, text_anchor="middle", font_size=12.5,
                  fill=P["muted"]))
     return grp
 
@@ -85,7 +85,7 @@ def build_sticks() -> Figure:
     ]
 
     for header_y, heading, side, first_top, cases in rows:
-        fig.add(text(95, header_y, heading, font_size=14, font_weight="bold",
+        fig.add(text(95, header_y, heading, font_size=15, font_weight="bold",
                      fill=P["ink"]))
         for i, (dx, dy, label, sub, motion) in enumerate(cases):
             cx = COLS[i % 2]
@@ -115,7 +115,7 @@ def build_nose_in() -> Figure:
         # the same stick input in both panels
         fig.add(translate(cx, 168, stick_pair("right", 1, 0, 22, 42)))
         fig.add(text(cx, 214, "right stick pushed right", text_anchor="middle",
-                     font_size=11, fill=P["muted"]))
+                     font_size=12.5, fill=P["muted"]))
 
         # aircraft, rotated to face away or toward the pilot
         fig.add(translate(cx, 292, g(aircraft_mini_top(0.95),
@@ -131,7 +131,7 @@ def build_nose_in() -> Figure:
         fig.add(text(cx, 372, result, text_anchor="middle",
                      font_weight="bold", fill=P["bad"]))
         fig.add(text(cx, 398, "arrow shows movement over the ground",
-                     text_anchor="middle", font_size=11, fill=P["muted"]))
+                     text_anchor="middle", font_size=12.5, fill=P["muted"]))
 
     # pilot marker between the panels
     fig.add(text(450, 300, "you", text_anchor="middle", font_size=12,

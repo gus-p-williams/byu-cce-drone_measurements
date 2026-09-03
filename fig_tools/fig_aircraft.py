@@ -37,7 +37,7 @@ def build(mode: str) -> Figure:
     c.add("Camera and gimbal", (450, 112), "middle", (450, 120), a["camera"], n=1)
     # left
     c.add("Propellers", (185, 200), "end", (190, 196), a["propeller"], n=2,
-          sub="opposite corners spin the same way")
+          sub="opposite corners match")
     c.add("Motors", (185, 295), "end", (190, 291), a["motor"], n=3)
     c.add("Arms", (185, 390), "end", (190, 386), a["arm"], n=4,
           sub="fold in for transport")

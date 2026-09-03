@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif" font-size="14">
   <rect x="0" y="0" width="900" height="620" fill="#f9f9f9" rx="8"/>
-  <text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Figure 1: Parts of a quadcopter</text>
-  <text x="450.0" y="46" text-anchor="middle" font-size="11" fill="#555555">Layout varies by model. Lighter aircraft often have fewer sensors, and some have no gimbal at all.</text>
+  <text x="450.0" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Figure 1: Parts of a quadcopter</text>
+  <text x="450.0" y="46" text-anchor="middle" font-size="12" fill="#555555">Layout varies by model. Lighter aircraft often have fewer sensors, and some have no gimbal at all.</text>
   <g transform="translate(450,340)">
     <g>
       <!-- generic quadcopter, top view -->
@@ -100,13 +100,13 @@
   <g id="names" fill="#1a1a1a">
     <text x="450" y="112" text-anchor="middle">Camera and gimbal</text>
     <text x="185" y="200" text-anchor="end">Propellers</text>
-    <text x="185" y="216" text-anchor="end" font-size="11" fill="#555555">opposite corners spin the same way</text>
+    <text x="185" y="216" text-anchor="end" font-size="12" fill="#555555">opposite corners match</text>
     <text x="185" y="295" text-anchor="end">Motors</text>
     <text x="185" y="390" text-anchor="end">Arms</text>
-    <text x="185" y="406" text-anchor="end" font-size="11" fill="#555555">fold in for transport</text>
+    <text x="185" y="406" text-anchor="end" font-size="12" fill="#555555">fold in for transport</text>
     <text x="715" y="200" text-anchor="start">Obstacle sensors</text>
     <text x="715" y="305" text-anchor="start">Satellite receiver</text>
-    <text x="715" y="321" text-anchor="start" font-size="11" fill="#555555">and compass, inside the body</text>
+    <text x="715" y="321" text-anchor="start" font-size="12" fill="#555555">and compass, inside the body</text>
     <text x="715" y="400" text-anchor="start">Battery</text>
     <text x="330" y="570" text-anchor="middle">Status light</text>
     <text x="580" y="570" text-anchor="middle">Landing feet</text>

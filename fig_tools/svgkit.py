@@ -34,9 +34,9 @@ PALETTE = {
     "white": "#ffffff",
 }
 FONT = "Arial, Helvetica, sans-serif"
-LABEL_SIZE = 13
-TITLE_SIZE = 16
-SUBTITLE_SIZE = 11
+LABEL_SIZE = 14
+TITLE_SIZE = 17
+SUBTITLE_SIZE = 12
 
 
 # ---------------------------------------------------------------------------

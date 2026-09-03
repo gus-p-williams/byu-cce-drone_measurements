@@ -154,19 +154,27 @@ def stick(dx: float = 0, dy: float = 0, r: float = 30,
 
 
 def stick_pair(side: str, dx: float, dy: float, r: float = 20,
-               gap: float = 38) -> El:
+               gap: float = 38, body: bool = True) -> El:
     """Both sticks side by side, with only `side` ("left" or "right") active.
 
-    Students see one controller in every panel, so there is never any doubt
-    about which thumb moves.
+    A light rounded outline stands in for the controller, so the pair reads as
+    one handset rather than two loose dials. Push arrows deliberately poke a
+    little past it.
     """
     left_active = side == "left"
-    return g(
+    grp = g()
+    if body:
+        pad = 12
+        w, h = 2 * (gap + r + pad), 2 * (r + pad)
+        grp.add(rect(-w / 2, -h / 2, w, h, rx=h * 0.34, fill="#eef1f4",
+                     stroke="#c5cdd5", stroke_width=1.5))
+    grp.add(
         g(stick(dx, dy, r, True) if left_active else stick(0, 0, r, False),
           transform=f"translate({-gap},0)"),
         g(stick(0, 0, r, False) if left_active else stick(dx, dy, r, True),
           transform=f"translate({gap},0)"),
     )
+    return grp
 
 
 def aircraft_mini_top(r: float = 1.0) -> El:

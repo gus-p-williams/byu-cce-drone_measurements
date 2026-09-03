@@ -27,12 +27,20 @@ CARD = dict(rx=10, fill=P["white"], stroke="#dde3e9", stroke_width=1.5)
 
 
 def card(cx, top, w, h, label, sub):
-    """A panel background with a bold caption and a grey sub-caption."""
-    return g(rect(cx - w / 2, top, w, h, **CARD),
-             text(cx, top + h - 40, label, text_anchor="middle",
-                  font_weight="bold", fill=P["ink"]),
-             text(cx, top + h - 20, sub, text_anchor="middle", font_size=11,
-                  fill=P["muted"]))
+    """A panel background with a bold caption and a grey sub-caption.
+
+    `sub` may be a string, or a sequence of lines when the caption is too long
+    to sit inside a narrow panel on one line.
+    """
+    lines = [sub] if isinstance(sub, str) else list(sub)
+    first = top + h - 16 - 17 * (len(lines) - 1)
+    grp = g(rect(cx - w / 2, top, w, h, **CARD),
+            text(cx, first - 24, label, text_anchor="middle", font_size=16,
+                 font_weight="bold", fill=P["ink"]))
+    for i, ln in enumerate(lines):
+        grp.add(text(cx, first + i * 17, ln, text_anchor="middle",
+                     font_size=12.5, fill=P["muted"]))
+    return grp
 
 
 # ---------------------------------------------------------------------------
@@ -44,24 +52,24 @@ def build_axes() -> Figure:
                  "Every movement a drone makes is a combination of these three "
                  "rotations plus going up or down.")
 
-    cols = (190, 450, 710)
+    cols = (175, 450, 725)
     tops = 84
-    h, w = 280, 250
+    h, w = 288, 264
 
     # pitch: side view, nose tilted down
     fig.add(card(cols[0], tops, w, h, "Pitch",
-                 "nose tips down or up, so it flies forward or back"))
+                 ("nose tips down or up,", "so it flies forward or back")))
     fig.add(translate(cols[0], tops + 120,
                       g(aircraft_mini_side(0.95), transform="rotate(18)")))
     fig.add(rotation_arrow(cols[0], tops + 120, 62, clockwise=True,
                            start_deg=200, sweep_deg=120, width=3))
     fig.add(circle(cols[0], tops + 120, 4, fill=P["muted"]))
     fig.add(text(cols[0], tops + 182, "side view", text_anchor="middle",
-                 font_size=11, font_style="italic", fill=P["muted"]))
+                 font_size=12, font_style="italic", fill=P["muted"]))
 
     # roll: head-on view, tilted to one side
     fig.add(card(cols[1], tops, w, h, "Roll",
-                 "leans left or right, so it slides sideways"))
+                 ("leans left or right,", "so it slides sideways")))
     fig.add(translate(cols[1], tops + 120,
                       g(aircraft_mini_side(0.95, nose=False),
                         transform="rotate(-18)")))
@@ -69,16 +77,16 @@ def build_axes() -> Figure:
                            start_deg=340, sweep_deg=120, width=3))
     fig.add(circle(cols[1], tops + 120, 4, fill=P["muted"]))
     fig.add(text(cols[1], tops + 182, "seen head-on", text_anchor="middle",
-                 font_size=11, font_style="italic", fill=P["muted"]))
+                 font_size=12, font_style="italic", fill=P["muted"]))
 
     # yaw: top view, spinning about the centre
     fig.add(card(cols[2], tops, w, h, "Yaw",
-                 "spins in place, so the nose points somewhere new"))
+                 ("spins in place, so the nose", "points somewhere new")))
     fig.add(translate(cols[2], tops + 120, aircraft_mini_top(0.9)))
     fig.add(rotation_arrow(cols[2], tops + 120, 60, clockwise=True,
                            start_deg=150, sweep_deg=240, width=3))
     fig.add(text(cols[2], tops + 182, "seen from above", text_anchor="middle",
-                 font_size=11, font_style="italic", fill=P["muted"]))
+                 font_size=12, font_style="italic", fill=P["muted"]))
 
     return fig
 
@@ -109,11 +117,11 @@ def build_lift() -> Figure:
             fig.add(arrow(cx + mx, mid - 24, cx + mx, mid - 24 - lift,
                           width=3.5))
         fig.add(text(cx, mid - 36 - lift, "lift", text_anchor="middle",
-                     font_size=11, fill=P["accent"]))
+                     font_size=12.5, fill=P["accent"]))
         # weight always the same length, drawn downward from the body
         fig.add(arrow(cx, mid + 24, cx, mid + 68, color=P["muted"], width=3.5))
         fig.add(text(cx, mid + 88, "weight", text_anchor="middle",
-                     font_size=11, fill=P["muted"]))
+                     font_size=12.5, fill=P["muted"]))
 
     return fig
 
@@ -144,21 +152,21 @@ def quad_speeds(fl, fr, rl, rr):
 
 
 def build_thrust() -> Figure:
-    fig = Figure(900, 450,
+    fig = Figure(900, 456,
                  "Figure 6: Which motors speed up",
                  "A drone has no steering. It moves by running some rotors "
                  "faster than others. The chevron marks the nose.")
 
-    cols = (150, 350, 550, 750)
-    tops, h, w = 84, 260, 186
+    cols = (148, 350, 552, 754)
+    tops, h, w = 84, 268, 196
     cases = (
-        (("same",) * 4, "Hover", "all four the same", None),
+        (("same",) * 4, "Hover", ("all four rotors", "at the same speed"), None),
         (("slow", "slow", "fast", "fast"), "Fly forward",
-         "rear pair faster, so the nose tips down", (0, -1)),
+         ("rear pair faster,", "so the nose tips down"), (0, -1)),
         (("fast", "slow", "fast", "slow"), "Slide right",
-         "left pair faster, so it leans right", (1, 0)),
+         ("left pair faster,", "so it leans right"), (1, 0)),
         (("slow", "fast", "fast", "slow"), "Turn right",
-         "one diagonal pair faster", "yaw"),
+         ("one diagonal pair", "faster than the other"), "yaw"),
     )
 
     for cx, (speeds, label, sub, motion) in zip(cols, cases):
@@ -174,15 +182,15 @@ def build_thrust() -> Figure:
                           cx + dx * 84, mid + dy * 84, width=3))
 
     # legend
-    ly = 396
-    fig.add(text(150, ly, "Rotor speed:", font_size=12, fill=P["muted"]))
+    ly = 402
+    fig.add(text(140, ly, "Rotor speed:", font_size=13, fill=P["muted"]))
     for i, (key, name) in enumerate((("slow", "slower"), ("same", "normal"),
                                      ("fast", "faster"))):
         r, colour = SPEED[key]
         x = 258 + i * 132
         fig.add(circle(x, ly - 5, r * 0.62, fill=colour, stroke=P["line"],
                        stroke_width=1.2))
-        fig.add(text(x + 20, ly, name, font_size=12, fill=P["muted"]))
+        fig.add(text(x + 20, ly, name, font_size=13, fill=P["muted"]))
     return fig
 
 

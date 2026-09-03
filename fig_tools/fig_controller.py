@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parts import controller, shift  # noqa: E402
 from svgkit import Callouts, Figure, render_png, translate  # noqa: E402
 
-TITLE = "Figure 3: A typical drone controller"
+TITLE = "Figure 7: A typical drone controller"
 SUBTITLE = ("Only the two sticks work the same on every controller. "
             "Buttons, switches, labels, and screens vary by model.")
 

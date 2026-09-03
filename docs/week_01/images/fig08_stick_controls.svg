@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" font-family="Arial, Helvetica, sans-serif" font-size="14">
   <rect x="0" y="0" width="900" height="900" fill="#f9f9f9" rx="8"/>
-  <text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Figure 8: What each stick does</text>
-  <text x="450.0" y="46" text-anchor="middle" font-size="11" fill="#555555">Mode 2 layout, the default on nearly every ready-to-fly drone. All directions are relative to the nose of the aircraft.</text>
-  <text x="95" y="92" font-size="14" font-weight="bold" fill="#1a1a1a">Left stick — altitude and heading</text>
+  <text x="450.0" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Figure 8: What each stick does</text>
+  <text x="450.0" y="46" text-anchor="middle" font-size="12" fill="#555555">Mode 2 layout, the default on nearly every ready-to-fly drone. All directions are relative to the nose of the aircraft.</text>
+  <text x="95" y="92" font-size="15" font-weight="bold" fill="#1a1a1a">Left stick — altitude and heading</text>
   <g>
     <rect x="95.0" y="104" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(173,166)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
@@ -49,13 +50,14 @@
         </g>
       </g>
     </g>
-    <text x="265" y="232" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Climb</text>
-    <text x="265" y="252" text-anchor="middle" font-size="11" fill="#555555">rises straight up</text>
+    <text x="265" y="232" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Climb</text>
+    <text x="265" y="253" text-anchor="middle" font-size="12.5" fill="#555555">rises straight up</text>
   </g>
   <g>
     <rect x="465.0" y="104" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(543,166)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
@@ -98,13 +100,14 @@
         </g>
       </g>
     </g>
-    <text x="635" y="232" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Descend</text>
-    <text x="635" y="252" text-anchor="middle" font-size="11" fill="#555555">comes straight down</text>
+    <text x="635" y="232" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Descend</text>
+    <text x="635" y="253" text-anchor="middle" font-size="12.5" fill="#555555">comes straight down</text>
   </g>
   <g>
     <rect x="95.0" y="288" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(173,350)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
@@ -157,13 +160,14 @@
         </g>
       </g>
     </g>
-    <text x="265" y="416" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Turn left</text>
-    <text x="265" y="436" text-anchor="middle" font-size="11" fill="#555555">nose swings left</text>
+    <text x="265" y="416" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Turn left</text>
+    <text x="265" y="437" text-anchor="middle" font-size="12.5" fill="#555555">nose swings left</text>
   </g>
   <g>
     <rect x="465.0" y="288" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(543,350)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
@@ -216,14 +220,15 @@
         </g>
       </g>
     </g>
-    <text x="635" y="416" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Turn right</text>
-    <text x="635" y="436" text-anchor="middle" font-size="11" fill="#555555">nose swings right</text>
+    <text x="635" y="416" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Turn right</text>
+    <text x="635" y="437" text-anchor="middle" font-size="12.5" fill="#555555">nose swings right</text>
   </g>
-  <text x="95" y="500" font-size="14" font-weight="bold" fill="#1a1a1a">Right stick — moving over the ground</text>
+  <text x="95" y="500" font-size="15" font-weight="bold" fill="#1a1a1a">Right stick — moving over the ground</text>
   <g>
     <rect x="95.0" y="514" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(173,576)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#c8d0d8" stroke-width="1.5"/>
@@ -276,13 +281,14 @@
         </g>
       </g>
     </g>
-    <text x="265" y="642" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Fly forward</text>
-    <text x="265" y="662" text-anchor="middle" font-size="11" fill="#555555">in the direction the nose points</text>
+    <text x="265" y="642" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Fly forward</text>
+    <text x="265" y="663" text-anchor="middle" font-size="12.5" fill="#555555">in the direction the nose points</text>
   </g>
   <g>
     <rect x="465.0" y="514" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(543,576)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#c8d0d8" stroke-width="1.5"/>
@@ -335,13 +341,14 @@
         </g>
       </g>
     </g>
-    <text x="635" y="642" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Fly backward</text>
-    <text x="635" y="662" text-anchor="middle" font-size="11" fill="#555555">away from the nose</text>
+    <text x="635" y="642" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Fly backward</text>
+    <text x="635" y="663" text-anchor="middle" font-size="12.5" fill="#555555">away from the nose</text>
   </g>
   <g>
     <rect x="95.0" y="698" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(173,760)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#c8d0d8" stroke-width="1.5"/>
@@ -394,13 +401,14 @@
         </g>
       </g>
     </g>
-    <text x="265" y="826" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Slide left</text>
-    <text x="265" y="846" text-anchor="middle" font-size="11" fill="#555555">nose keeps pointing the same way</text>
+    <text x="265" y="826" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Slide left</text>
+    <text x="265" y="847" text-anchor="middle" font-size="12.5" fill="#555555">nose keeps pointing the same way</text>
   </g>
   <g>
     <rect x="465.0" y="698" width="340" height="170" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
     <g transform="translate(543,760)">
       <g>
+        <rect x="-61.0" y="-29.0" width="122" height="58" rx="19.720000000000002" fill="#eef1f4" stroke="#c5cdd5" stroke-width="1.5"/>
         <g transform="translate(-32,0)">
           <g>
             <circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#c8d0d8" stroke-width="1.5"/>
@@ -453,7 +461,7 @@
         </g>
       </g>
     </g>
-    <text x="635" y="826" text-anchor="middle" font-weight="bold" fill="#1a1a1a">Slide right</text>
-    <text x="635" y="846" text-anchor="middle" font-size="11" fill="#555555">nose keeps pointing the same way</text>
+    <text x="635" y="826" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Slide right</text>
+    <text x="635" y="847" text-anchor="middle" font-size="12.5" fill="#555555">nose keeps pointing the same way</text>
   </g>
 </svg>
