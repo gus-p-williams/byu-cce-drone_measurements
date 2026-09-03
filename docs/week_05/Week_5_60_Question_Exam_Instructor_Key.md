@@ -5,7 +5,7 @@
 
 ## Sectional Chart Reference (Figure 10 — Salt Lake City Area)
 
-![Figure 10 - Sectional Chart Excerpt](images/fig10_slc_sectional_excerpt.jpg)
+![Figure 10 - Sectional Chart Excerpt](images/w05_fig10_slc_sectional_excerpt.jpg)
 
 ---
 ### Question 1
