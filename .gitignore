@@ -31,3 +31,11 @@ node_modules/
 
 # other
 *.log
+
+# Claude Code: local, untracked working files
+.claude/local/
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Review folder: temporary files awaiting approval (see review/README.md)
+/review/

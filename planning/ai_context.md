@@ -1,0 +1,68 @@
+# AI Context
+
+Read this before editing any course content.
+
+## What this repository is
+
+- Source for a Read the Docs site built with **MkDocs** (`readthedocs` theme). Config lives in
+  `mkdocs.yml`; the build environment is in `readthedocs.yaml` and `docs/requirements.txt`.
+- All published content is Markdown under `docs/`, organized by week (`docs/week_01/` through
+  `docs/week_06/`) plus flight checklists in `docs/flight_check_list/`.
+- The site is the homework and exercise companion to the class. The BYU Learning Suite schedule
+  links into these pages.
+
+## The course
+
+- **Title:** BYU CCE Drone Measurements.
+- **Audience:** freshman Civil Engineering and Construction Management students. Assume no prior
+  drone, GIS, or surveying experience.
+- **Format:** one-credit-hour introductory course. Each week is a short lecture plus a lab or
+  exercise. Content must fit in roughly one hour of class contact time per week.
+- **Central theme:** drones are *measurement instruments* for engineers. Every page should connect
+  back to the question "is this data appropriate, reliable, and defensible for the decision at hand?"
+  Accuracy versus effort (pacing vs. GPS vs. drone) is a recurring idea.
+
+## Weekly structure (as of September 2026)
+
+| Week | Topic | Pages |
+|------|-------|-------|
+| 1 | Introduction and flight basics | `week_01/class_overview.md`, Flight Basics (DJI Mini) |
+| 2 | Software | Bentley iTwin, QGIS measurements |
+| 3 | Measurements | Measurements lab, metadata |
+| 4 | Mission planning | Structure from Motion (SfM) workflow, mission planning for SfM |
+| 5 | FAA Part 107 exam | Exam overview, knowledge review, resources, practice exams and instructor keys |
+| 6 | Sensors | LiDAR, thermal, multispectral |
+
+The authoritative nav order is the `nav:` block in `mkdocs.yml`. Update it whenever a page is
+added, renamed, or removed.
+
+## Hardware and software referenced
+
+- **Aircraft:** DJI Mini series (sub-250 g). Recreational rules are simple for this class of
+  aircraft, but the course still teaches Part 107.
+- **Software:** Bentley iTwin, QGIS, SfM photogrammetry tools.
+- **Regulatory:** FAA Part 107 (small UAS rule). The Week 5 material tracks the FAA Airman
+  Knowledge Testing Supplement (FAA-CT-8080-2H). The full PDF is git-ignored; a reduced copy
+  lives in `docs/week_05/images/`.
+
+## Markdown features in use
+
+Enabled in `mkdocs.yml`: `admonition` (used heavily for "Key Takeaways" blocks), `attr_list`,
+`md_in_html`, `sane_lists`, `pymdownx.arithmatex` (MathJax), `pymdownx.tasklist`, `pymdownx.emoji`.
+Custom styling is in `docs/css/custom.css`; MathJax config is in `docs/js/mathjax-config.js`.
+
+## People
+
+- Repository owner, instructor, and primary author: Gus Williams (`gus-p-williams` on GitHub).
+  Refer to review by Gus as "instructor review".
+- TAs also commit content. Past contributors in the history: `Brandan-W`, `norar24`.
+- Content goes through a review pass before landing. Call it "TA review" or "instructor review"
+  depending on who did it.
+
+## Things to be careful about
+
+- Instructor answer keys (files with `Instructor` in the name) are published on the site today.
+  Do not add or move exam answers without checking with the instructor.
+- Keep external links and figures attributable. Several Week 6 images come from Wikimedia and
+  need their captions and credits preserved.
+- Do not commit the full FAA supplement PDF or other large binaries.
