@@ -47,8 +47,32 @@ spin the same direction, which is what lets the aircraft turn without tipping.*
 
 ## Cameras, Sensors, and Payloads
 
-*[Figure 3 — payload icon strip. Standard camera, thermal, multispectral, LiDAR, gas detector,
-delivery or drop mechanism.]*
+For engineering work the sensor **is** the instrument, and the aircraft is the tripod that carries
+it. On most small drones the camera is fixed in place and the whole airframe is built around it.
+Larger professional aircraft take **interchangeable payloads**, so one aircraft can carry whichever
+sensor the job needs.
+
+![Sensors a drone can carry](images/fig03_payloads.svg){ width="100%" }
+
+*Figure 3: Common drone payloads. Which one you need depends entirely on what you are trying to
+measure.*
+
+| Payload | Answers the question | Covered in |
+|---------|----------------------|------------|
+| Standard camera | What does the site look like, and what are its dimensions? | Weeks 2 to 4 |
+| Thermal | Where is heat escaping, or where is moisture trapped? | [Week 6](../week_06/Thermal.md) |
+| Multispectral | How healthy is the vegetation, and where is bare ground? | [Week 6](../week_06/Multispectral.md) |
+| LiDAR | What is the ground surface underneath the trees? | [Week 6](../week_06/LiDAR.md) |
+| Gas detector | Is there a leak, and where is it coming from? | not covered in this course |
+
+Other payloads exist for specific jobs, including speakers, spotlights, and release mechanisms for
+delivering small loads.
+
+!!! tip "Choosing a payload is an engineering decision"
+    Every step up in capability costs money, weight, flight time, and processing effort. A standard
+    camera answers most civil engineering questions perfectly well. Reach for thermal,
+    multispectral, or LiDAR when the question genuinely requires it, and be ready to explain why it
+    did.
 
 ---
 
