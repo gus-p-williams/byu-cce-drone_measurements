@@ -54,12 +54,46 @@ delivery or drop mechanism.]*
 
 ## How a Drone Flies
 
-*[Figure 4 — aircraft axes. Pitch, roll, and yaw arrows on the aircraft outline.]*
+A drone has no wings, no rudder, and nothing that steers. It has four propellers that only spin
+faster or slower. Everything the aircraft does comes from that one control.
 
-*[Figure 5 (optional) — hover balance. Four thrust arrows against one weight arrow.]*
+![Pitch, roll, and yaw](images/fig04_axes.svg){ width="100%" }
 
-*[Figure 6 — differential thrust, four panels: hover, climb, pitch forward, yaw right. Motor speed
-shown by arrow size.]*
+*Figure 4: The three rotations. Every flight path is some combination of these, plus climbing and
+descending.*
+
+### Staying in the air
+
+Propellers push air downward, and the air pushes back. That upward push is **lift**. Whether the
+aircraft rises, holds still, or sinks depends only on how lift compares with the weight of the
+aircraft.
+
+![Lift compared with weight](images/fig05_lift_and_weight.svg){ width="100%" }
+
+*Figure 5: Lift greater than weight means climbing, lift equal to weight means hovering, and lift
+less than weight means descending.*
+
+### Steering without a rudder
+
+To move in any direction, the flight controller speeds some rotors up and slows others down. You
+never do this yourself; you move a stick, and the aircraft works out the rotor speeds hundreds of
+times a second.
+
+![Which motors speed up for each movement](images/fig06_differential_thrust.svg){ width="100%" }
+
+*Figure 6: Speeding up the rear pair tips the nose down and the aircraft moves forward. Speeding up
+one diagonal pair turns it. Speeding up all four makes it climb.*
+
+!!! note "Why the propellers spin in opposite directions"
+    A spinning propeller tries to twist the aircraft the opposite way. Two propellers turn one
+    direction and two turn the other, so in a steady hover those twists cancel out. Speeding up one
+    diagonal pair unbalances them on purpose, and the aircraft yaws. This is also why a propeller
+    fitted in the wrong position will not fly.
+
+!!! warning "Everything costs battery"
+    Fighting wind, climbing, and flying fast all mean running the motors harder. A drone in a stiff
+    breeze can use its battery far faster than the remaining-time estimate suggests, because that
+    estimate assumes calm conditions.
 
 ---
 
@@ -128,25 +162,25 @@ stays where it is.*
 
 ---
 
-## Automated Flight Functions
+## A Basic Flight, Start to Finish
 
-*[Figure 10 — home point and position hold. Satellites, aircraft, home marker, and the drift arrow
-that appears when the satellite signal is lost.]*
+*[Figure 10 — flight sequence strip, nine icons from unfold to power off.]*
 
-*[Figure 11 — obstacle sensor coverage, top view, with the blind zones shaded.]*
-
-*[Figure 12 — battery states bar: normal, warning, forced return, forced landing.]*
-
-*[Figure 13 — Return to Home profile, side view, showing the climb to a safe altitude over a tree
-line before flying home.]*
+*[Figure 11 (optional) — box and hover practice pattern, top view.]*
 
 ---
 
-## A Basic Flight, Start to Finish
+## Automated Flight Functions
 
-*[Figure 14 — flight sequence strip, nine icons from unfold to power off.]*
+*[Figure 12 — home point and position hold. Satellites, aircraft, home marker, and the drift arrow
+that appears when the satellite signal is lost.]*
 
-*[Figure 15 (optional) — box and hover practice pattern, top view.]*
+*[Figure 13 — obstacle sensor coverage, top view, with the blind zones shaded.]*
+
+*[Figure 14 — battery states bar: normal, warning, forced return, forced landing.]*
+
+*[Figure 15 — Return to Home profile, side view, showing the climb to a safe altitude over a tree
+line before flying home.]*
 
 ---
 

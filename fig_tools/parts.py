@@ -186,11 +186,18 @@ def aircraft_mini_top(r: float = 1.0) -> El:
     return g(grp, transform=f"scale({r})") if r != 1.0 else grp
 
 
-def aircraft_mini_side(r: float = 1.0) -> El:
-    """A small quadcopter seen from the side, for climb and descend panels."""
+def aircraft_mini_side(r: float = 1.0, nose: bool = True) -> El:
+    """A small quadcopter seen from the side, nose to the right.
+
+    Set nose=False for a head-on view, where neither end should look like the
+    front (used for the roll panel).
+    """
     grp = g()
     grp.add(rect(-22, -8, 44, 18, rx=6, fill=P["body"], stroke=P["line"],
                  stroke_width=1.5))
+    if nose:
+        grp.add(polygon([(22, -7), (32, 1), (22, 9)], fill=P["dark"],
+                        stroke=P["line"], stroke_width=1))
     for mx in (-34, 34):
         grp.add(line(mx, -8, mx, -18, stroke=P["line"], stroke_width=4,
                      stroke_linecap="round"))
