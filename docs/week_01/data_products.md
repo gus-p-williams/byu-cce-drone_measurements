@@ -1,14 +1,15 @@
 # Aerial Measurement Products
 
 !!! abstract "Key Takeaways"
-    - A drone brings back **photographs**. Everything else on this page is made from them by
-      software.
+    - **Match the sensor to the question.** A normal camera cannot measure temperature, plant
+      health, or gas. Specialized sensors exist because those need different physics, not because
+      they are better cameras.
+    - **The same product can come from different sensors.** A 3D model can be built from ordinary
+      photographs or from LiDAR, and there are good reasons to choose either.
     - Each product answers a **different question**. Picking the wrong one is a common and
       expensive mistake.
     - **DSM keeps the trees and buildings. DTM removes them.** That single distinction decides
       whether your earthwork numbers are right.
-    - The **sensor you fly** decides what you can produce. A normal camera cannot give you
-      temperature.
 
 This page is a reference. You will come back to it in Weeks 2, 3, 4, and 6 as each product turns up.
 
@@ -42,6 +43,39 @@ and each step throws some information away in exchange for being easier to use.*
     the other two. When it matters, say **DSM** for the surface with everything on it and **DTM**
     for bare ground. If someone hands you a "DEM" for an earthwork calculation, ask which one they
     mean before you use it.
+
+---
+
+## Matching the sensor to the need
+
+Choosing a sensor is the same kind of decision as choosing a measurement method: pay for capability
+only when the question needs it.
+
+| Sensor | Measures | Reach for it when |
+|--------|----------|-------------------|
+| **Standard camera** | Visible light | Almost always. It is already on the aircraft and answers most questions |
+| **LiDAR** | Distance, by timing laser pulses | Ground under vegetation, power lines, or when you need geometry at night |
+| **Thermal** | Surface temperature | Heat loss, trapped moisture, failing equipment, leak detection |
+| **Multispectral** | Light bands beyond visible | Plant health and stress, erosion, bare ground |
+| **Dedicated detectors** | One specific thing, such as methane or carbon monoxide | Leak surveys and safety work, where the answer is a concentration |
+
+### Photographs or LiDAR for a 3D model?
+
+Both produce a point cloud and a 3D model, so the choice is about the site and the budget, not
+about which is "better".
+
+| | From photographs | From LiDAR |
+|---|---|---|
+| **Cost** | Low. The camera is already there | High. A dedicated sensor and a heavier aircraft |
+| **Needs** | Daylight and visible texture | Neither. It works at night and over plain surfaces |
+| **Vegetation** | Sees the top of the canopy only | Pulses slip between leaves and reach the ground |
+| **Result** | Full color, looks like the real thing | Precise geometry, limited or no color |
+| **Best for** | Open sites, stockpiles, visual records | Forested ground, power lines, dense structure |
+
+!!! tip "The usual answer is a camera"
+    Reach past a standard camera when the question genuinely requires it, and be ready to say what
+    the extra sensor bought you. "We flew LiDAR because the stockpile was under tree cover" is an
+    engineering justification. "We flew LiDAR because we had it" is not.
 
 ---
 
