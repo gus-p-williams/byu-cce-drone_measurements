@@ -42,14 +42,20 @@ SUBTITLE_SIZE = 12
 # ---------------------------------------------------------------------------
 # File naming
 # ---------------------------------------------------------------------------
-def figure_name(week: int, number: int, slug: str, variant: str = "") -> str:
+def figure_name(week: int, number: int | None, slug: str,
+                variant: str = "") -> str:
     """Build a figure's file name from its week and figure number.
 
-    Every figure is named wNN_figMM_slug.svg, so an exported file still says
-    which week and which figure it is once it is out of the repository.
+    Every numbered figure is named wNN_figMM_slug.svg, so an exported file
+    still says which week and which figure it is once it is out of the
+    repository. Pass number=None for an illustration that nothing refers to by
+    number; it becomes wNN_slug.svg and takes no number from the sequence.
     Deriving the name here keeps it from drifting away from the number printed
     inside the drawing.
     """
+    if number is None:
+        # an illustration nothing cross-references, so it carries no number
+        return f"w{week:02d}_{slug}.svg"
     return f"w{week:02d}_fig{number:02d}{variant}_{slug}.svg"
 
 

@@ -53,6 +53,13 @@ when the captions are rewritten.
 
 ## Week 1 follow-ups
 
+- [ ] Replace `w01_overview_photo_placeholder.svg` on the overview page with a real photo of
+      students flying. Worth having: pilot, controller, and aircraft all in one frame; someone at a
+      laptop with a finished map on screen. Check whether consent is needed for recognizable faces.
+- [ ] The old overview defined DEM as including vegetation and structures, which is really a DSM.
+      The rewrite uses DSM and DTM, matching Weeks 4 and 6, and treats DEM as the umbrella term.
+      Worth a glance to confirm that is how you want the three used across the course.
+
 - [ ] Confirm the three pre-class videos in `week_01/flight_basics.md`. They were restored from
       `DJI_Mini_Resources.md`, which commit `d173bd4` deleted during the Week 1 reorganization, so
       they may have been dropped on purpose.
@@ -78,7 +85,9 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - [x] Phase 3 — `week_01/flight_issues.md` added with Figures 17 to 19 and linked from Flight
       Basics and the pre-flight checklist; feature-availability matrix added as a section of Flight
       Basics rather than its own page, since it is one table.
-- [ ] Phase 4 — optional animation on three figures, full read-through, backlog update.
+- [ ] Phase 4 — **deferred by the instructor, September 2026. Keep, do not drop.** Optional
+      animation on two or three figures, a full read-through of both Week 1 pages for length
+      and consistency, and a backlog tidy. Pick this up once the other weeks are revised.
 
 ## Done
 
