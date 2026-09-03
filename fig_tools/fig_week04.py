@@ -152,8 +152,8 @@ def build_overlap() -> Figure:
 # ---------------------------------------------------------------------------
 def build_overlap_cost() -> Figure:
     fig = Figure(900, 460, "Forward and side overlap do not cost the same",
-                 "Both raise the photo count. Only one of them makes you fly "
-                 "further.")
+                 "Both give you more images to store and process. Only one of "
+                 "them makes you fly further.")
 
     top, w, h = 84, 386, 250
     for cx, title, col, lines in (
@@ -170,7 +170,7 @@ def build_overlap_cost() -> Figure:
           "",
           "Flight time: up with every extra line",
           "Batteries: more of them",
-          "You pay in: time, batteries and processing")),
+          "You pay in: time, batteries, storage, processing")),
     ):
         fig.add(rect(cx - w / 2, top, w, h, **CARD))
         fig.add(text(cx, top + 30, title, text_anchor="middle", font_size=15,
@@ -296,7 +296,10 @@ def build_nadir_oblique() -> Figure:
                          font_weight="bold", fill=P["bad"]))
         else:
             dx, dy = cx - 150, top + 66
-            fig.add(path(f"M{dx},{dy + 14} L{cx - 6},{gy} L{cx + 74},{gy - 6} Z",
+            # the view must actually contain everything drawn in green:
+            # the whole roof and the full height of the near wall
+            fig.add(path(f"M{dx},{dy + 14} L{cx - 64},{gy} L{cx + 186},{gy} "
+                         f"L{cx + 186},{dy + 100} Z",
                          fill=SHOT, fill_opacity="0.12", stroke=SHOT,
                          stroke_width=1.5, stroke_dasharray="6 4"))
             fig.add(line(bx0, roof, bx1, roof, stroke="#2f8f4e",
