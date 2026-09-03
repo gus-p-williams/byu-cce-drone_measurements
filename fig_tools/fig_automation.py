@@ -36,11 +36,11 @@ def home_marker(x, y, scale=1.0):
 
 
 def satellite_arcs(live=True):
-    colour = P["accent"] if live else "#c8d0d8"
+    color = P["accent"] if live else "#c8d0d8"
     grp = g()
     for r in (12, 20, 28):
         grp.add(path(f"M{-r},0 a{r},{r} 0 0,1 {2 * r},0", fill="none",
-                     stroke=colour, stroke_width=2.4, stroke_linecap="round"))
+                     stroke=color, stroke_width=2.4, stroke_linecap="round"))
     if not live:
         grp.add(g(line(-14, -22, 14, 2), line(14, -22, -14, 2),
                   stroke=P["bad"], stroke_width=3, stroke_linecap="round"))
@@ -167,9 +167,9 @@ def build_battery_states() -> Figure:
     )
 
     x = x0
-    for frac, colour, label, lines in bands:
+    for frac, color, label, lines in bands:
         w = (x1 - x0) * frac
-        fig.add(rect(x, y, w, h, fill=colour, stroke=P["white"],
+        fig.add(rect(x, y, w, h, fill=color, stroke=P["white"],
                      stroke_width=2))
         mid = x + w / 2
         fig.add(text(mid, y + h + 30, label, text_anchor="middle",

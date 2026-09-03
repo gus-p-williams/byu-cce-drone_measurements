@@ -79,7 +79,7 @@ def build_axes() -> Figure:
     fig.add(text(cols[1], tops + 182, "seen head-on", text_anchor="middle",
                  font_size=12, font_style="italic", fill=P["muted"]))
 
-    # yaw: top view, spinning about the centre
+    # yaw: top view, spinning about the center
     fig.add(card(cols[2], tops, w, h, "Yaw",
                  ("spins in place, so the nose", "points somewhere new")))
     fig.add(translate(cols[2], tops + 120, aircraft_mini_top(0.9)))
@@ -133,15 +133,15 @@ SPEED = {"slow": (11, "#c3ccd4"), "same": (15, "#8fa3b5"), "fast": (21, P["accen
 
 
 def quad_speeds(fl, fr, rl, rr):
-    """Top view where each rotor's circle size and colour shows its speed."""
+    """Top view where each rotor's circle size and color shows its speed."""
     motors = {"fl": (-34, -27), "fr": (34, -27), "rl": (-34, 27), "rr": (34, 27)}
     speeds = {"fl": fl, "fr": fr, "rl": rl, "rr": rr}
     grp = g()
     grp.add(g(*[line(mx * 0.3, my * 0.5, mx, my) for mx, my in motors.values()],
               stroke=P["line"], stroke_width=5, stroke_linecap="round"))
     for key, (mx, my) in motors.items():
-        r, colour = SPEED[speeds[key]]
-        grp.add(circle(mx, my, r, fill=colour, stroke=P["line"],
+        r, color = SPEED[speeds[key]]
+        grp.add(circle(mx, my, r, fill=color, stroke=P["line"],
                        stroke_width=1.2))
     grp.add(rect(-12, -22, 24, 44, rx=6, fill=P["body"], stroke=P["line"],
                  stroke_width=1.5))
@@ -186,9 +186,9 @@ def build_thrust() -> Figure:
     fig.add(text(140, ly, "Rotor speed:", font_size=13, fill=P["muted"]))
     for i, (key, name) in enumerate((("slow", "slower"), ("same", "normal"),
                                      ("fast", "faster"))):
-        r, colour = SPEED[key]
+        r, color = SPEED[key]
         x = 258 + i * 132
-        fig.add(circle(x, ly - 5, r * 0.62, fill=colour, stroke=P["line"],
+        fig.add(circle(x, ly - 5, r * 0.62, fill=color, stroke=P["line"],
                        stroke_width=1.2))
         fig.add(text(x + 20, ly, name, font_size=13, fill=P["muted"]))
     return fig

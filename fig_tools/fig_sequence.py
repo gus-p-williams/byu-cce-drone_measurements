@@ -6,7 +6,7 @@ Usage:
 
 Outputs:
     fig10_flight_sequence.svg   nine steps, grouped into three phases
-    fig11_practice_pattern.svg  the box pattern to practise first
+    fig11_practice_pattern.svg  the box pattern to practice first
 """
 from __future__ import annotations
 
@@ -174,7 +174,7 @@ def build_sequence() -> Figure:
 # ---------------------------------------------------------------------------
 def build_practice() -> Figure:
     fig = Figure(900, 470,
-                 "Figure 11: The box, the first pattern to practise",
+                 "Figure 11: The box, the first pattern to practice",
                  "Fly it slowly, one side at a time, pausing in a hover at "
                  "every corner.")
 

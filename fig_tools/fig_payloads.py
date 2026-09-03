@@ -85,7 +85,7 @@ def icon_gas():
 
 
 PAYLOADS = (
-    (icon_camera, "Standard camera", ("colour photos and video,", "what your eye sees")),
+    (icon_camera, "Standard camera", ("color photos and video,", "what your eye sees")),
     (icon_thermal, "Thermal", ("surface temperature,", "shown as an image")),
     (icon_multispectral, "Multispectral", ("light beyond visible,", "such as near infrared")),
     (icon_lidar, "LiDAR", ("distance, by timing", "laser pulses")),

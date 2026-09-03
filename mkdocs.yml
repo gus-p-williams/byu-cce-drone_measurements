@@ -19,6 +19,7 @@ markdown_extensions:
     - pymdownx.tasklist:
         custom_checkbox: false
         clickable_checkbox: true
+    - pymdownx.details
     - pymdownx.emoji:
 
 theme:

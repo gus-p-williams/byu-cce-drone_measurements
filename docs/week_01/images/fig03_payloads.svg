@@ -14,7 +14,7 @@
     </g>
   </g>
   <text x="100" y="198" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">Standard camera</text>
-  <text x="100" y="226" text-anchor="middle" font-size="12" fill="#555555">colour photos and video,</text>
+  <text x="100" y="226" text-anchor="middle" font-size="12" fill="#555555">color photos and video,</text>
   <text x="100" y="243" text-anchor="middle" font-size="12" fill="#555555">what your eye sees</text>
   <rect x="195.0" y="70" width="160" height="208" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
   <g transform="translate(275,132)">

@@ -258,7 +258,7 @@ def rotation_arrow(cx: float, cy: float, r: float, clockwise: bool = True,
 def aircraft_top(show_rotation: bool = True, prop_style: str = "blades"):
     """A generic quadcopter seen from above, nose pointing up.
 
-    Origin (0, 0) is the centre of the aircraft. Roughly 400 wide by 330 tall
+    Origin (0, 0) is the center of the aircraft. Roughly 400 wide by 330 tall
     including the propeller discs.
 
     prop_style: "blades" draws a disc plus a two-blade propeller

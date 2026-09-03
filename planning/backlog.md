@@ -29,6 +29,14 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 - [ ] `docs/requirements.txt` is published to the site root, because MkDocs copies every file in
       `docs/`. Harmless, but worth knowing before putting anything else in `docs/`.
 
+## Week 1 follow-ups
+
+- [ ] Confirm the three pre-class videos in `week_01/flight_basics.md`. They were restored from
+      `DJI_Mini_Resources.md`, which commit `d173bd4` deleted during the Week 1 reorganization, so
+      they may have been dropped on purpose.
+- [ ] Decide whether the Check Your Understanding answers should stay visible on the public site.
+      They are collapsed behind a toggle, not hidden.
+
 ## Ideas
 
 - [ ] Add a course-wide glossary page for acronyms (UAS, SfM, GSD, AGL, VLOS, GCP, RTK).
@@ -43,11 +51,10 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - [x] Phase 0 — figure style approved; `fig_tools/` toolkit and generic controller figure built.
 - [x] Phase 1 — page skeleton, flight checklist landing page, post-flight list, nav fix,
       clean strict build. Awaiting instructor review of the checklist overview prose.
-- [ ] Phase 2 — sections, each as figure then caption. Done: aircraft parts (fig 1), how a drone
-      flies (figs 4-6), the controller (fig 7), stick controls (figs 8-9). Remaining: payloads
-      (fig 3), basic flight (figs 10-11), automated functions (figs 12-15), rules, check your
-      understanding, resources. Figure 2 (underside view) still optional.
-- [ ] Phase 3 — linked pages: common flight issues, feature-availability table, checklist cross-links.
+- [x] Phase 2 — all sections written, sixteen figures. Figure 2 (an underside view of the
+      aircraft) was planned but not needed; add it only if the parts table proves thin in class.
+- [ ] Phase 3 — linked pages: a common flight issues table, and a feature-availability matrix
+      (toy / consumer / professional). Checklist cross-links are already in place both ways.
 - [ ] Phase 4 — optional animation on three figures, full read-through, backlog update.
 
 ## Done
@@ -57,9 +64,10 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - 2026-09-03 — Built `fig_tools/` (SVG toolkit, reusable parts, controller figure script) and
   recorded the figure style rules in `instructions.md`. Folder named `fig_tools`, not `figures`,
   so it is not mistaken for a folder of images.
-- 2026-09-03 — Week 1 Flight Basics: aircraft parts, how a drone flies, the controller, and
-  stick controls written, with seven generated figures. Automated Flight Functions moved below
-  A Basic Flight so students meet manual flying first.
+- 2026-09-03 — Week 1 Flight Basics finished: all sections written with sixteen generated
+  figures, plus Check Your Understanding with collapsible answers and a Resources section.
+  Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
+  Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
 - 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
   `week_01/flight_basics.md`. Added `flight_check_list/index.md`, filled the empty post-flight
   checklist, and removed the dangling "links below" promise from both checklist pages. The strict

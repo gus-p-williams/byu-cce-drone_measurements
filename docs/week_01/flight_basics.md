@@ -149,7 +149,7 @@ and switches are named differently from one manufacturer to the next.*
 ## Stick Controls
 
 Nearly every ready-to-fly drone uses the **Mode 2** layout. The left stick handles altitude and
-heading, and the right stick moves the aircraft over the ground. Both sticks spring back to centre
+heading, and the right stick moves the aircraft over the ground. Both sticks spring back to center
 when you let go, and the aircraft simply holds position.
 
 ![What each stick does](images/fig08_stick_controls.svg){ width="100%" }
@@ -172,7 +172,7 @@ stays where it is.*
     controls are far more sensitive than they look, and a gentle push is almost always enough.
 
 !!! note "The flight mode changes how the sticks feel"
-    Many drones have two or three flight modes, commonly labelled **Cine**, **Normal**, and
+    Many drones have two or three flight modes, commonly labeled **Cine**, **Normal**, and
     **Sport**, though some manufacturers use names such as Beginner and Normal instead. The same
     stick movement produces a different result in each one:
 
@@ -224,8 +224,8 @@ about which stick to move. When several laps feel boring, you are ready to fly s
 !!! tip "Hover before you go anywhere"
     After take-off, hold a hover at about eye level for a few seconds and try a small input on each
     stick. You are checking that the aircraft responds the way you expect and is not drifting. If
-    something feels wrong, land while the drone is still two metres away and at head height, not
-    when it is a hundred metres out.
+    something feels wrong, land while the drone is still two meters away and at head height, not
+    when it is a hundred meters out.
 
 ---
 
@@ -298,17 +298,121 @@ steer around anything on the way.*
 
 ## Rules in One Screen
 
-*[Reuse Figure 13 (visual line of sight) and Figure 14 (400 ft AGL) from
-[Week 5](../week_05/FAA_Exam_Planning_and_Overview.md).]*
+Flying is regulated, and the rules exist because a two-pound object falling from 300 feet is
+dangerous. Three of them are easy to break without noticing.
+
+![The rules that apply on every flight](images/fig16_rules.svg){ width="100%" }
+
+*Figure 16: Line of sight, the altitude limit, and people. These three catch out more new pilots
+than everything else combined.*
+
+The full set, in short:
+
+- Keep the aircraft **within your own unaided sight** at all times. Binoculars and the camera view
+  do not count.
+- Stay at or below **400 ft (120 m) above the ground**.
+- **Never fly over people** who are not part of your operation, or over moving vehicles.
+- **Daylight only**, one aircraft at a time, and never from a moving vehicle.
+- **Check the airspace** before you fly. Near an airport you need authorization, not just good
+  intentions.
+- **Register the aircraft** if it weighs 250 g or more, and comply with **Remote ID**.
+- Any flight connected to work, study, or business needs a **Part 107 Remote Pilot Certificate**.
+
+!!! warning "Course work counts as a business purpose"
+    Flying for a class project, research, or anything a client might pay for falls under Part 107,
+    not the recreational rules, even when nobody is paying you. Week 5 covers the certificate and
+    the exam in full.
+
+[Week 5 covers all of this in detail](../week_05/FAA_Exam_Planning_and_Overview.md), including
+airspace, weather, and the Part 107 exam itself.
 
 ---
 
 ## Check Your Understanding
 
-*[Five questions, including the numbered controller figure used for the homework.]*
+**1. Name each numbered control.**
+
+![Controller with numbered controls](images/fig07b_controller_numbered.svg){ width="100%" }
+
+??? note "Answers"
+    1. Left stick
+    2. Right stick
+    3. Power button
+    4. Battery level lights
+    5. Return to Home and flight pause
+    6. Flight mode switch
+    7. Gimbal tilt dial
+    8. Shutter and record button
+    9. Antennas
+    10. Phone holder or built-in screen
+    11. Charging and data port
+
+**2.** The drone is hovering with its nose pointed back at you. You push the right stick to the
+right. Which way does the aircraft move, from where you are standing?
+
+??? note "Answer"
+    To **your left**. Stick directions are relative to the nose of the aircraft, and the nose is
+    facing you, so the aircraft's right is your left.
+
+**3.** To turn the aircraft to the right, which motors speed up, and why does it not tip over?
+
+??? note "Answer"
+    One **diagonal pair** speeds up, the pair that spins counter-clockwise. Because they are on
+    opposite corners, the extra lift is balanced across the aircraft, so it stays level. What
+    changes is the twisting force, and the aircraft rotates.
+
+**4.** You lose the controller signal at 90 m altitude. There is a 100 m tree line between you and
+the aircraft. What does the aircraft do, and what single setting decides whether it gets home?
+
+??? note "Answer"
+    Losing signal triggers **Return to Home**. The aircraft climbs to its Return to Home altitude,
+    flies a straight line back, and descends. The setting that matters is that **Return to Home
+    altitude**: if it is below the height of the tree line, the aircraft flies straight into it.
+
+**5.** Why does it matter where you stand when the drone calibrates its compass on a construction
+site?
+
+??? note "Answer"
+    Rebar, steel decking, vehicles, and buried services distort the magnetic field. A compass
+    calibrated over them gives the aircraft a wrong idea of which way it is facing, which can send
+    it flying the wrong direction, including during Return to Home.
+
+**6.** Which parts of the aircraft matter most to the quality of an engineering measurement, and
+why?
+
+??? note "Answer"
+    The **camera** sets how much detail each photo holds, the **gimbal** keeps that detail sharp
+    and level, and the **satellite receiver** records where each photo was taken. Without all
+    three, the images may look fine but cannot be turned into a defensible measurement.
 
 ---
 
 ## Resources
 
-*[Pre-class videos, plus manufacturer references for the controllers used in class.]*
+### Watch before class
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ccep1cKgb2M" title="Drone flight basics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/euDo4vXLvkY" title="Flying a small drone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6_ucCKFJUCU?start=275" title="Safe drone flying zones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Watch the third video until 14:32.
+
+### Manuals and references
+
+Every drone is different, and the manual is the only place with the right answer for the aircraft in
+your hands.
+
+- [DJI remote controller button functions](https://support.dji.com/help/content?customId=en-us03400006567&spaceId=34&re=US&lang=en){target="_blank"} — what each control does on the DJI controllers
+- [Holy Stone manuals](https://www.firstquadcopter.com/drone-manuals/free-holy-stone-drone-manuals-pdf-download-guides-for-all-models/){target="_blank"} — PDFs for the Holy Stone models
+- [FAA Remote Pilot Study Guide](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/media/remote_pilot_study_guide.pdf){target="_blank"} — the official study guide behind Week 5
+
+### Next steps
+
+- [Pre-Flight Checklist](../flight_check_list/pre_flight/pre_general.md) and
+  [Post-Flight Checklist](../flight_check_list/post_flight/post_general.md) — what to run through
+  on site
+- [Week 5: FAA Part 107](../week_05/FAA_Exam_Planning_and_Overview.md) — the rules in full, and the
+  certificate you will need
+- [Week 6: Sensors](../week_06/LiDAR.md) — thermal, multispectral, and LiDAR payloads in detail
