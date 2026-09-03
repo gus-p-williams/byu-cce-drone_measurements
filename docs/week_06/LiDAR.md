@@ -32,10 +32,23 @@ Below are links to several LiDAR visualizations. Notice the platform motion and 
 - **Canopy Height Model (CHM):** The difference between DSM and DTM, showing actual tree heights.
 - **Intensity Imagery:** A raster showing how strongly different materials reflected the laser.
 
-## Where it earns its cost on a project
+## Where it earns its place on a project
 
-LiDAR is expensive. Reach for it when one of its specific advantages matters, and use photographs
-when it does not.
+Neither sensor is simply better, faster, or cheaper. The trades run in different directions at once,
+and which one wins depends on the site and on what is actually scarce.
+
+| | Photogrammetry | LiDAR |
+|---|---|---|
+| **Equipment** | The camera is already on the aircraft | A dedicated sensor, and a heavier aircraft to carry it |
+| **Collection** | Needs daylight, texture, and high overlap | Fewer constraints, so it can fly faster and after dark |
+| **Processing** | Hours of matching and solving before you have anything | Points come out almost directly, with far less compute |
+| **Vegetation** | Sees the top of the canopy | Reaches the ground through it |
+| **Thin features** | Meshed away | Survive |
+| **Color** | Photo-realistic | Limited, unless a camera flies alongside |
+
+The sticker price is higher and the time cost is lower. On a project where staff hours or the
+schedule are the binding constraint rather than the equipment budget, LiDAR can be the **cheaper**
+answer, not just the more capable one.
 
 | Use case | What you produce | Why LiDAR rather than photos |
 |----------|------------------|------------------------------|
@@ -47,10 +60,13 @@ when it does not.
 | **Slope and embankment monitoring** | Repeat surfaces, differenced over time | Millimeter-to-centimeter change detection through vegetation, which is where slope movement usually hides |
 
 !!! tip "Stockpiles are the honest case"
-    Both methods measure a clean, open stockpile to within a couple of centimeters, and photographs
-    are far cheaper. LiDAR wins when the pile is overgrown, the site is deep in shadow, or you need
-    the survey at night while the plant is idle. If someone specifies LiDAR for bare aggregate piles
-    in good light, ask what it is buying.
+    Both methods measure a clean, open stockpile to within a couple of centimeters, so the choice is
+    not about accuracy. If you own a camera drone and the pile is clear, photographs get you there
+    with no extra hardware. If you own LiDAR, or you need the number before the end of the day
+    rather than after an overnight processing run, LiDAR gets you there sooner.
+
+    "Which do we already have, and what is short this week: money or time?" is a legitimate
+    engineering question, and it will not always have the same answer.
 
 Other fields use LiDAR heavily for their own reasons: archaeology to find earthworks under forest,
 forestry to measure canopy height and biomass. Both rest on the same trick you need for drainage,

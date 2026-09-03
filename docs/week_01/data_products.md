@@ -61,12 +61,14 @@ only when the question needs it.
 
 ### Photographs or LiDAR for a 3D model?
 
-Both produce a point cloud and a 3D model, so the choice is about the site and the budget, not
-about which is "better".
+Both produce a point cloud and a 3D model. Neither is simply better: the equipment costs more for
+LiDAR while the time costs more for photographs, so the answer depends on the site and on which of
+the two is short.
 
 | | From photographs | From LiDAR |
 |---|---|---|
-| **Cost** | Low. The camera is already there | High. A dedicated sensor and a heavier aircraft |
+| **Equipment cost** | Low. The camera is already there | High. A dedicated sensor and a heavier aircraft |
+| **Time cost** | Hours of processing to solve the geometry | Much less. The points come out almost directly |
 | **Needs** | Daylight and visible texture | Neither. It works at night and over plain surfaces |
 | **Vegetation** | Sees the top of the canopy only | Pulses slip between leaves and reach the ground |
 | **Result** | Full color, looks like the real thing | Precise geometry, limited or no color |
