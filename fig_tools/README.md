@@ -13,9 +13,17 @@ site, including scripts.
 
 | File | Purpose |
 |------|---------|
-| `svgkit.py` | Tiny SVG builder, shared palette and fonts, callout helper, optional PNG render through Inkscape |
-| `parts.py` | Reusable drawings: controller, and later the aircraft and stick glyph, each with anchor points for callouts |
-| `fig_*.py` | One script per figure or figure family. Each writes to `review/` by default |
+| `svgkit.py` | Tiny SVG builder, shared palette and type sizes, arrows, callout helper, optional PNG render through Inkscape |
+| `parts.py` | Reusable drawings: controller, quadcopter (top view), mini aircraft icons, control sticks, rotation arrows |
+| `fig_aircraft.py` | Figure 1, parts of a quadcopter, labeled and numbered |
+| `fig_controller.py` | Figure 7, the controller, labeled and numbered |
+| `fig_sticks.py` | Figures 8 and 9, stick controls and nose-in reversal |
+| `fig_flight.py` | Figures 4, 5 and 6, rotation axes, lift against weight, differential thrust |
+
+Each `fig_*.py` writes to `review/` by default and to a docs images folder with `--out`.
+
+Anything drawn more than once belongs in `parts.py`, so the same aircraft and the same controller
+appear in every figure. Change a part there and every figure that uses it updates on the next run.
 
 No third-party packages are required. Any Python 3.8 or newer works.
 

@@ -43,8 +43,10 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - [x] Phase 0 — figure style approved; `fig_tools/` toolkit and generic controller figure built.
 - [x] Phase 1 — page skeleton, flight checklist landing page, post-flight list, nav fix,
       clean strict build. Awaiting instructor review of the checklist overview prose.
-- [ ] Phase 2 — sections, each as figure then caption: aircraft parts, controller, stick controls,
-      how it flies, automated functions, basic flight, payloads and rules.
+- [ ] Phase 2 — sections, each as figure then caption. Done: aircraft parts (fig 1), how a drone
+      flies (figs 4-6), the controller (fig 7), stick controls (figs 8-9). Remaining: payloads
+      (fig 3), basic flight (figs 10-11), automated functions (figs 12-15), rules, check your
+      understanding, resources. Figure 2 (underside view) still optional.
 - [ ] Phase 3 — linked pages: common flight issues, feature-availability table, checklist cross-links.
 - [ ] Phase 4 — optional animation on three figures, full read-through, backlog update.
 
@@ -55,6 +57,9 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - 2026-09-03 — Built `fig_tools/` (SVG toolkit, reusable parts, controller figure script) and
   recorded the figure style rules in `instructions.md`. Folder named `fig_tools`, not `figures`,
   so it is not mistaken for a folder of images.
+- 2026-09-03 — Week 1 Flight Basics: aircraft parts, how a drone flies, the controller, and
+  stick controls written, with seven generated figures. Automated Flight Functions moved below
+  A Basic Flight so students meet manual flying first.
 - 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
   `week_01/flight_basics.md`. Added `flight_check_list/index.md`, filled the empty post-flight
   checklist, and removed the dangling "links below" promise from both checklist pages. The strict
