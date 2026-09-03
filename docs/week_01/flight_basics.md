@@ -113,6 +113,19 @@ stays where it is.*
     Keep the nose pointed away from you while you are learning, and use small stick movements. The
     controls are far more sensitive than they look, and a gentle push is almost always enough.
 
+!!! note "The flight mode changes how the sticks feel"
+    Many drones have two or three flight modes, commonly labelled **Cine**, **Normal**, and
+    **Sport**, though some manufacturers use names such as Beginner and Normal instead. The same
+    stick movement produces a different result in each one:
+
+    - **Cine** slows everything down and softens the response, for smooth video.
+    - **Normal** is the everyday setting and what you will use for most measurement flights.
+    - **Sport** raises the speed limit and makes the aircraft respond sharply. On many models it
+      also **turns obstacle sensing off** and lengthens the braking distance.
+
+    Check which mode the switch is in before you take off. More on this in
+    [Automated Flight Functions](#automated-flight-functions) below.
+
 ---
 
 ## Automated Flight Functions
