@@ -303,18 +303,25 @@ dangerous. Three of them are easy to break without noticing.
 
 ![The rules that apply on every flight](images/fig16_rules.svg){ width="100%" }
 
-*Figure 16: Line of sight, the altitude limit, and people. These three catch out more new pilots
-than everything else combined.*
+*Figure 16: Keep the aircraft in sight and below the altitude limit, and know the three things you
+must never fly over or into.*
 
-The full set, in short:
+**The three you must never do**
+
+- **Never over people** who are not part of your operation. Not a crowd, not a single bystander,
+  not the rest of your crew standing across the site.
+- **Never over moving traffic.** Roads, rail, and waterways in use are all excluded, and a stalled
+  line of traffic can start moving while you are above it.
+- **Never in airspace you are not authorized for.** Controlled airspace around airports, restricted
+  areas, and temporary flight restrictions all exclude you unless you hold a specific
+  authorization. Check before every flight, not once per site.
+
+**The rest, in short**
 
 - Keep the aircraft **within your own unaided sight** at all times. Binoculars and the camera view
   do not count.
 - Stay at or below **400 ft (120 m) above the ground**.
-- **Never fly over people** who are not part of your operation, or over moving vehicles.
 - **Daylight only**, one aircraft at a time, and never from a moving vehicle.
-- **Check the airspace** before you fly. Near an airport you need authorization, not just good
-  intentions.
 - **Register the aircraft** if it weighs 250 g or more, and comply with **Remote ID**.
 - Any flight connected to work, study, or business needs a **Part 107 Remote Pilot Certificate**.
 
