@@ -105,22 +105,45 @@ reconstructions go wrong.
 
 ## From points to products
 
-Once the cameras and the tie points agree, the rest is mechanical.
+Once the cameras and the tie points agree, the rest is mechanical. Each step trades some information away for something easier to use.
 
 ![The reconstruction pipeline](images/w04_fig03_pipeline.svg){ width="100%" }
 
 *Figure 3: A sparse cloud of tie points is thickened into a dense cloud, meshed into a surface, and
 covered with the original photographs.*
 
-1. **Feature detection and matching.** Find distinctive points in each photo and match them between
-   photos.
-2. **Sparse reconstruction.** Work out camera positions and a skeleton of 3D tie points.
-3. **Bundle adjustment.** Adjust every camera position and every point together until the whole set
-   is as consistent as it can be. This is the step that makes the model accurate.
-4. **Dense reconstruction.** Using the solved camera positions, match almost every pixel to build a
-   dense point cloud.
-5. **Mesh and texture.** Build a surface over the points and drape the photographs over it.
-6. **Georeferencing.** Tie the result to real-world coordinates using GPS and ground control.
+### What actually happens at each step
+
+**Sparse to dense.** The sparse cloud only has points where the software found something
+distinctive, so it is mostly corners and edges. Now that it knows where every camera was, it goes
+back to the photos and works on *every* pixel. The trick is that once the camera positions are
+known, a pixel's match in another photo must lie along a single known line, so a search of the whole
+image becomes a search along one line. That is what makes matching millions of points possible at
+all. Thousands of points become millions.
+
+**Dense to mesh.** A point cloud is samples, not surfaces. Meshing stretches a continuous skin of
+triangles over the points, bridging small gaps and deciding what is solid. Noise gets smoothed here,
+and thin things such as railings, wires, and fence posts often vanish, because too few points landed
+on them to define a surface.
+
+**Mesh to textured model.** Each triangle is colored using whichever photo saw it best: most
+face-on, least blurred, least shadowed. This adds no geometry at all. It is what makes the model
+recognizable rather than what makes it accurate.
+
+**Surface to orthophoto.** Every photo is a perspective view, so buildings lean outward from the
+center of the frame and the scale changes across it. Orthorectification projects each pixel onto the
+surface the software just built, then re-renders the scene as if photographed from directly
+overhead, everywhere at once. Every part of the result is at the same scale, and that is precisely
+what makes it something you can measure on.
+
+**Surface to DSM and DTM.** The surface is sampled onto a regular grid, storing one height per cell
+instead of a picture. Keep everything and you have a **DSM**. Classify the cells, remove the ones
+that are vegetation or structures, and interpolate the ground underneath, and you have a **DTM**.
+
+!!! note "Georeferencing runs through all of it"
+    None of the above puts the model anywhere in particular. GPS positions and ground control points
+    are what tie the whole reconstruction to real coordinates, and that happens during the solve
+    rather than at the end.
 
 See [Aerial Measurement Products](../week_01/data_products.md) for what each of those outputs is
 used for.
