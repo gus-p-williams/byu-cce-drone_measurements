@@ -109,8 +109,8 @@ Once the cameras and the tie points agree, the rest is mechanical. Each step tra
 
 ![The reconstruction pipeline](images/w04_fig03_pipeline.svg){ width="100%" }
 
-*Figure 3: A sparse cloud of tie points is thickened into a dense cloud, meshed into a surface, and
-covered with the original photographs.*
+*Figure 3: The same building at four stages. A sparse cloud of tie points is thickened into a dense
+cloud, meshed into a surface, and covered with the original photographs.*
 
 ### What actually happens at each step
 
@@ -126,6 +126,18 @@ triangles over the points, bridging small gaps and deciding what is solid. Noise
 and thin things such as railings, wires, and fence posts often vanish, because too few points landed
 on them to define a surface.
 
+It also errs the other way. Where two things are near each other but not actually joined, such as a
+tree beside a wall, the gap between two buildings, or the space under a railing, the mesher can
+bridge straight across and invent a surface that is not there. Models like this look shrink-wrapped
+or webbed, and it is obvious once you know to look for it.
+
+!!! tip "If the mesh looks webbed, change the tolerance"
+    Processing software exposes settings for how far it is willing to reach when joining points.
+    Tighten them and the mesh follows the points more strictly, which removes the false webbing at
+    the cost of leaving more genuine holes. Loosen them and you get a smoother, more complete
+    surface that may be partly invented. Neither setting is correct in general; it depends on
+    whether you would rather have gaps you can see or surfaces you cannot trust.
+
 **Mesh to textured model.** Each triangle is colored using whichever photo saw it best: most
 face-on, least blurred, least shadowed. This adds no geometry at all. It is what makes the model
 recognizable rather than what makes it accurate.
@@ -139,6 +151,11 @@ what makes it something you can measure on.
 **Surface to DSM and DTM.** The surface is sampled onto a regular grid, storing one height per cell
 instead of a picture. Keep everything and you have a **DSM**. Classify the cells, remove the ones
 that are vegetation or structures, and interpolate the ground underneath, and you have a **DTM**.
+
+![From the surface to the deliverables](images/w04_fig03b_to_products.svg){ width="100%" }
+
+*Figure 3b: The orthophoto and the DSM are the same surface read two different ways, one as a
+picture and one as a grid of heights.*
 
 !!! note "Georeferencing runs through all of it"
     None of the above puts the model anywhere in particular. GPS positions and ground control points

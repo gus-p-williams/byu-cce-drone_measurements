@@ -22,9 +22,6 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 
 ## Housekeeping
 
-- [ ] `docs/week_04/images/w04_fig03_pipeline.svg` is the one Week 4 figure not redrawn. It still
-      uses the old style: no title, different palette, no house background. Redraw it in
-      `fig_tools/` when convenient.
 
 - [ ] Week 6 uses raw `<img src="../images/...">` tags in seven places. MkDocs does not rewrite
       paths inside raw HTML, so these work only because clean URLs are on. Convert them to Markdown
@@ -106,6 +103,8 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
   figures, plus Check Your Understanding with collapsible answers and a Resources section.
   Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
   Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
+- 2026-09-03 — Redrew Week 4 Figure 3 around one building at four stages, and added Figure 3b
+  for where the orthophoto and DSM come from.
 - 2026-09-03 — Rewrote both Week 4 pages around the decisions a student actually makes, with nine
   figures. Six are new (parallax, overlap, overlap cost, GSD, nadir/oblique, accuracy) and three
   replaced older drawings. Algorithm names moved into a collapsed appendix.

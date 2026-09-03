@@ -1,15 +1,17 @@
-"""Three redraws of the Week 4 reconstruction pipeline figure, for review.
+"""Week 4 Figures 3 and 3b: the reconstruction pipeline and its outputs.
 
-The figure it replaces shows three unrelated scatters of dots, so nothing tells
-you the stages are the same scene at increasing density. All three options here
-draw one recognizable building and put it through the stages, which is the whole
-point of the figure.
+Both draw one recognizable building rather than an abstract scatter, because
+the point of Figure 3 is that every stage is the *same scene* at a different
+density. The figure these replaced used unrelated dots at each stage, so nothing
+carried that.
 
-The standard progression in the literature is four stages, not three: sparse
-cloud, dense cloud, mesh, then textured mesh. All three options show four.
+Four stages, not three: sparse cloud, dense cloud, mesh, textured model. A grid
+layout and a version carrying processing cost were also drawn and set aside;
+they are in the history if the page layout ever changes.
 
 Usage:
-    python fig_tools/fig_pipeline_options.py --png
+    python fig_tools/fig_pipeline.py --png
+    python fig_tools/fig_pipeline.py --out docs/week_04/images
 """
 from __future__ import annotations
 
@@ -146,13 +148,10 @@ STAGES = (
     ("textured", "Textured model", "the photos draped back on",
      "what you show a client"),
 )
-COSTS = ("seconds, a few MB", "hours, several GB", "minutes", "minutes")
-
-
 # ---------------------------------------------------------------------------
-# Option A: one row of four
+# Figure 3: one row of four stages
 # ---------------------------------------------------------------------------
-def build_option_a() -> Figure:
+def build_pipeline() -> Figure:
     fig = Figure(900, 400, "From matched points to a model",
                  "The same building at each stage. Only the amount of detail "
                  "changes.")
@@ -170,77 +169,6 @@ def build_option_a() -> Figure:
             fig.add(arrow(cx + w / 2 + 5, top + h / 2, cx + w / 2 + 22,
                           top + h / 2, color="#b6c2cc", width=3, head=9))
     fig.add(text(450, 376,
-                 "Every stage after the first is derived. Get the tie points "
-                 "wrong and nothing downstream can recover.",
-                 text_anchor="middle", font_size=13, font_style="italic",
-                 fill=P["muted"]))
-    return fig
-
-
-# ---------------------------------------------------------------------------
-# Option B: a two by two grid, bigger
-# ---------------------------------------------------------------------------
-def build_option_b() -> Figure:
-    fig = Figure(900, 640, "From matched points to a model",
-                 "The same building at each stage, large enough to see what "
-                 "actually changes.")
-    w, h = 400, 250
-    for i, (stage, title, sub, count) in enumerate(STAGES):
-        cx = 250 + (i % 2) * 400
-        top = 84 + (i // 2) * 268
-        fig.add(rect(cx - w / 2, top, w, h, **CARD))
-        fig.add(circle(cx - w / 2 + 26, top + 26, 14, fill=P["accent"]))
-        fig.add(text(cx - w / 2 + 26, top + 31, i + 1, text_anchor="middle",
-                     font_size=13, font_weight="bold", fill=P["white"]))
-        fig.add(translate(cx + 40, top + 112, building(stage, 1.15)))
-        fig.add(text(cx - 122, top + 92, title, font_size=15,
-                     font_weight="bold", fill=P["ink"]))
-        fig.add(text(cx - 122, top + 114, sub, font_size=11.5,
-                     fill=P["muted"]))
-        fig.add(text(cx - 122, top + 138, count, font_size=11.5,
-                     font_style="italic", fill=P["accent"]))
-    fig.add(text(450, 618,
-                 "Every stage after the first is derived from the one before.",
-                 text_anchor="middle", font_size=13, font_style="italic",
-                 fill=P["muted"]))
-    return fig
-
-
-# ---------------------------------------------------------------------------
-# Option C: option A, plus what each stage costs
-# ---------------------------------------------------------------------------
-def build_option_c() -> Figure:
-    fig = Figure(900, 480, "From matched points to a model",
-                 "The same building at each stage, and what each stage costs "
-                 "you in time and disk.")
-    cols, w, h, top = (128, 340, 552, 764), 176, 252, 84
-    for i, (cx, (stage, title, sub, count)) in enumerate(zip(cols, STAGES)):
-        fig.add(rect(cx - w / 2, top, w, h, **CARD))
-        fig.add(translate(cx, top + 96, building(stage, 0.86)))
-        fig.add(text(cx, top + 176, title, text_anchor="middle", font_size=14,
-                     font_weight="bold", fill=P["ink"]))
-        fig.add(text(cx, top + 198, sub, text_anchor="middle", font_size=11,
-                     fill=P["muted"]))
-        fig.add(text(cx, top + 222, count, text_anchor="middle", font_size=11,
-                     font_style="italic", fill=P["accent"]))
-        if i < 3:
-            fig.add(arrow(cx + w / 2 + 5, top + h / 2, cx + w / 2 + 22,
-                          top + h / 2, color="#b6c2cc", width=3, head=9))
-
-    by = 372
-    fig.add(rect(30, by - 26, 840, 66, rx=8, fill="#f2f5f8",
-                 stroke="#dde3e9", stroke_width=1.5))
-    fig.add(text(52, by, "Typical cost", font_size=12.5, font_weight="bold",
-                 fill=P["muted"]))
-    for cx, cost in zip(cols, COSTS):
-        fig.add(text(cx, by, cost, text_anchor="middle", font_size=12,
-                     fill=P["ink"]))
-    fig.add(text(450, by + 24,
-                 "The dense step is where the time goes, and it is the step "
-                 "your overlap and altitude choices control.",
-                 text_anchor="middle", font_size=11.5, fill=P["muted"]))
-
-    fig.add(text(450, 458,
                  "Every stage after the first is derived. Get the tie points "
                  "wrong and nothing downstream can recover.",
                  text_anchor="middle", font_size=13, font_style="italic",
@@ -323,11 +251,11 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    for builder, slug in ((build_option_a, "w04_fig03_option_a_strip"),
-                          (build_option_b, "w04_fig03_option_b_grid"),
-                          (build_option_c, "w04_fig03_option_c_with_cost"),
-                          (build_products_branch, "w04_fig03b_to_products")):
-        fname = os.path.join(args.out, slug + ".svg")
+    for builder, number, slug, variant in (
+        (build_pipeline, 3, "pipeline", ""),
+        (build_products_branch, 3, "to_products", "b"),
+    ):
+        fname = os.path.join(args.out, figure_name(4, number, slug, variant))
         builder().save(fname)
         print("wrote", fname)
         if args.png:
