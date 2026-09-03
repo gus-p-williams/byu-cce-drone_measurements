@@ -2,7 +2,7 @@
 
 ![Students flying on campus](images/w01_overview_photo_placeholder.svg){ width="100%" }
 
-You will fly a drone in the first week of this class. By the end of the semester you will be able to
+You will fly a drone in the first lab of this class. By the end of the semester you will be able to
 put one over a construction site, turn what it saw into a map, measure something off that map, and
 defend the number when a client asks where it came from.
 
@@ -27,6 +27,38 @@ That last part is what makes this an engineering course rather than a flying cou
 Each week is a short lecture followed by something you actually do: a flight, a lab, or a piece of
 software. The [flight checklists](../flight_check_list/index.md) and
 [Flight Basics](flight_basics.md) are there whenever you need them.
+
+---
+
+## Before you fly: the TRUST certificate
+
+Anyone flying a drone recreationally in the United States has to pass **TRUST**, The Recreational
+UAS Safety Test. You need yours before the first lab, and you will not be allowed to fly without it.
+
+It is not an exam in any meaningful sense. It is a short set of questions with a bit of reading
+attached, and it is designed so that everyone passes.
+
+| | |
+|---|---|
+| Cost | Free |
+| Where | Online, through any FAA-approved administrator |
+| How long | About 30 minutes |
+| Can you fail it? | No. Miss a question and it shows you the answer, then asks again |
+| Does it expire? | No |
+| Do you carry it? | Yes, whenever you fly |
+
+It covers the basics you would want any pilot near you to know: where you may and may not fly,
+staying below 400 feet, keeping the aircraft in sight, giving way to crewed aircraft, and when a
+drone has to be registered.
+
+!!! warning "Save your certificate when you finish"
+    The FAA does not keep a copy. The certificate is issued to you once, and if you lose it your
+    only option is to take the test again. Download the PDF, then email it to yourself.
+
+    [Take the TRUST test](https://www.faa.gov/uas/recreational_flyers/knowledge_test_updates){target="_blank"}
+
+TRUST covers the flying you do in this class. **Part 107** is the separate certificate you need to
+fly for work, and [Week 5](../week_05/FAA_Exam_Planning_and_Overview.md) is devoted to earning it.
 
 ---
 
@@ -81,6 +113,8 @@ are answering.*
 
 ## What you need
 
+- **Your TRUST certificate**, before the first lab. See
+  [above](#before-you-fly-the-trust-certificate). This one is not optional.
 - **Nothing to buy.** Aircraft, controllers, and batteries are provided.
 - **A laptop** that can run QGIS, which is free.
 - **Closed-toe shoes and a jacket.** Some of this class happens outside.

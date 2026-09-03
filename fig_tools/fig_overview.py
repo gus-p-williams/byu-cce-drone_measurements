@@ -117,7 +117,7 @@ WEEKS = (
 
 def build_semester() -> Figure:
     fig = Figure(900, 440, "Six weeks, start to finish",
-                 "One hour a week. You fly in the first week, not the last.")
+                 "One hour a week, and you fly in the first lab rather than the last week.")
     cols, w, h = (155, 450, 745), 270, 158
     for i, (num, icon, title, sub) in enumerate(WEEKS):
         cx = cols[i % 3]
