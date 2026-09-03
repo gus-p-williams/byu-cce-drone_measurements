@@ -45,7 +45,7 @@ Instructor decision, September 2026: keep the current images for now and revisit
       names; the Wikimedia-named copies are never displayed. Also unused:
       `Effigy_mounds_lidar.jpg`, `Infrared_thermal_imaging_during_a_yacht_survey.jpg`,
       `LIDAR_field_yield.jpg`, `Tank-DSM-filled.webp`, and both files in `week_06/media/`.
-- [ ] **Seven raw `<img>` tags** on the Thermal and Multispectral pages, which work only because
+- [ ] **Raw `<img>` tags** remain on the Thermal and Multispectral pages, which work only because
       clean URLs are on. Convert to Markdown with `attr_list`.
 
 ## Housekeeping
@@ -122,6 +122,10 @@ Plan agreed September 2026. Generic, figure-led page in Topic 1, with detail mov
 
 ## Done
 
+- 2026-09-03 — Topic 6 thermal page reoriented to civil work: roof moisture, concrete
+  delamination and concealed services replace search-and-rescue and agriculture. Added three
+  figures (what the camera reads, emissivity and false hotspots, when to fly) and a timing
+  table with real windows rather than "early morning or late evening".
 - 2026-09-03 — Redrew the LiDAR returns figure as Topic 6 Figure 1: one pulse with four
   returns beside a classified cross-section, with a legend and a note that the two surfaces
   coincide over open ground. Numbered the LiDAR page's three figures.
