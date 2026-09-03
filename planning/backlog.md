@@ -30,6 +30,27 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 - [ ] `docs/requirements.txt` is published to the site root, because MkDocs copies every file in
       `docs/`. Harmless, but worth knowing before putting anything else in `docs/`.
 
+## Figure naming rollout
+
+Figures are named `wNN_figMM_short_name.svg`, numbered as one sequence per week in nav order. See
+`instructions.md`. Weeks 1 and 5 are converted. The rest are deferred to each week's content
+revision, because they have no figure numbers today and inventing numbers now would only be redone
+when the captions are rewritten.
+
+- [ ] **Week 3** — three images, one referenced, no figure numbers anywhere. Assign numbers and
+      rename during the Week 3 revision. `EB_Parking_Lot.png` and `EB_Parking_Lot_digital.png` are
+      unreferenced; decide whether they are wanted before renaming them.
+- [ ] **Week 4** — four images across two pages, all referenced. `Mission_Planning_SfM.md` already
+      captions its two as Figure 1 and Figure 2, but it is the *second* page in the nav, so
+      numbering the week through in nav order renumbers them to 3 and 4. `SfM_Workflow.md`'s two
+      images have no captions at all and need them written.
+- [ ] **Week 6** — seventeen images across three pages, none numbered, captions written as
+      "Description:" rather than "Figure N". Several are Wikimedia originals whose file names carry
+      the provenance, so record each source and licence in its caption before renaming. Seven
+      references are raw HTML `<img>` tags that also need converting to Markdown (see Housekeeping).
+      Unreferenced: `Effigy_mounds_lidar.jpg`, `Infrared_thermal_imaging_during_a_yacht_survey.jpg`,
+      `LIDAR_field_yield.jpg`, `Tank-DSM-filled.webp`, and both files in `week_06/media/`.
+
 ## Week 1 follow-ups
 
 - [ ] Confirm the three pre-class videos in `week_01/flight_basics.md`. They were restored from
@@ -69,6 +90,8 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
   figures, plus Check Your Understanding with collapsible answers and a Resources section.
   Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
   Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
+- 2026-09-03 — Adopted `wNN_figMM_short_name.svg` for figure files and converted Weeks 1 and 5.
+  `svgkit.figure_name()` is now the only place a generated figure's name is built.
 - 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
   `week_01/flight_basics.md`. Added `flight_check_list/index.md`, filled the empty post-flight
   checklist, and removed the dangling "links below" promise from both checklist pages. The strict

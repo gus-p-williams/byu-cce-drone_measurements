@@ -42,11 +42,17 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
 - Drawings are generic. Brand names go in captions or tables, not in the picture. Where hardware
   varies between models, say so in the subtitle or caption.
 - Keep text as text in the SVG. Do not convert labels to paths.
-- File names: `wNN_figMM_short_name.svg` inside the week's `images/` folder, where `NN` is the week
-  and `MM` is the figure number in page order (for example `w01_fig07_controller.svg`). The week
-  prefix means an exported figure still says where it came from once it is out of the repository.
-  Scripts build the name with `svgkit.figure_name()`, so the number in the file name cannot drift
-  away from the number printed inside the drawing.
+- File names: `wNN_figMM_short_name.svg` inside the week's `images/` folder, for example
+  `w01_fig07_controller.svg`. The week prefix means an exported figure still says where it came
+  from once it is out of the repository. Scripts build the name with `svgkit.figure_name()`, so the
+  number in the file name cannot drift away from the number printed inside the drawing.
+- `MM` runs as **one sequence across the whole week**, following the nav order of that week's pages.
+  A three-page week numbers straight through rather than restarting at each page, so every file in
+  one `images/` folder has a distinct number. Weeks 1 and 5 are single pages, so the two rules
+  happen to agree there.
+- A borrowed image's original file name is part of its provenance. Before renaming one, make sure
+  the caption already records the source and the licence, or the trail back to it is lost. This
+  matters most in Week 6, where several images come from Wikimedia.
 - The Markdown caption is an italic line under the image: `*Figure NN: ...*` The number there, the
   number in the file name, and the number in the drawing's own title must all agree.
 - A figure used in more than one week is generated once per week with a `--number` flag, because the
