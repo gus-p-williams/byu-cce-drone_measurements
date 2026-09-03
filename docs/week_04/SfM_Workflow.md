@@ -68,19 +68,38 @@ A **tie point** is a feature the software recognizes in more than one photo. Mor
 tie points, and more tie points means a better solve. Too little overlap and the reconstruction
 develops holes that no amount of processing will fill.
 
-### What makes a good tie point, and what defeats one
+### What makes a good tie point
 
-| The software copes well with | The software struggles with |
-|------------------------------|------------------------------|
-| Gravel, rock, and rough concrete | Fresh snow and smooth sand |
-| Painted lines, kerbs, and manhole covers | Blank asphalt and plain roofs |
-| Buildings with corners and texture | Glass, mirrors, and polished metal |
-| Vegetation that is not moving | Water, and anything moving in wind |
-| Consistent, even lighting | Hard shadows that shift between photos |
+The software is not looking for *texture*. It is looking for a point it can identify **uniquely** and
+then find again in another photo. Those are not the same thing, and the difference is where most
+reconstructions go wrong.
+
+| Kind of surface | Examples | What the software does |
+|-----------------|----------|------------------------|
+| **Uniquely identifiable** | A manhole cover, a rock, a building corner, a crack, a painted arrow or number | Matches it correctly. This is what you want. |
+| **Nothing to identify** | Blank asphalt, fresh snow, still water, plain roofs, glass | Finds nothing. You get holes. |
+| **Identifiable but repeated** | Parking stall lines, lane dashes, grass, row crops, tiled roofs | Matches confidently and **wrongly**. |
+
+!!! warning "A repeating pattern is worse than a blank one"
+    A blank surface fails honestly. The software finds nothing, and you get a hole you can see and
+    deal with.
+
+    A repeating pattern fails quietly. Every dash in a lane line looks like every other dash, so a
+    segment in one photo gets matched to the wrong segment in the next. Parking lot stall lines do
+    this constantly. So does grass: one clump looks distinctive on its own, but the field is full of
+    clumps that are equally distinctive and look just like it. Row crops are the same problem planted
+    in neat rows.
+
+    The result is not a gap. It is a model that is confidently wrong, sometimes with a whole section
+    shifted or warped, and nothing on screen tells you. Only a checkpoint catches it.
+
+    **What helps:** more overlap, so a bad match is outvoted by good ones; a cross-hatch pass, so the
+    pattern is seen from a second direction; and ground control, so the error has something to show
+    up against.
 
 !!! tip "This is why overcast days are good for mapping"
     Flat light means a feature looks the same in every photo. Bright sun creates hard shadows that
-    move as you fly, and a shadow edge is exactly the kind of "feature" that fools the matcher.
+    move as you fly, and a shadow edge is exactly the kind of false feature that fools the matcher.
 
 ---
 
@@ -111,10 +130,11 @@ used for.
 !!! question "Activity: think like the software"
     Look at two overlapping photos from a flight, or at the site outside your classroom.
 
-    1. **Find three easy features.** Points a computer could match without trouble: a manhole cover,
-       a corner of a sidewalk, a painted line.
-    2. **Find three hard ones.** Areas that would defeat it: uniform grass, the middle of a paved
-       road, a shadow, a puddle.
+    1. **Find three easy features.** Points a computer could identify and find again: a manhole
+       cover, a corner of a sidewalk, a painted arrow or number.
+    2. **Find three hard ones.** Two kinds count here. Areas with nothing to match at all, such as
+       blank asphalt or a puddle, and areas full of things that look identical to each other, such
+       as stall lines or mown grass. Which kind worries you more, and why?
     3. **Then decide.** You are asked to map a rocky canyon and a snowfield on the same day. Which
        one worries you, and what would you change about the flight to compensate?
 

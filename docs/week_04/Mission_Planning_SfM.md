@@ -49,9 +49,14 @@ more flight lines, and every extra line costs a battery.*
 
 | Site | Forward | Side |
 |------|---------|------|
-| Open, flat ground | 70% | 60% |
+| Open, flat ground with varied texture | 70% | 60% |
 | **General mapping, start here** | **80%** | **70%** |
 | Tall vegetation, complex structures | 85% | 80% |
+| Repeating patterns: parking lots, row crops, grass | 85% | 80% |
+
+Sites full of repeating detail need the extra overlap for a different reason: the software
+mismatches near-identical features, and extra views outvote the bad matches. See
+[what makes a good tie point](SfM_Workflow.md#what-makes-a-good-tie-point).
 
 Push forward overlap when in doubt; it is the cheap one. Going past about 85% buys very little and
 costs a slower flight and far more images to store and process. **Overlap is a design decision, not
@@ -72,13 +77,19 @@ ninety degrees to the first, doubles your flight time and is worth it when:
 - the site has **tall vegetation** or dense canopy
 - there are **buildings or structures** with vertical faces
 - the ground is **steeply sloping**
-- the first flight produced a model with holes in it
+- the surface is full of **repeating patterns**, such as stall lines or row crops, because seeing
+  them from a second direction helps the software tell one from another
+- a first flight produced a model with holes or warping in it
 
-For a flat parking lot, it is wasted effort.
+On open ground with varied texture and nothing tall on it, a second pass is time you do not need to
+spend.
 
 !!! question "Activity: grid strategy"
-    Look at Figure 6. Mapping a flat parking lot, would you fly the second pass? What if you were
-    mapping a dense forest with tall trees? Explain your reasoning in terms of tie points.
+    A flat parking lot has no tall objects and no slope, which argues against a second pass. It is
+    also covered in identical white stall lines, which argues for one.
+
+    Which way would you go? And once you had flown it, what would you look at to find out whether
+    you had chosen correctly?
 
 ---
 
