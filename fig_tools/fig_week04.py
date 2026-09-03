@@ -1,7 +1,8 @@
 """Proposed figures for Week 4: SfM workflow and mission planning.
 
-Written as proposals. They land in review/ by default and are only copied into
-docs/week_04/images/ once approved.
+Numbered per the Week 4 convention: the week runs straight through in nav
+order, so SfM Workflow takes 1 to 3 and Mission Planning takes 4 to 9. Figure 3
+is the existing pipeline drawing, renamed.
 
 Three are replacements for figures that already exist but sit outside the house
 style. Three cover concepts the pages currently explain in prose only: overlap,
@@ -22,8 +23,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import aircraft_mini_side, aircraft_mini_top  # noqa: E402
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, circle, g, line, path, polygon,  # noqa: E402
-                    rect, render_png, text, translate)
+from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
+                    path, polygon, rect, render_png, text, translate)
 
 CARD = dict(rx=10, fill=P["white"], stroke="#dde3e9", stroke_width=1.5)
 SHOT = "#4a90d9"
@@ -684,17 +685,17 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    for builder, slug in (
-        (build_overlap, "w04_proposed_overlap"),
-        (build_overlap_cost, "w04_proposed_overlap_cost"),
-        (build_gsd, "w04_proposed_gsd_altitude"),
-        (build_nadir_oblique, "w04_proposed_nadir_oblique"),
-        (build_grid, "w04_proposed_grid"),
-        (build_matching, "w04_proposed_parallax"),
-        (build_orbit, "w04_proposed_orbit"),
-        (build_accuracy, "w04_proposed_accuracy"),
+    for builder, number, slug in (
+        (build_matching, 1, "parallax"),
+        (build_overlap, 2, "overlap"),
+        (build_gsd, 4, "gsd_altitude"),
+        (build_overlap_cost, 5, "overlap_cost"),
+        (build_grid, 6, "grid"),
+        (build_nadir_oblique, 7, "nadir_oblique"),
+        (build_orbit, 8, "orbit"),
+        (build_accuracy, 9, "accuracy"),
     ):
-        fname = os.path.join(args.out, slug + ".svg")
+        fname = os.path.join(args.out, figure_name(4, number, slug))
         builder().save(fname)
         print("wrote", fname)
         if args.png:

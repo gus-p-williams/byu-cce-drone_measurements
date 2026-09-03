@@ -1,82 +1,132 @@
-# Structure-from-Motion (SfM) — Workflow Overview
+# How Photos Become 3D
 
-This note explains the core steps in a typical Structure-from-Motion (SfM) photogrammetry pipeline, from feature detection and matching through sparse and dense reconstruction to mesh and orthophoto generation.
+!!! abstract "Key Takeaways"
+    - **Structure from Motion (SfM)** turns ordinary overlapping photos into a 3D model by finding
+      the same point in several of them.
+    - A point photographed **once** is useless. The same point photographed from several positions
+      becomes a measurement.
+    - The software solves for **where the camera was** and **what the scene looks like** at the same
+      time.
+    - Knowing roughly where the drone was, from GPS, makes that solve faster and puts the answer in
+      the right place on Earth.
 
-## Key Takeaways
-- **3D from 2D:** SfM is the process of estimating 3D structures from 2D image sequences by finding matching features in overlapping photos.
-- **Overlap is Critical:** For the math to work, every point on the ground should be seen in at least 5–9 different photos.
-- **The "Tie Point":** A tie point is a unique visual feature (like a rock or a corner of a building) that the computer can identify in multiple images to "tie" them together.
-- **Accuracy through Math:** "Bundle Adjustment" is the heavy-duty math step that fixes small errors in camera positions to make the final model accurate.
-
----
-
-## I. High-Level Pipeline
-1. **Image Acquisition:** Capture overlapping images with GPS/IMU data.
-2. **Feature Detection & Matching:** Detect unique "keypoints" and match them between image pairs.
-3. **Sparse Reconstruction:** Estimate initial camera positions and create a "skeleton" of 3D points (tie points).
-4. **Bundle Adjustment:** Refine camera positions and points to minimize errors.
-5. **Dense Reconstruction:** Create a high-density point cloud by matching almost every pixel.
-6. **Mesh & Texturing:** Build a surface over the points and "paint" it with the original photos.
-7. **Georeferencing:** Align the model to real-world coordinates using GCPs or RTK.
+This page is about why you fly the way you do in the next section. You do not need the algorithms;
+you need to know what the software is trying to do, so that you give it what it needs.
 
 ---
 
-## II. Feature Detection and Matching
+## Where 3D comes from
 
-![](images/sfm_camera_matches.svg)
+A single photo is flat. Two photos of the same thing, taken from different places, are not.
 
-Feature detectors find distinctive keypoints in each image and compute descriptors. Matching algorithms pair keypoints across images to form correspondences; these correspondences are the basis for estimating relative camera geometry and triangulating 3D points.
+![One pole photographed from two positions](images/w04_fig01_parallax.svg){ width="100%" }
 
-Why matches matter
-- A single 3D point must be observed in at least two images to be triangulated.
-- Robust matching (with RANSAC) rejects outliers and inconsistent matches, improving the stability of pose estimation.
+*Figure 1: The same pole looks short from almost overhead and long from off to the side. That
+difference is the measurement.*
 
----
+If you already know where the drone was for each photo, the only unknowns left are the height and
+position of the pole, and two photos are enough to solve for them. Two known camera positions, two
+measured angles, one unknown height: that is a triangle.
 
-## III. Sparse Reconstruction and Bundle Adjustment
+### What if you do not know where the drone was?
 
-After finding matches, the software estimates where the cameras were in 3D space.
+In practice you rarely know the camera positions exactly. Then you are solving a bigger problem:
+**where each photo was taken from, and where everything in the scene is, at the same time.**
 
-- **Initial Estimation:** From matched pairs, SfM estimates the relative rotations and translations between cameras.
-- **Triangulation:** These correspondences yield a sparse (coarse) point cloud of tie points.
-- **Bundle Adjustment:** This is the most critical step. It jointly refines all camera poses and 3D points to minimize "reprojection error." This step is computationally expensive but essential for internal consistency.
+That is still solvable, but it needs more to work with. The same point has to appear in several
+photos, and each pair of photos needs several points in common, not just one. Given enough shared
+points across enough photos, there is only one arrangement of cameras and 3D points that explains
+every photo at once, and the software searches for it.
 
----
+This is what Structure from Motion does, and it is why the name mentions structure *and* motion: it
+recovers the shape of the scene and the path of the camera together. Robotics calls the same problem
+**SLAM**, simultaneous localization and mapping.
 
-## IV. Dense Reconstruction and Mesh Generation
+!!! warning "Shape is not size"
+    With no known positions at all, the software recovers the **shape** of everything and the
+    relative arrangement of the cameras, but not the **size**, and not where any of it sits on
+    Earth. A model of a building can come out perfectly proportioned and twice life size.
 
-![](images/sfm_pointcloud_pipeline.svg)
-
-- Using the refined camera poses, multi-view stereo algorithms compute dense depth estimates for pixels and generate a dense point cloud.
-- The dense cloud is then meshed into polygons (e.g., via Poisson surface reconstruction or Delaunay triangulation) and textured using the original photos to create realistic 3D models.
-- Orthophotos and digital surface models (DSMs) are created by projecting/orthorectifying the imagery onto the mesh or rasterizing the dense point cloud.
-
----
-
-## V. Practical Tips for Success
-- **Image Quality:** Blurry or dark photos will cause the matching step to fail.
-- **Texture Matters:** Surfaces like smooth snow, shiny glass, or moving water are extremely difficult for SfM to reconstruct.
-- **Varying Perspectives:** Adding "oblique" (angled) photos helps reconstruct the vertical sides of buildings and reduces gaps in the model.
-
----
-
-## VI. Student Activity: The "Feature Detection" Challenge
-
-### Objective
-Understand how a computer "sees" features compared to a human.
-
-### Task
-Look at the two images below (or any two overlapping photos from your last flight).
-1. **Identify 3 "Easy" Features:** Find three points that are easy for a human to match (e.g., a specific yellow flower, a manhole cover, a corner of a sidewalk).
-2. **Identify 3 "Hard" Features:** Find three areas that would be difficult for a computer to match (e.g., a patch of uniform green grass, the middle of a paved road, a shadow that might move between photos).
-3. **Reflection:** If you were flying over a forest vs. a rocky canyon, which would have more "reliable" tie points? Why?
+    Something has to supply the missing scale and position. Usually that is the drone's GPS. It does
+    not have to be perfect: a rough position for each photo gives the software a starting point near
+    the answer, so it solves faster and drifts less. With **RTK GPS**, where each photo's position is
+    known to a few centimeters, the camera positions are close to known before processing begins.
 
 ---
 
-## Appendix: Technical Deep Dive (Optional)
-### Common Algorithmic Building Blocks
-- **Detectors:** SIFT, ORB, AKAZE.
-- **Estimation:** RANSAC for outlier rejection.
-- **Solvers:** Ceres Solver, g2o.
-- **Surface:** Poisson reconstruction, Delaunay triangulation.
+## Why overlap is the whole game
 
+Everything above depends on one thing: the same point appearing in many photos. That is what overlap
+buys you, and it is the single most important number you set before a flight.
+
+![What overlap means](images/w04_fig02_overlap.svg){ width="100%" }
+
+*Figure 2: Overlap is not wasted effort. It is what puts every ground point into five to nine
+different photos.*
+
+A **tie point** is a feature the software recognizes in more than one photo. More overlap means more
+tie points, and more tie points means a better solve. Too little overlap and the reconstruction
+develops holes that no amount of processing will fill.
+
+### What makes a good tie point, and what defeats one
+
+| The software copes well with | The software struggles with |
+|------------------------------|------------------------------|
+| Gravel, rock, and rough concrete | Fresh snow and smooth sand |
+| Painted lines, kerbs, and manhole covers | Blank asphalt and plain roofs |
+| Buildings with corners and texture | Glass, mirrors, and polished metal |
+| Vegetation that is not moving | Water, and anything moving in wind |
+| Consistent, even lighting | Hard shadows that shift between photos |
+
+!!! tip "This is why overcast days are good for mapping"
+    Flat light means a feature looks the same in every photo. Bright sun creates hard shadows that
+    move as you fly, and a shadow edge is exactly the kind of "feature" that fools the matcher.
+
+---
+
+## From points to products
+
+Once the cameras and the tie points agree, the rest is mechanical.
+
+![The reconstruction pipeline](images/w04_fig03_pipeline.svg){ width="100%" }
+
+*Figure 3: A sparse cloud of tie points is thickened into a dense cloud, meshed into a surface, and
+covered with the original photographs.*
+
+1. **Feature detection and matching.** Find distinctive points in each photo and match them between
+   photos.
+2. **Sparse reconstruction.** Work out camera positions and a skeleton of 3D tie points.
+3. **Bundle adjustment.** Adjust every camera position and every point together until the whole set
+   is as consistent as it can be. This is the step that makes the model accurate.
+4. **Dense reconstruction.** Using the solved camera positions, match almost every pixel to build a
+   dense point cloud.
+5. **Mesh and texture.** Build a surface over the points and drape the photographs over it.
+6. **Georeferencing.** Tie the result to real-world coordinates using GPS and ground control.
+
+See [Aerial Measurement Products](../week_01/data_products.md) for what each of those outputs is
+used for.
+
+---
+
+!!! question "Activity: think like the software"
+    Look at two overlapping photos from a flight, or at the site outside your classroom.
+
+    1. **Find three easy features.** Points a computer could match without trouble: a manhole cover,
+       a corner of a sidewalk, a painted line.
+    2. **Find three hard ones.** Areas that would defeat it: uniform grass, the middle of a paved
+       road, a shadow, a puddle.
+    3. **Then decide.** You are asked to map a rocky canyon and a snowfield on the same day. Which
+       one worries you, and what would you change about the flight to compensate?
+
+---
+
+??? note "Optional: what the algorithms are called"
+    You will meet these names in software documentation. You do not need them for this course.
+
+    - **Feature detectors:** SIFT, ORB, AKAZE. These find and describe distinctive keypoints.
+    - **Outlier rejection:** RANSAC. Throws out matches that do not fit the emerging geometry.
+    - **Bundle adjustment solvers:** Ceres Solver, g2o. These minimize reprojection error, the gap
+      between where a point should appear in a photo and where it actually does.
+    - **Surface reconstruction:** Poisson reconstruction, Delaunay triangulation. These turn a cloud
+      of points into a continuous surface.
+    - **Open-source pipeline:** COLMAP, if you want to see the whole process end to end.

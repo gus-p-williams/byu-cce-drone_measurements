@@ -22,6 +22,10 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 
 ## Housekeeping
 
+- [ ] `docs/week_04/images/w04_fig03_pipeline.svg` is the one Week 4 figure not redrawn. It still
+      uses the old style: no title, different palette, no house background. Redraw it in
+      `fig_tools/` when convenient.
+
 - [ ] Week 6 uses raw `<img src="../images/...">` tags in seven places. MkDocs does not rewrite
       paths inside raw HTML, so these work only because clean URLs are on. Convert them to Markdown
       images with `attr_list` for sizing, matching the other weeks.
@@ -40,10 +44,8 @@ when the captions are rewritten.
 - [ ] **Week 3** — three images, one referenced, no figure numbers anywhere. Assign numbers and
       rename during the Week 3 revision. `EB_Parking_Lot.png` and `EB_Parking_Lot_digital.png` are
       unreferenced; decide whether they are wanted before renaming them.
-- [ ] **Week 4** — four images across two pages, all referenced. `Mission_Planning_SfM.md` already
-      captions its two as Figure 1 and Figure 2, but it is the *second* page in the nav, so
-      numbering the week through in nav order renumbers them to 3 and 4. `SfM_Workflow.md`'s two
-      images have no captions at all and need them written.
+- [x] **Week 4** — done. Both pages rewritten with nine numbered figures, `w04_figNN_`, running
+      through the week in nav order.
 - [ ] **Week 6** — seventeen images across three pages, none numbered, captions written as
       "Description:" rather than "Figure N". Several are Wikimedia originals whose file names carry
       the provenance, so record each source and licence in its caption before renaming. Seven
@@ -104,6 +106,9 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
   figures, plus Check Your Understanding with collapsible answers and a Resources section.
   Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
   Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
+- 2026-09-03 — Rewrote both Week 4 pages around the decisions a student actually makes, with nine
+  figures. Six are new (parallax, overlap, overlap cost, GSD, nadir/oblique, accuracy) and three
+  replaced older drawings. Algorithm names moved into a collapsed appendix.
 - 2026-09-03 — Added `week_01/flight_issues.md` (symptom, cause, action tables plus a fly-away
   warning) and a feature-availability matrix inside Flight Basics.
 - 2026-09-03 — Adopted `wNN_figMM_short_name.svg` for figure files and converted Weeks 1 and 5.

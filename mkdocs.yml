@@ -44,8 +44,8 @@ nav:
       - Measurements Lab: week_03/lab_measurements.md
       - Metadata: week_03/metadata.md
   - Week 4 - Mission Planning:
-      - SfM Workflow: week_04/SfM_Workflow.md
-      - Mission Planning (SfM): week_04/Mission_Planning_SfM.md
+      - How Photos Become 3D: week_04/SfM_Workflow.md
+      - Planning the Flight: week_04/Mission_Planning_SfM.md
   - Week 5 - FAA Part 107 Exam:
       - Exam Planning & Overview: week_05/FAA_Exam_Planning_and_Overview.md
       - Knowledge Review: week_05/Part_107_Knowledge_Review.md
