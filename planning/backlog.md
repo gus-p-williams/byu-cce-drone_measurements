@@ -75,9 +75,9 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
       clean strict build. Awaiting instructor review of the checklist overview prose.
 - [x] Phase 2 — all sections written, sixteen figures. Figure 2 (an underside view of the
       aircraft) was planned but not needed; add it only if the parts table proves thin in class.
-- [x] Phase 3 — `week_01/flight_issues.md` added and linked from Flight Basics and the pre-flight
-      checklist; feature-availability matrix added as a section of Flight Basics rather than its
-      own page, since it is one table.
+- [x] Phase 3 — `week_01/flight_issues.md` added with Figures 17 to 19 and linked from Flight
+      Basics and the pre-flight checklist; feature-availability matrix added as a section of Flight
+      Basics rather than its own page, since it is one table.
 - [ ] Phase 4 — optional animation on three figures, full read-through, backlog update.
 
 ## Done

@@ -221,6 +221,32 @@ def aircraft_mini_side(r: float = 1.0, nose: bool = True) -> El:
 
 
 # ---------------------------------------------------------------------------
+# People and vehicles, for scale and for the rules figures
+# ---------------------------------------------------------------------------
+def person(x: float, y: float, scale: float = 1.0, fill: str | None = None) -> El:
+    """A simple standing figure, drawn with its feet on (x, y)."""
+    fill = fill or P["dark"]
+    return g(
+        g(circle(0, -14, 7, fill=fill),
+          path("M-8,3 a8,10 0 0,1 16,0 z", fill=fill),
+          transform=f"scale({scale})" if scale != 1 else None),
+        transform=f"translate({x},{y})")
+
+
+def car(x: float, y: float, scale: float = 1.0) -> El:
+    """A car seen from the side, drawn about its own centre."""
+    return g(
+        g(path("M-30,4 l7,-13 h32 l9,13 z", fill="#7a8794", stroke=P["line"],
+               stroke_width=1.5),
+          rect(-34, 4, 68, 11, rx=4, fill="#8f9aa6", stroke=P["line"],
+               stroke_width=1.5),
+          circle(-18, 16, 6, fill=P["dark"]),
+          circle(18, 16, 6, fill=P["dark"]),
+          transform=f"scale({scale})" if scale != 1 else None),
+        transform=f"translate({x},{y})")
+
+
+# ---------------------------------------------------------------------------
 # Rotation arrow, used to show which way a propeller turns
 # ---------------------------------------------------------------------------
 def rotation_arrow(cx: float, cy: float, r: float, clockwise: bool = True,

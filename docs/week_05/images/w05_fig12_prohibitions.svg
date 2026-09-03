@@ -5,20 +5,20 @@
   <rect x="20.0" y="84" width="270" height="252" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
   <g transform="translate(121,194)">
     <g transform="scale(1.25)">
-      <circle cx="0" cy="-13" r="6.5" fill="#7a8794"/>
-      <path d="M-7,6 a7,9 0 0,1 14,0 z" fill="#7a8794"/>
+      <circle cx="0" cy="-14" r="7" fill="#7a8794"/>
+      <path d="M-8,3 a8,10 0 0,1 16,0 z" fill="#7a8794"/>
     </g>
   </g>
   <g transform="translate(155,194)">
     <g transform="scale(1.25)">
-      <circle cx="0" cy="-13" r="6.5" fill="#7a8794"/>
-      <path d="M-7,6 a7,9 0 0,1 14,0 z" fill="#7a8794"/>
+      <circle cx="0" cy="-14" r="7" fill="#7a8794"/>
+      <path d="M-8,3 a8,10 0 0,1 16,0 z" fill="#7a8794"/>
     </g>
   </g>
   <g transform="translate(189,194)">
     <g transform="scale(1.25)">
-      <circle cx="0" cy="-13" r="6.5" fill="#7a8794"/>
-      <path d="M-7,6 a7,9 0 0,1 14,0 z" fill="#7a8794"/>
+      <circle cx="0" cy="-14" r="7" fill="#7a8794"/>
+      <path d="M-8,3 a8,10 0 0,1 16,0 z" fill="#7a8794"/>
     </g>
   </g>
   <g>

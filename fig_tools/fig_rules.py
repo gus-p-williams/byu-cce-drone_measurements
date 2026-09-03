@@ -21,32 +21,13 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from parts import aircraft_mini_side  # noqa: E402
+from parts import aircraft_mini_side, car, person  # noqa: E402
 from svgkit import PALETTE as P  # noqa: E402
 from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
                     path, rect, render_png, text, translate)
 
 GROUND_Y = 366
 CEILING_Y = 152
-
-
-def person(x, y, scale=1.0, fill=None):
-    fill = fill or P["dark"]
-    return translate(x, y, g(
-        circle(0, -13, 6.5, fill=fill),
-        path("M-7,6 a7,9 0 0,1 14,0 z", fill=fill),
-        transform=f"scale({scale})" if scale != 1 else None))
-
-
-def car(x, y, scale=1.0):
-    return translate(x, y, g(
-        path("M-30,4 l7,-13 h32 l9,13 z", fill="#7a8794", stroke=P["line"],
-             stroke_width=1.5),
-        rect(-34, 4, 68, 11, rx=4, fill="#8f9aa6", stroke=P["line"],
-             stroke_width=1.5),
-        circle(-18, 16, 6, fill=P["dark"]),
-        circle(18, 16, 6, fill=P["dark"]),
-        transform=f"scale({scale})" if scale != 1 else None))
 
 
 def control_tower(x, y, scale=1.0):
