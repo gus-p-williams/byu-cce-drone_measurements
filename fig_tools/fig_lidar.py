@@ -160,22 +160,26 @@ def whole_flight(fig):
         if bx0 <= x <= bx1:
             y = min(y, roof_y)
         dsm.append((x, y))
-    fig.add(path("M" + " L".join(f"{x:.0f},{y:.0f}" for x, y in dsm),
-                 fill="none", stroke=P["bad"], stroke_width=2.5,
-                 stroke_dasharray="8 5"))
     fig.add(path("M" + " L".join(f"{x0 + i * (x1 - x0) / 89:.0f},"
                                  f"{ground_at(x0 + i * (x1 - x0) / 89):.0f}"
                                  for i in range(90)),
-                 fill="none", stroke=BEAM, stroke_width=2.5))
+                 fill="none", stroke=BEAM, stroke_width=4.5))
+    fig.add(path("M" + " L".join(f"{x:.0f},{y:.0f}" for x, y in dsm),
+                 fill="none", stroke=P["bad"], stroke_width=2.2,
+                 stroke_dasharray="7 5"))
 
-    fig.add(text(x0 + 6, 168, "DSM — through the first returns", font_size=11.5,
-                 font_weight="bold", fill=P["bad"]))
-    fig.add(text(x0 + 6, 186, "everything the pulses hit first", font_size=10.5,
-                 fill=P["muted"]))
-    fig.add(text(x0 + 6, 486, "DTM — through the ground returns only",
-                 font_size=11.5, font_weight="bold", fill=BEAM))
-    fig.add(text(x0 + 6, 504, "vegetation classified out and discarded",
-                 font_size=10.5, fill=P["muted"]))
+    lx, ly = x0 + 4, 152
+    fig.add(line(lx, ly, lx + 34, ly, stroke=P["bad"], stroke_width=2.2,
+                 stroke_dasharray="7 5"))
+    fig.add(text(lx + 42, ly + 4, "DSM, red dashed — the top of whatever the",
+                 font_size=11, fill=P["ink"]))
+    fig.add(text(lx + 42, ly + 19, "pulse hit first: canopy, roof, or ground",
+                 font_size=11, fill=P["muted"]))
+    fig.add(line(lx, ly + 40, lx + 34, ly + 40, stroke=BEAM, stroke_width=4.5))
+    fig.add(text(lx + 42, ly + 44, "DTM, blue solid — ground returns only,",
+                 font_size=11, fill=P["ink"]))
+    fig.add(text(lx + 42, ly + 59, "with the vegetation classified out",
+                 font_size=11, fill=P["muted"]))
 
     # canopy height is the gap between them
     chx = 556
@@ -189,6 +193,15 @@ def whole_flight(fig):
                  font_weight="bold", fill=P["ink"]))
     fig.add(text(chx + 52, ground_at(chx) - 44, "height", font_size=11,
                  font_weight="bold", fill=P["ink"]))
+
+    ox, lx2 = 796, 754
+    fig.add(arrow(ox, ground_at(ox) + 44, ox, ground_at(ox) + 10,
+                  color=P["muted"], width=1.8, head=7))
+    for i, ln in enumerate(("open ground: nothing above it,",
+                            "so both surfaces are identical",
+                            "and the dashes ride on the blue")):
+        fig.add(text(lx2, ground_at(ox) + 60 + i * 14, ln, text_anchor="middle",
+                     font_size=10.5, fill=P["muted"]))
 
     bcx = (bx0 + bx1) / 2
     fig.add(text(bcx, roof_y - 44, "no ground return here:", text_anchor="middle",
