@@ -29,13 +29,19 @@ Each `fig_*.py` writes to `review/` by default and to a docs images folder with 
 Anything drawn more than once belongs in `parts.py`, so the same aircraft and the same controller
 appear in every figure. Change a part there and every figure that uses it updates on the next run.
 
-A figure used in more than one week takes a `--number` flag, so the number printed in its title
-matches the page it lands on. `fig_rules.py` works this way: Week 1 gets the full drawing, Week 5
-gets `--no-scene` because it already covers line of sight and altitude in its own figures.
+## File names
+
+Figures are named `wNN_figMM_short_name.svg`, week first, then the figure number in page order.
+Scripts never spell the name out; they call `svgkit.figure_name(week, number, slug)`, so the
+number in the file name always matches the number printed inside the drawing.
+
+A figure used in more than one week is generated once per week, with `--number` setting the number
+in its title. `fig_rules.py` works this way: Week 1 gets the full drawing, Week 5 gets `--no-scene`
+because it already covers line of sight and altitude in its own figures.
 
 ```
 python fig_tools/fig_rules.py --out docs/week_01/images
-python fig_tools/fig_rules.py --no-scene --number 12     --name fig12_prohibitions.svg --out docs/week_05/images
+python fig_tools/fig_rules.py --no-scene --week 5 --number 12     --slug prohibitions --out docs/week_05/images
 ```
 
 No third-party packages are required. Any Python 3.8 or newer works.

@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import aircraft_mini_side, aircraft_mini_top  # noqa: E402
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, circle, g, line, path, polygon,  # noqa: E402
-                    rect, render_png, text, translate)
+from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
+                    path, polygon, rect, render_png, text, translate)
 
 CARD_W, CARD_H = 270, 150
 COLS = (155, 450, 745)
@@ -225,8 +225,9 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    for builder, name in ((build_sequence, "fig10_flight_sequence.svg"),
-                          (build_practice, "fig11_practice_pattern.svg")):
+    for builder, name in (
+            (build_sequence, figure_name(1, 10, "flight_sequence")),
+            (build_practice, figure_name(1, 11, "practice_pattern"))):
         fname = os.path.join(args.out, name)
         builder().save(fname)
         print("wrote", fname)

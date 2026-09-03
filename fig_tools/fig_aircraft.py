@@ -17,7 +17,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import aircraft_top, shift  # noqa: E402
-from svgkit import Callouts, Figure, render_png, translate  # noqa: E402
+from svgkit import (Callouts, Figure, figure_name, render_png,  # noqa: E402
+                    translate)
 
 TITLE = "Figure 1: Parts of a quadcopter"
 SUBTITLE = ("Layout varies by model. Lighter aircraft often have fewer sensors, "
@@ -61,8 +62,9 @@ def main() -> None:
     ap.add_argument("--png", action="store_true", help="also render PNGs")
     args = ap.parse_args()
 
-    for mode, name in (("names", "fig01_aircraft_parts.svg"),
-                       ("numbers", "fig01b_aircraft_parts_numbered.svg")):
+    for mode, name in (
+            ("names", figure_name(1, 1, "aircraft_parts")),
+            ("numbers", figure_name(1, 1, "aircraft_parts_numbered", "b"))):
         fname = os.path.join(args.out, name)
         build(mode).save(fname)
         print("wrote", fname)

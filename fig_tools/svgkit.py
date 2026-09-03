@@ -40,6 +40,20 @@ SUBTITLE_SIZE = 12
 
 
 # ---------------------------------------------------------------------------
+# File naming
+# ---------------------------------------------------------------------------
+def figure_name(week: int, number: int, slug: str, variant: str = "") -> str:
+    """Build a figure's file name from its week and figure number.
+
+    Every figure is named wNN_figMM_slug.svg, so an exported file still says
+    which week and which figure it is once it is out of the repository.
+    Deriving the name here keeps it from drifting away from the number printed
+    inside the drawing.
+    """
+    return f"w{week:02d}_fig{number:02d}{variant}_{slug}.svg"
+
+
+# ---------------------------------------------------------------------------
 # Elements
 # ---------------------------------------------------------------------------
 def _attr_name(key: str) -> str:

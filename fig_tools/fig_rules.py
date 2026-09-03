@@ -7,11 +7,11 @@ those two in its own Figures 13 and 14, so it gets the prohibitions alone.
 Usage:
     python fig_tools/fig_rules.py --png
     python fig_tools/fig_rules.py --out docs/week_01/images
-    python fig_tools/fig_rules.py --no-scene --number 12         --name fig12_prohibitions.svg --out docs/week_05/images
+    python fig_tools/fig_rules.py --no-scene --number 12         --slug prohibitions --week 5 --out docs/week_05/images
 
 Outputs:
-    fig16_rules.svg          Week 1: sight, altitude, and the three never-dos
-    fig12_prohibitions.svg   Week 5: the three never-dos on their own
+    w01_fig16_rules.svg         Week 1: sight, altitude, and the never-dos
+    w05_fig12_prohibitions.svg  Week 5: the never-dos on their own
 """
 from __future__ import annotations
 
@@ -23,8 +23,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import aircraft_mini_side  # noqa: E402
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, circle, g, line, path, rect,  # noqa: E402
-                    render_png, text, translate)
+from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
+                    path, rect, render_png, text, translate)
 
 GROUND_Y = 366
 CEILING_Y = 152
@@ -165,10 +165,12 @@ def main() -> None:
                     help="figure number printed in the title")
     ap.add_argument("--no-scene", dest="scene", action="store_false",
                     help="draw only the three prohibitions")
-    ap.add_argument("--name", default="fig16_rules.svg")
+    ap.add_argument("--week", type=int, default=1)
+    ap.add_argument("--slug", default="rules")
     args = ap.parse_args()
 
-    fname = os.path.join(args.out, args.name)
+    fname = os.path.join(
+        args.out, figure_name(args.week, args.number, args.slug))
     build(args.number, args.scene).save(fname)
     print("wrote", fname)
     if args.png:

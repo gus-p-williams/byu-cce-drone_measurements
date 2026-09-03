@@ -19,7 +19,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import controller, shift  # noqa: E402
-from svgkit import Callouts, Figure, render_png, translate  # noqa: E402
+from svgkit import (Callouts, Figure, figure_name, render_png,  # noqa: E402
+                    translate)
 
 TITLE = "Figure 7: A typical drone controller"
 SUBTITLE = ("Only the two sticks work the same on every controller. "
@@ -73,8 +74,9 @@ def main() -> None:
     args = ap.parse_args()
 
     outputs = {
-        "names": os.path.join(args.out, "fig07_controller.svg"),
-        "numbers": os.path.join(args.out, "fig07b_controller_numbered.svg"),
+        "names": os.path.join(args.out, figure_name(1, 7, "controller")),
+        "numbers": os.path.join(
+            args.out, figure_name(1, 7, "controller_numbered", "b")),
     }
     for mode, fname in outputs.items():
         build(mode, args.screen).save(fname)

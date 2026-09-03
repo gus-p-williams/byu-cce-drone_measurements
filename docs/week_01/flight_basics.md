@@ -22,7 +22,7 @@
 
 ## Parts of the Aircraft
 
-![Parts of a quadcopter](images/fig01_aircraft_parts.svg){ width="100%" }
+![Parts of a quadcopter](images/w01_fig01_aircraft_parts.svg){ width="100%" }
 
 *Figure 1: The main parts of a small quadcopter, seen from above. Propellers on opposite corners
 spin the same direction, which is what lets the aircraft turn without tipping.*
@@ -52,7 +52,7 @@ it. On most small drones the camera is fixed in place and the whole airframe is 
 Larger professional aircraft take **interchangeable payloads**, so one aircraft can carry whichever
 sensor the job needs.
 
-![Sensors a drone can carry](images/fig03_payloads.svg){ width="100%" }
+![Sensors a drone can carry](images/w01_fig03_payloads.svg){ width="100%" }
 
 *Figure 3: Common drone payloads. Which one you need depends entirely on what you are trying to
 measure.*
@@ -81,7 +81,7 @@ delivering small loads.
 A drone has no wings, no rudder, and nothing that steers. It has four propellers that only spin
 faster or slower. Everything the aircraft does comes from that one control.
 
-![Pitch, roll, and yaw](images/fig04_axes.svg){ width="100%" }
+![Pitch, roll, and yaw](images/w01_fig04_axes.svg){ width="100%" }
 
 *Figure 4: The three rotations. Every flight path is some combination of these, plus climbing and
 descending.*
@@ -92,7 +92,7 @@ Propellers push air downward, and the air pushes back. That upward push is **lif
 aircraft rises, holds still, or sinks depends only on how lift compares with the weight of the
 aircraft.
 
-![Lift compared with weight](images/fig05_lift_and_weight.svg){ width="100%" }
+![Lift compared with weight](images/w01_fig05_lift_and_weight.svg){ width="100%" }
 
 *Figure 5: Lift greater than weight means climbing, lift equal to weight means hovering, and lift
 less than weight means descending.*
@@ -103,7 +103,7 @@ To move in any direction, the flight controller speeds some rotors up and slows 
 never do this yourself; you move a stick, and the aircraft works out the rotor speeds hundreds of
 times a second.
 
-![Which motors speed up for each movement](images/fig06_differential_thrust.svg){ width="100%" }
+![Which motors speed up for each movement](images/w01_fig06_differential_thrust.svg){ width="100%" }
 
 *Figure 6: Speeding up the rear pair tips the nose down and the aircraft moves forward. Speeding up
 one diagonal pair turns it. Speeding up all four makes it climb.*
@@ -123,7 +123,7 @@ one diagonal pair turns it. Speeding up all four makes it climb.*
 
 ## The Controller
 
-![A typical drone controller](images/fig07_controller.svg){ width="100%" }
+![A typical drone controller](images/w01_fig07_controller.svg){ width="100%" }
 
 *Figure 7: A typical controller. The two sticks work the same way on nearly every aircraft. Buttons
 and switches are named differently from one manufacturer to the next.*
@@ -152,7 +152,7 @@ Nearly every ready-to-fly drone uses the **Mode 2** layout. The left stick handl
 heading, and the right stick moves the aircraft over the ground. Both sticks spring back to center
 when you let go, and the aircraft simply holds position.
 
-![What each stick does](images/fig08_stick_controls.svg){ width="100%" }
+![What each stick does](images/w01_fig08_stick_controls.svg){ width="100%" }
 
 *Figure 8: The eight stick inputs. In each panel the dark stick is the one you move; the pale one
 stays where it is.*
@@ -163,7 +163,7 @@ stays where it is.*
     everything reverses: pushing right sends it to your left. This single fact causes more beginner
     crashes than anything else.
 
-![Flying away from you compared with flying toward you](images/fig09_nose_in.svg){ width="100%" }
+![Flying away from you compared with flying toward you](images/w01_fig09_nose_in.svg){ width="100%" }
 
 *Figure 9: The same stick input gives opposite results depending on which way the nose points.*
 
@@ -191,7 +191,7 @@ stays where it is.*
 Every flight follows the same nine steps, whether it is a two-minute check or a full survey. Run
 them in the same order every time, especially on the flights that feel routine.
 
-![The nine steps of a flight](images/fig10_flight_sequence.svg){ width="100%" }
+![The nine steps of a flight](images/w01_fig10_flight_sequence.svg){ width="100%" }
 
 *Figure 10: A flight from start to finish. The three phases are setting up on the ground, starting
 up and checking, then flying and packing away.*
@@ -211,7 +211,7 @@ flight; the checklists are what you actually tick off.
 Before flying any real task, get comfortable with the controls somewhere open, well away from
 people, cars, buildings, and trees. The box is the standard first exercise.
 
-![The box practice pattern](images/fig11_practice_pattern.svg){ width="100%" }
+![The box practice pattern](images/w01_fig11_practice_pattern.svg){ width="100%" }
 
 *Figure 11: Fly one side, stop in a hover at the corner, then fly the next side. Slow and
 deliberate beats fast and smooth at this stage.*
@@ -240,7 +240,7 @@ source of surprises, because each feature has limits that are not obvious until 
 The aircraft works out its position from satellites, and its heading from an internal compass. When
 it powers up and gets a good fix it records a **home point**, the spot it will come back to.
 
-![Holding position with and without satellites](images/fig12_home_point.svg){ width="100%" }
+![Holding position with and without satellites](images/w01_fig12_home_point.svg){ width="100%" }
 
 *Figure 12: With satellites, the aircraft sits still on its own. Without them it drifts, and it is
 entirely up to you to notice and correct.*
@@ -257,7 +257,7 @@ entirely up to you to notice and correct.*
 Obstacle sensors look in fixed directions and are easily fooled. Treat them as a backstop that
 occasionally saves you, never as permission to stop looking.
 
-![Where the obstacle sensors look](images/fig13_obstacle_coverage.svg){ width="100%" }
+![Where the obstacle sensors look](images/w01_fig13_obstacle_coverage.svg){ width="100%" }
 
 *Figure 13: Sensors watch some directions and not others, and there are things they cannot see even
 when pointed straight at them.*
@@ -269,7 +269,7 @@ you reach for it to cover ground faster.
 
 As the battery drains, the aircraft takes decisions away from you, one step at a time.
 
-![What happens as the battery drains](images/fig14_battery_states.svg){ width="100%" }
+![What happens as the battery drains](images/w01_fig14_battery_states.svg){ width="100%" }
 
 *Figure 14: The thresholds vary by model, and the aircraft raises them the further away you are,
 because it has further to fly back.*
@@ -279,7 +279,7 @@ because it has further to fly back.*
 Three things start a Return to Home: **you press the button**, the **battery gets low**, or the
 **controller signal is lost**. In all three cases the aircraft does the same thing.
 
-![The Return to Home flight profile](images/fig15_return_to_home.svg){ width="100%" }
+![The Return to Home flight profile](images/w01_fig15_return_to_home.svg){ width="100%" }
 
 *Figure 15: It climbs to a set altitude, flies a straight line home, then descends. It does not
 steer around anything on the way.*
@@ -301,7 +301,7 @@ steer around anything on the way.*
 Flying is regulated, and the rules exist because a two-pound object falling from 300 feet is
 dangerous. Three of them are easy to break without noticing.
 
-![The rules that apply on every flight](images/fig16_rules.svg){ width="100%" }
+![The rules that apply on every flight](images/w01_fig16_rules.svg){ width="100%" }
 
 *Figure 16: Keep the aircraft in sight and below the altitude limit, and know the three things you
 must never fly over or into.*
@@ -339,7 +339,7 @@ airspace, weather, and the Part 107 exam itself.
 
 **1. Name each numbered control.**
 
-![Controller with numbered controls](images/fig07b_controller_numbered.svg){ width="100%" }
+![Controller with numbered controls](images/w01_fig07b_controller_numbered.svg){ width="100%" }
 
 ??? note "Answers"
     1. Left stick

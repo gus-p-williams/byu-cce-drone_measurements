@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parts import (aircraft_mini_side, aircraft_mini_top,  # noqa: E402
                    rotation_arrow)
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, circle, g, line, rect, render_png,  # noqa: E402
-                    text, translate)
+from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
+                    rect, render_png, text, translate)
 
 CARD = dict(rx=10, fill=P["white"], stroke="#dde3e9", stroke_width=1.5)
 
@@ -200,9 +200,10 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    for builder, name in ((build_axes, "fig04_axes.svg"),
-                          (build_lift, "fig05_lift_and_weight.svg"),
-                          (build_thrust, "fig06_differential_thrust.svg")):
+    for builder, name in (
+            (build_axes, figure_name(1, 4, "axes")),
+            (build_lift, figure_name(1, 5, "lift_and_weight")),
+            (build_thrust, figure_name(1, 6, "differential_thrust"))):
         fname = os.path.join(args.out, name)
         builder().save(fname)
         print("wrote", fname)

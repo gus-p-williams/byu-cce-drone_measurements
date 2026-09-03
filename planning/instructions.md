@@ -42,8 +42,15 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
 - Drawings are generic. Brand names go in captions or tables, not in the picture. Where hardware
   varies between models, say so in the subtitle or caption.
 - Keep text as text in the SVG. Do not convert labels to paths.
-- File names: `figNN_short_name.svg` inside the week's `images/` folder, numbered in page order.
-  The Markdown caption is an italic line under the image: `*Figure NN: ...*`
+- File names: `wNN_figMM_short_name.svg` inside the week's `images/` folder, where `NN` is the week
+  and `MM` is the figure number in page order (for example `w01_fig07_controller.svg`). The week
+  prefix means an exported figure still says where it came from once it is out of the repository.
+  Scripts build the name with `svgkit.figure_name()`, so the number in the file name cannot drift
+  away from the number printed inside the drawing.
+- The Markdown caption is an italic line under the image: `*Figure NN: ...*` The number there, the
+  number in the file name, and the number in the drawing's own title must all agree.
+- A figure used in more than one week is generated once per week with a `--number` flag, because the
+  same drawing may be Figure 16 on one page and Figure 12 on another.
 - Check every figure by rendering it to PNG (Inkscape command line, or `--png` on the script)
   and looking at it before committing.
 

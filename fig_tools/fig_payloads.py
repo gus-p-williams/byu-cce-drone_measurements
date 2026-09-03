@@ -16,8 +16,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, circle, g, line, path, rect, render_png,  # noqa: E402
-                    text, translate)
+from svgkit import (Figure, circle, figure_name, g, line, path,  # noqa: E402
+                    rect, render_png, text, translate)
 
 CARD_W, CARD_H = 160, 208
 COLS = (100, 275, 450, 625, 800)
@@ -118,7 +118,7 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    fname = os.path.join(args.out, "fig03_payloads.svg")
+    fname = os.path.join(args.out, figure_name(1, 3, "payloads"))
     build().save(fname)
     print("wrote", fname)
     if args.png:

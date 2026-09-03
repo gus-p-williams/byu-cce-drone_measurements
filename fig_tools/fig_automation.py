@@ -21,8 +21,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from parts import aircraft_mini_side, aircraft_mini_top  # noqa: E402
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, circle, g, line, path, polygon,  # noqa: E402
-                    rect, render_png, text, translate)
+from svgkit import (Figure, arrow, circle, figure_name, g, line,  # noqa: E402
+                    path, polygon, rect, render_png, text, translate)
 
 
 def home_marker(x, y, scale=1.0):
@@ -266,10 +266,10 @@ def main() -> None:
     args = ap.parse_args()
 
     for builder, name in (
-        (build_home_point, "fig12_home_point.svg"),
-        (build_obstacle_coverage, "fig13_obstacle_coverage.svg"),
-        (build_battery_states, "fig14_battery_states.svg"),
-        (build_return_to_home, "fig15_return_to_home.svg"),
+        (build_home_point, figure_name(1, 12, "home_point")),
+        (build_obstacle_coverage, figure_name(1, 13, "obstacle_coverage")),
+        (build_battery_states, figure_name(1, 14, "battery_states")),
+        (build_return_to_home, figure_name(1, 15, "return_to_home")),
     ):
         fname = os.path.join(args.out, name)
         builder().save(fname)

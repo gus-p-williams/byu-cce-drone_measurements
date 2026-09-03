@@ -19,8 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parts import (aircraft_mini_side, aircraft_mini_top,  # noqa: E402
                    rotation_arrow, stick_pair)
 from svgkit import PALETTE as P  # noqa: E402
-from svgkit import (Figure, arrow, g, render_png, rect, text,  # noqa: E402
-                    translate)
+from svgkit import (Figure, arrow, figure_name, g, render_png,  # noqa: E402
+                    rect, text, translate)
 
 # Two wide panels per row keeps each one large enough to read on the page.
 COLS = (265, 635)
@@ -147,8 +147,9 @@ def main() -> None:
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
 
-    for builder, name in ((build_sticks, "fig08_stick_controls.svg"),
-                          (build_nose_in, "fig09_nose_in.svg")):
+    for builder, name in (
+            (build_sticks, figure_name(1, 8, "stick_controls")),
+            (build_nose_in, figure_name(1, 9, "nose_in"))):
         fname = os.path.join(args.out, name)
         builder().save(fname)
         print("wrote", fname)
