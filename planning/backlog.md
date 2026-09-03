@@ -75,8 +75,9 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
       clean strict build. Awaiting instructor review of the checklist overview prose.
 - [x] Phase 2 — all sections written, sixteen figures. Figure 2 (an underside view of the
       aircraft) was planned but not needed; add it only if the parts table proves thin in class.
-- [ ] Phase 3 — linked pages: a common flight issues table, and a feature-availability matrix
-      (toy / consumer / professional). Checklist cross-links are already in place both ways.
+- [x] Phase 3 — `week_01/flight_issues.md` added and linked from Flight Basics and the pre-flight
+      checklist; feature-availability matrix added as a section of Flight Basics rather than its
+      own page, since it is one table.
 - [ ] Phase 4 — optional animation on three figures, full read-through, backlog update.
 
 ## Done
@@ -90,6 +91,8 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
   figures, plus Check Your Understanding with collapsible answers and a Resources section.
   Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
   Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
+- 2026-09-03 — Added `week_01/flight_issues.md` (symptom, cause, action tables plus a fly-away
+  warning) and a feature-availability matrix inside Flight Basics.
 - 2026-09-03 — Adopted `wNN_figMM_short_name.svg` for figure files and converted Weeks 1 and 5.
   `svgkit.figure_name()` is now the only place a generated figure's name is built.
 - 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding

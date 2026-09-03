@@ -28,4 +28,7 @@ Aircraft differ in how they fold, how the battery seats, and which sensors need 
 Check the manual for the drone you are flying, and see
 [Flight Basics](../../week_01/flight_basics.md) for what each part does.
 
+If a check fails or the aircraft reports an error, see
+[Common Flight Issues](../../week_01/flight_issues.md).
+
 Drone-specific checklists will be linked here as they are added.

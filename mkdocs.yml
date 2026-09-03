@@ -35,6 +35,7 @@ nav:
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
       - Flight Basics: week_01/flight_basics.md
+      - Common Flight Issues: week_01/flight_issues.md
   - Week 2 - Software:
       - Bentley iTwin: week_02/bentley_itwin.md
       - QGIS Measurements: week_02/qgis_measurements.md

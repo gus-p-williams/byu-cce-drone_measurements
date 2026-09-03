@@ -17,6 +17,8 @@
     aircraft add interchangeable sensors and redundant systems. **Only the two control sticks work
     the same way on nearly every aircraft.** Button names, switch positions, and screens vary from
     model to model, so always check the manual for the drone you are actually flying.
+    [Which Features Does Your Drone Have?](#which-features-does-your-drone-have) sets out what to
+    expect from each class of aircraft.
 
 ---
 
@@ -201,6 +203,9 @@ up and checking, then flying and packing away.*
     is not, it has nothing to listen to. Depending on the model it may sit there refusing to arm,
     or it may start a Return to Home you did not ask for.
 
+If something does not behave the way you expect at any point in that sequence,
+[Common Flight Issues](flight_issues.md) lists the usual causes.
+
 The detailed item-by-item lists live on the checklist pages:
 [Pre-Flight](../flight_check_list/pre_flight/pre_general.md) and
 [Post-Flight](../flight_check_list/post_flight/post_general.md). Figure 10 is the shape of the
@@ -293,6 +298,35 @@ steer around anything on the way.*
     Every one of these features can fail or be fooled. Fly so that losing all of them at once would
     be inconvenient rather than dangerous: stay within sight, stay clear of people and obstacles,
     and come back with battery to spare.
+
+When one of them does misbehave, [Common Flight Issues](flight_issues.md) lists the usual causes
+and what to do about each.
+
+---
+
+## Which Features Does Your Drone Have?
+
+Almost everything on this page is standard on a mid-range consumer drone, absent from a cheap toy,
+and extended on a professional aircraft. Before flying an unfamiliar model, find out which column
+it sits in.
+
+| Feature | Toy | Consumer | Professional |
+|---------|-----|----------|--------------|
+| Satellite positioning | rarely | yes | yes |
+| Holds position with no input | no, it drifts constantly | yes | yes |
+| Return to Home | no | yes | yes |
+| Mechanical gimbal | no, digital stabilization only | usually | yes |
+| Obstacle sensors | no | sometimes, often forward and down only | usually all round |
+| Flight modes (Cine, Normal, Sport) | no | yes | yes |
+| Interchangeable payloads | no | no | yes |
+| Remote ID built in | no | yes on current models | yes |
+| Redundant motors or batteries | no | no | often |
+
+!!! note "Weight and capability are different questions"
+    The sub-250 g aircraft used in this class are **consumer** drones despite their size. They have
+    satellite positioning, a gimbal, and Return to Home. Being under 250 g changes what you must
+    register, not what the aircraft can do. Do not assume a small drone is a toy, or that a heavy
+    one is capable.
 
 ---
 
