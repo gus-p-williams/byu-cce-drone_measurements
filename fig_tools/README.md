@@ -19,11 +19,24 @@ site, including scripts.
 | `fig_controller.py` | Figure 7, the controller, labeled and numbered |
 | `fig_sticks.py` | Figures 8 and 9, stick controls and nose-in reversal |
 | `fig_flight.py` | Figures 4, 5 and 6, rotation axes, lift against weight, differential thrust |
+| `fig_payloads.py` | Figure 3, the sensors a drone can carry |
+| `fig_sequence.py` | Figures 10 and 11, the flight sequence and the box practice pattern |
+| `fig_automation.py` | Figures 12 to 15, position hold, sensor coverage, battery states, Return to Home |
+| `fig_rules.py` | Week 1 Figure 16 and Week 5 Figure 12, from one drawing |
 
 Each `fig_*.py` writes to `review/` by default and to a docs images folder with `--out`.
 
 Anything drawn more than once belongs in `parts.py`, so the same aircraft and the same controller
 appear in every figure. Change a part there and every figure that uses it updates on the next run.
+
+A figure used in more than one week takes a `--number` flag, so the number printed in its title
+matches the page it lands on. `fig_rules.py` works this way: Week 1 gets the full drawing, Week 5
+gets `--no-scene` because it already covers line of sight and altitude in its own figures.
+
+```
+python fig_tools/fig_rules.py --out docs/week_01/images
+python fig_tools/fig_rules.py --no-scene --number 12     --name fig12_prohibitions.svg --out docs/week_05/images
+```
 
 No third-party packages are required. Any Python 3.8 or newer works.
 

@@ -14,7 +14,8 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 ## Content gaps
 
 - [ ] Week 5 `FAA_Exam_Planning_and_Overview.md` has captions for Figures 15, 16, 19, 20, 24, 25,
-      and 27, but no matching image files exist. Those captions currently sit under nothing.
+      and 27, but no matching image files exist. Figure 12 now exists (the three prohibitions);
+      Figures 2, 5, 6, 8, 9, 17, 18 and 21 are still unused numbers. Those captions currently sit under nothing.
       Either draw the figures or remove the captions.
 - [ ] Neither flight checklist links to drone-specific lists yet. Both pages now say those will be
       added rather than promising links that do not exist. Write them when the fleet is settled.

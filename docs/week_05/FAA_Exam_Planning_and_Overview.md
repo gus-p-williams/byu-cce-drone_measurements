@@ -309,6 +309,9 @@ Part 107 establishes the following operating rules for sUAS:
 | **Multiple aircraft** | One pilot, one drone at a time (unless waiver obtained) |
 | **Aircraft weight** | Under 55 lbs (including payload) at takeoff |
 
+![Figure 12 — Three Absolute Prohibitions](images/fig12_prohibitions.svg)
+*Figure 12: The three limits that most often catch out new remote pilots. Some can be waived with an approved safety case, as shown in the next section, but ATC authorization in controlled airspace cannot.*
+
 ![Figure 13 — Visual Line of Sight Requirement](images/fig13_vlos.svg)
 *Figure 13: The remote PIC must maintain direct visual contact with the sUAS at all times. A Visual Observer may assist but does not replace the PIC's VLOS obligation.*
 
