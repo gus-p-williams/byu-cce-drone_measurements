@@ -124,6 +124,88 @@ def shift(anchors: dict, dx: float, dy: float) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Control stick glyph, and small aircraft icons for multi-panel figures
+# ---------------------------------------------------------------------------
+def stick(dx: float = 0, dy: float = 0, r: float = 30,
+          active: bool = True) -> El:
+    """One control stick seen from above, knob pushed by (dx, dy) in -1..1.
+
+    Drawn at the local origin. A dashed outline shows the neutral position and
+    an arrow shows which way the thumb pushes. An inactive stick is drawn pale,
+    so a figure can show both sticks and highlight only the one in use.
+    """
+    from svgkit import arrow as _arrow
+
+    edge = P["line"] if active else "#c8d0d8"
+    knob = P["dark"] if active else "#c8d0d8"
+
+    grp = g(circle(0, 0, r, fill=P["white"], stroke=edge, stroke_width=1.5))
+    grp.add(circle(0, 0, r * 0.34, fill="none", stroke="#cccccc",
+                   stroke_width=1, stroke_dasharray="3 3"))
+    kx, ky = dx * r * 0.52, dy * r * 0.52
+    grp.add(circle(kx, ky, r * 0.34, fill=knob, stroke=edge,
+                   stroke_width=1.2))
+    if active and (dx or dy):
+        mag = (dx ** 2 + dy ** 2) ** 0.5
+        ux, uy = dx / mag, dy / mag
+        grp.add(_arrow(ux * r * 1.02, uy * r * 1.02,
+                       ux * (r + 15), uy * (r + 15), width=2.5, head=8))
+    return grp
+
+
+def stick_pair(side: str, dx: float, dy: float, r: float = 20,
+               gap: float = 38) -> El:
+    """Both sticks side by side, with only `side` ("left" or "right") active.
+
+    Students see one controller in every panel, so there is never any doubt
+    about which thumb moves.
+    """
+    left_active = side == "left"
+    return g(
+        g(stick(dx, dy, r, True) if left_active else stick(0, 0, r, False),
+          transform=f"translate({-gap},0)"),
+        g(stick(0, 0, r, False) if left_active else stick(dx, dy, r, True),
+          transform=f"translate({gap},0)"),
+    )
+
+
+def aircraft_mini_top(r: float = 1.0) -> El:
+    """A small quadcopter seen from above, nose up. Roughly 92 x 78 at r=1."""
+    grp = g()
+    motors = [(-30, -24), (30, -24), (-30, 24), (30, 24)]
+    grp.add(g(*[line(mx * 0.28, my * 0.5, mx, my) for mx, my in motors],
+              stroke=P["line"], stroke_width=5, stroke_linecap="round"))
+    grp.add(g(*[circle(mx, my, 15) for mx, my in motors],
+              fill="#e8edf2", stroke="#b6c2cc", stroke_width=1))
+    grp.add(g(*[circle(mx, my, 5) for mx, my in motors], fill=P["dark"]))
+    grp.add(rect(-11, -20, 22, 40, rx=6, fill=P["body"], stroke=P["line"],
+                 stroke_width=1.5))
+    # a solid arrowhead marks the nose, so a rotated aircraft is readable
+    grp.add(polygon([(0, -37), (-11, -21), (11, -21)], fill=P["dark"],
+                    stroke=P["line"], stroke_width=1))
+    return g(grp, transform=f"scale({r})") if r != 1.0 else grp
+
+
+def aircraft_mini_side(r: float = 1.0) -> El:
+    """A small quadcopter seen from the side, for climb and descend panels."""
+    grp = g()
+    grp.add(rect(-22, -8, 44, 18, rx=6, fill=P["body"], stroke=P["line"],
+                 stroke_width=1.5))
+    for mx in (-34, 34):
+        grp.add(line(mx, -8, mx, -18, stroke=P["line"], stroke_width=4,
+                     stroke_linecap="round"))
+        grp.add(line(mx - 17, -20, mx + 17, -20, stroke=P["dark"],
+                     stroke_width=4, stroke_linecap="round"))
+        grp.add(line(mx * 0.6, -2, mx, -10, stroke=P["line"], stroke_width=4,
+                     stroke_linecap="round"))
+    for fx in (-14, 14):
+        grp.add(line(fx, 10, fx, 20, stroke=P["dark"], stroke_width=4,
+                     stroke_linecap="round"))
+    grp.add(rect(-6, -4, 10, 9, rx=3, fill=P["dark"]))
+    return g(grp, transform=f"scale({r})") if r != 1.0 else grp
+
+
+# ---------------------------------------------------------------------------
 # Rotation arrow, used to show which way a propeller turns
 # ---------------------------------------------------------------------------
 def rotation_arrow(cx: float, cy: float, r: float, clockwise: bool = True,

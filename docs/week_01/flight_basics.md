@@ -90,10 +90,28 @@ and switches are named differently from one manufacturer to the next.*
 
 ## Stick Controls
 
-*[Figure 8 — stick inputs to aircraft motion, eight mini panels.]*
+Nearly every ready-to-fly drone uses the **Mode 2** layout. The left stick handles altitude and
+heading, and the right stick moves the aircraft over the ground. Both sticks spring back to centre
+when you let go, and the aircraft simply holds position.
 
-*[Figure 9 — nose-in reversal. Two panels: aircraft facing away, then facing the pilot, same stick
-input, opposite apparent motion.]*
+![What each stick does](images/fig08_stick_controls.svg){ width="100%" }
+
+*Figure 8: The eight stick inputs. In each panel the dark stick is the one you move; the pale one
+stays where it is.*
+
+!!! warning "The nose decides left and right, not you"
+    Stick directions are relative to the **nose of the aircraft**, not to where you are standing.
+    While the drone flies away from you, its left matches your left. Turn it around to face you and
+    everything reverses: pushing right sends it to your left. This single fact causes more beginner
+    crashes than anything else.
+
+![Flying away from you compared with flying toward you](images/fig09_nose_in.svg){ width="100%" }
+
+*Figure 9: The same stick input gives opposite results depending on which way the nose points.*
+
+!!! tip "Two habits that prevent most crashes"
+    Keep the nose pointed away from you while you are learning, and use small stick movements. The
+    controls are far more sensitive than they look, and a gentle push is almost always enough.
 
 ---
 

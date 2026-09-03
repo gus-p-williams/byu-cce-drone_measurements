@@ -124,6 +124,27 @@ def text(x, y, s, **attrs) -> El:
     return El("text", escape(str(s)), x=x, y=y, **attrs)
 
 
+def arrow(x1, y1, x2, y2, color: str | None = None, width: float = 3,
+          head: float = 10) -> El:
+    """A straight arrow from (x1, y1) to (x2, y2), with a solid head."""
+    import math
+
+    color = color or PALETTE["accent"]
+    dx, dy = x2 - x1, y2 - y1
+    length = math.hypot(dx, dy) or 1
+    ux, uy = dx / length, dy / length
+    # stop the shaft where the head begins, so the tip stays sharp
+    sx, sy = x2 - ux * head, y2 - uy * head
+    nx, ny = -uy, ux
+    return g(
+        line(x1, y1, sx, sy, stroke=color, stroke_width=width,
+             stroke_linecap="round"),
+        polygon([(x2, y2),
+                 (sx + nx * head * 0.5, sy + ny * head * 0.5),
+                 (sx - nx * head * 0.5, sy - ny * head * 0.5)], fill=color),
+    )
+
+
 def translate(x, y, *children, scale: float | None = None) -> El:
     t = f"translate({x},{y})"
     if scale is not None and scale != 1:
