@@ -216,6 +216,11 @@ people, cars, buildings, and trees. The box is the standard first exercise.
 *Figure 11: Fly one side, stop in a hover at the corner, then fly the next side. Slow and
 deliberate beats fast and smooth at this stage.*
 
+Do not treat one lap as finished. Fly the box round several times, until the corners stop needing
+thought. Then fly it the other way round, and then again with the nose turned to follow the
+direction of travel. The pattern is the same each time; what changes is how much you have to think
+about which stick to move. When several laps feel boring, you are ready to fly something useful.
+
 !!! tip "Hover before you go anywhere"
     After take-off, hold a hover at about eye level for a few seconds and try a small input on each
     stick. You are checking that the aircraft responds the way you expect and is not drifting. If
@@ -226,15 +231,68 @@ deliberate beats fast and smooth at this stage.*
 
 ## Automated Flight Functions
 
-*[Figure 12 — home point and position hold. Satellites, aircraft, home marker, and the drift arrow
-that appears when the satellite signal is lost.]*
+A modern drone does a great deal for you. It holds position, avoids some obstacles, watches its own
+battery, and will fly itself home. This automation is genuinely good, and it is also the most common
+source of surprises, because each feature has limits that are not obvious until you meet them.
 
-*[Figure 13 — obstacle sensor coverage, top view, with the blind zones shaded.]*
+### Knowing where it is
 
-*[Figure 14 — battery states bar: normal, warning, forced return, forced landing.]*
+The aircraft works out its position from satellites, and its heading from an internal compass. When
+it powers up and gets a good fix it records a **home point**, the spot it will come back to.
 
-*[Figure 15 — Return to Home profile, side view, showing the climb to a safe altitude over a tree
-line before flying home.]*
+![Holding position with and without satellites](images/fig12_home_point.svg){ width="100%" }
+
+*Figure 12: With satellites, the aircraft sits still on its own. Without them it drifts, and it is
+entirely up to you to notice and correct.*
+
+!!! warning "Steel and rebar confuse the compass"
+    This matters on a construction site more than almost anywhere. Reinforcing bar, steel decking,
+    vehicles, and buried services all distort the magnetic field. A compass calibrated while
+    standing on rebar can send the aircraft flying confidently in the wrong direction. Calibrate on
+    open ground, away from metal, and always wait for the home point confirmation before you take
+    off.
+
+### Seeing obstacles
+
+Obstacle sensors look in fixed directions and are easily fooled. Treat them as a backstop that
+occasionally saves you, never as permission to stop looking.
+
+![Where the obstacle sensors look](images/fig13_obstacle_coverage.svg){ width="100%" }
+
+*Figure 13: Sensors watch some directions and not others, and there are things they cannot see even
+when pointed straight at them.*
+
+Sport mode turns obstacle sensing off entirely on many models, which is worth remembering before
+you reach for it to cover ground faster.
+
+### Watching the battery
+
+As the battery drains, the aircraft takes decisions away from you, one step at a time.
+
+![What happens as the battery drains](images/fig14_battery_states.svg){ width="100%" }
+
+*Figure 14: The thresholds vary by model, and the aircraft raises them the further away you are,
+because it has further to fly back.*
+
+### Return to Home
+
+Three things start a Return to Home: **you press the button**, the **battery gets low**, or the
+**controller signal is lost**. In all three cases the aircraft does the same thing.
+
+![The Return to Home flight profile](images/fig15_return_to_home.svg){ width="100%" }
+
+*Figure 15: It climbs to a set altitude, flies a straight line home, then descends. It does not
+steer around anything on the way.*
+
+!!! warning "Return to Home flies straight, not smart"
+    The aircraft will happily fly a straight line through a crane, a building, or a tree line. The
+    only thing protecting it is the Return to Home altitude you set before take-off. Set it above
+    the tallest obstacle on the site, and reset it when you move to a new site.
+
+!!! tip "Automation is a backup, not a plan"
+    Every one of these features can fail or be fooled. Fly so that losing all of them at once would
+    be inconvenient rather than dangerous: stay within sight, stay clear of people and obstacles,
+    and come back with battery to spare.
 
 ---
 
