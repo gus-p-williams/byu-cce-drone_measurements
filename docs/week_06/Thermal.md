@@ -1,4 +1,4 @@
-# Week 6 — Thermal Imaging Overview
+# Thermal Imaging
 
 This page outlines thermal (infrared) sensors on drones: how they capture thermal information, typical data products, use cases, and practical flight considerations.
 

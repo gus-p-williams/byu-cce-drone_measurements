@@ -1,4 +1,4 @@
-# Week 5 — FAA Exam Planning and Overview
+# The Part 107 Exam
 
 This page provides a comprehensive overview of the FAA Part 107 Remote Pilot Certificate exam: what it covers, eligibility requirements, and a step-by-step plan for the certification process. Use this alongside the [Knowledge Review](Part_107_Knowledge_Review.md) for a complete study package.
 

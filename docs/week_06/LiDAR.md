@@ -1,4 +1,4 @@
-# Week 6 — LiDAR Overview
+# LiDAR
 
 This page introduces LiDAR sensors on drones: how they work, the primary data products, common use cases, and practical guidance for planning LiDAR flights.
 

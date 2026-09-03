@@ -22,7 +22,7 @@ site, including scripts.
 | `fig_payloads.py` | Figure 3, the sensors a drone can carry |
 | `fig_sequence.py` | Figures 10 and 11, the flight sequence and the box practice pattern |
 | `fig_automation.py` | Figures 12 to 15, position hold, sensor coverage, battery states, Return to Home |
-| `fig_rules.py` | Week 1 Figure 16 and Week 5 Figure 12, from one drawing |
+| `fig_rules.py` | Topic 1 Figure 16 and Topic 5 Figure 12, from one drawing |
 
 Each `fig_*.py` writes to `review/` by default and to a docs images folder with `--out`.
 
@@ -36,7 +36,7 @@ Scripts never spell the name out; they call `svgkit.figure_name(week, number, sl
 number in the file name always matches the number printed inside the drawing.
 
 A figure used in more than one week is generated once per week, with `--number` setting the number
-in its title. `fig_rules.py` works this way: Week 1 gets the full drawing, Week 5 gets `--no-scene`
+in its title. `fig_rules.py` works this way: Topic 1 gets the full drawing, Topic 5 gets `--no-scene`
 because it already covers line of sight and altitude in its own figures.
 
 ```

@@ -1,4 +1,4 @@
-# Week 6 — Multispectral Imaging Overview
+# Multispectral Imaging
 
 This page introduces multispectral sensors on drones, explains common spectral bands and indices, and provides practical guidance for planning flights and producing quantitative products.
 

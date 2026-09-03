@@ -61,10 +61,10 @@ measure.*
 
 | Payload | Answers the question | Covered in |
 |---------|----------------------|------------|
-| Standard camera | What does the site look like, and what are its dimensions? | Weeks 2 to 4 |
-| Thermal | Where is heat escaping, or where is moisture trapped? | [Week 6](../week_06/Thermal.md) |
-| Multispectral | How healthy is the vegetation, and where is bare ground? | [Week 6](../week_06/Multispectral.md) |
-| LiDAR | What is the ground surface underneath the trees? | [Week 6](../week_06/LiDAR.md) |
+| Standard camera | What does the site look like, and what are its dimensions? | Topics 2 to 4 |
+| Thermal | Where is heat escaping, or where is moisture trapped? | [Topic 6](../week_06/Thermal.md) |
+| Multispectral | How healthy is the vegetation, and where is bare ground? | [Topic 6](../week_06/Multispectral.md) |
+| LiDAR | What is the ground surface underneath the trees? | [Topic 6](../week_06/LiDAR.md) |
 | Gas detector | Is there a leak, and where is it coming from? | not covered in this course |
 
 Other payloads exist for specific jobs, including speakers, spotlights, and release mechanisms for
@@ -361,10 +361,10 @@ must never fly over or into.*
 
 !!! warning "Course work counts as a business purpose"
     Flying for a class project, research, or anything a client might pay for falls under Part 107,
-    not the recreational rules, even when nobody is paying you. Week 5 covers the certificate and
+    not the recreational rules, even when nobody is paying you. Topic 5 covers the certificate and
     the exam in full.
 
-[Week 5 covers all of this in detail](../week_05/FAA_Exam_Planning_and_Overview.md), including
+[Topic 5 covers all of this in detail](../week_05/FAA_Exam_Planning_and_Overview.md), including
 airspace, weather, and the Part 107 exam itself.
 
 ---
@@ -447,13 +447,13 @@ your hands.
 
 - [DJI remote controller button functions](https://support.dji.com/help/content?customId=en-us03400006567&spaceId=34&re=US&lang=en){target="_blank"} — what each control does on the DJI controllers
 - [Holy Stone manuals](https://www.firstquadcopter.com/drone-manuals/free-holy-stone-drone-manuals-pdf-download-guides-for-all-models/){target="_blank"} — PDFs for the Holy Stone models
-- [FAA Remote Pilot Study Guide](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/media/remote_pilot_study_guide.pdf){target="_blank"} — the official study guide behind Week 5
+- [FAA Remote Pilot Study Guide](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/media/remote_pilot_study_guide.pdf){target="_blank"} — the official study guide behind Topic 5
 
 ### Next steps
 
 - [Pre-Flight Checklist](../flight_check_list/pre_flight/pre_general.md) and
   [Post-Flight Checklist](../flight_check_list/post_flight/post_general.md) — what to run through
   on site
-- [Week 5: FAA Part 107](../week_05/FAA_Exam_Planning_and_Overview.md) — the rules in full, and the
+- [Topic 5: FAA Part 107](../week_05/FAA_Exam_Planning_and_Overview.md) — the rules in full, and the
   certificate you will need
-- [Week 6: Sensors](../week_06/LiDAR.md) — thermal, multispectral, and LiDAR payloads in detail
+- [Topic 6: Sensors](../week_06/LiDAR.md) — thermal, multispectral, and LiDAR payloads in detail

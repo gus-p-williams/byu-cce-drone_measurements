@@ -11,7 +11,7 @@ General conventions for anyone (human or AI) editing this repository.
 
 ## Page structure
 
-Each content page should follow the pattern established in Weeks 1 through 5:
+Each content page should follow the pattern established in Topics 1 through 5:
 
 1. `# Title` as the first line.
 2. A `!!! abstract "Key Takeaways"` admonition with three to five bullets.
@@ -48,11 +48,11 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
   number in the file name cannot drift away from the number printed inside the drawing.
 - `MM` runs as **one sequence across the whole week**, following the nav order of that week's pages.
   A three-page week numbers straight through rather than restarting at each page, so every file in
-  one `images/` folder has a distinct number. Weeks 1 and 5 are single pages, so the two rules
+  one `images/` folder has a distinct number. Topics 1 and 5 are single pages, so the two rules
   happen to agree there.
 - A borrowed image's original file name is part of its provenance. Before renaming one, make sure
   the caption already records the source and the licence, or the trail back to it is lost. This
-  matters most in Week 6, where several images come from Wikimedia.
+  matters most in Topic 6, where several images come from Wikimedia.
 - The Markdown caption is an italic line under the image: `*Figure NN: ...*` The number there, the
   number in the file name, and the number in the drawing's own title must all agree.
 - A figure used in more than one week is generated once per week with a `--number` flag, because the
@@ -72,7 +72,7 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
 
 - Do not commit `site/`, large PDFs, or anything under `.claude/local/`.
 - Write commit messages that say which week and which page changed, matching the existing history
-  (for example, "Standardize Week 4 SfM and Mission Planning materials").
+  (for example, "Standardize Topic 4 SfM and Mission Planning materials").
 
 ## Working with Claude Code
 

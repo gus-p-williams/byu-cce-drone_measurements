@@ -11,7 +11,7 @@
     - **DSM keeps the trees and buildings. DTM removes them.** That single distinction decides
       whether your earthwork numbers are right.
 
-This page is a reference. You will come back to it in Weeks 2, 3, 4, and 6 as each product turns up.
+This page is a reference. You will come back to it in Topics 2, 3, 4, and 6 as each product turns up.
 
 ---
 
@@ -122,7 +122,7 @@ ground itself.*
 
 ## What you'll produce in this class
 
-| Week | What you make |
+| Topic | What you make |
 |------|---------------|
 | 2 | An orthomosaic, from photos flown for you |
 | 3 | Measurements off that orthomosaic, compared against pacing and Google Maps |

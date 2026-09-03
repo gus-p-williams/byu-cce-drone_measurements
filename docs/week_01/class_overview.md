@@ -58,7 +58,7 @@ drone has to be registered.
     [Take the TRUST test](https://www.faa.gov/uas/recreational_flyers/knowledge_test_updates){target="_blank"}
 
 TRUST covers the flying you do in this class. **Part 107** is the separate certificate you need to
-fly for work, and [Week 5](../week_05/FAA_Exam_Planning_and_Overview.md) is devoted to earning it.
+fly for work, and [Topic 5](../week_05/FAA_Exam_Planning_and_Overview.md) is devoted to earning it.
 
 ---
 

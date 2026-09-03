@@ -13,7 +13,7 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 
 ## Content gaps
 
-- [ ] Week 5 `FAA_Exam_Planning_and_Overview.md` has captions for Figures 15, 16, 19, 20, 24, 25,
+- [ ] Topic 5 `FAA_Exam_Planning_and_Overview.md` has captions for Figures 15, 16, 19, 20, 24, 25,
       and 27, but no matching image files exist. Figure 12 now exists (the three prohibitions);
       Figures 2, 5, 6, 8, 9, 17, 18 and 21 are still unused numbers. Those captions currently sit under nothing.
       Either draw the figures or remove the captions.
@@ -23,7 +23,7 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 ## Housekeeping
 
 
-- [ ] Week 6 uses raw `<img src="../images/...">` tags in seven places. MkDocs does not rewrite
+- [ ] Topic 6 uses raw `<img src="../images/...">` tags in seven places. MkDocs does not rewrite
       paths inside raw HTML, so these work only because clean URLs are on. Convert them to Markdown
       images with `attr_list` for sizing, matching the other weeks.
 - [ ] `test_image.jpg` and `mkdocs_thermal_page.html` sit at the repository root. Move them into
@@ -34,23 +34,23 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 ## Figure naming rollout
 
 Figures are named `wNN_figMM_short_name.svg`, numbered as one sequence per week in nav order. See
-`instructions.md`. Weeks 1 and 5 are converted. The rest are deferred to each week's content
+`instructions.md`. Topics 1 and 5 are converted. The rest are deferred to each week's content
 revision, because they have no figure numbers today and inventing numbers now would only be redone
 when the captions are rewritten.
 
-- [ ] **Week 3** — three images, one referenced, no figure numbers anywhere. Assign numbers and
-      rename during the Week 3 revision. `EB_Parking_Lot.png` and `EB_Parking_Lot_digital.png` are
+- [ ] **Topic 3** — three images, one referenced, no figure numbers anywhere. Assign numbers and
+      rename during the Topic 3 revision. `EB_Parking_Lot.png` and `EB_Parking_Lot_digital.png` are
       unreferenced; decide whether they are wanted before renaming them.
-- [x] **Week 4** — done. Both pages rewritten with nine numbered figures, `w04_figNN_`, running
+- [x] **Topic 4** — done. Both pages rewritten with nine numbered figures, `w04_figNN_`, running
       through the week in nav order.
-- [ ] **Week 6** — seventeen images across three pages, none numbered, captions written as
+- [ ] **Topic 6** — seventeen images across three pages, none numbered, captions written as
       "Description:" rather than "Figure N". Several are Wikimedia originals whose file names carry
       the provenance, so record each source and licence in its caption before renaming. Seven
       references are raw HTML `<img>` tags that also need converting to Markdown (see Housekeeping).
       Unreferenced: `Effigy_mounds_lidar.jpg`, `Infrared_thermal_imaging_during_a_yacht_survey.jpg`,
       `LIDAR_field_yield.jpg`, `Tank-DSM-filled.webp`, and both files in `week_06/media/`.
 
-## Week 1 follow-ups
+## Topic 1 follow-ups
 
 - [ ] Replace the eight `w01_example_*.svg` placeholders on `week_01/data_products.md` with real
       products from class flights: orthomosaic, point cloud, DSM, DTM, 3D model, contours, thermal,
@@ -60,11 +60,11 @@ when the captions are rewritten.
       students flying. Worth having: pilot, controller, and aircraft all in one frame; someone at a
       laptop with a finished map on screen. Check whether consent is needed for recognizable faces.
 - [ ] The old overview defined DEM as including vegetation and structures, which is really a DSM.
-      The rewrite uses DSM and DTM, matching Weeks 4 and 6, and treats DEM as the umbrella term.
+      The rewrite uses DSM and DTM, matching Topics 4 and 6, and treats DEM as the umbrella term.
       Worth a glance to confirm that is how you want the three used across the course.
 
 - [ ] Confirm the three pre-class videos in `week_01/flight_basics.md`. They were restored from
-      `DJI_Mini_Resources.md`, which commit `d173bd4` deleted during the Week 1 reorganization, so
+      `DJI_Mini_Resources.md`, which commit `d173bd4` deleted during the Topic 1 reorganization, so
       they may have been dropped on purpose.
 - [ ] Decide whether the Check Your Understanding answers should stay visible on the public site.
       They are collapsed behind a toggle, not hidden.
@@ -72,13 +72,13 @@ when the captions are rewritten.
 ## Ideas
 
 - [ ] Add a course-wide glossary page for acronyms (UAS, SfM, GSD, AGL, VLOS, GCP, RTK).
-- [ ] Add "Check Your Understanding" questions to Weeks 1 through 4 to match the Week 5 practice exams.
+- [ ] Add "Check Your Understanding" questions to Topics 1 through 4 to match the Topic 5 practice exams.
 - [ ] Decide whether instructor answer keys should stay on the public site or move to a private
       location.
 
-## In progress: Week 1 Flight Basics
+## In progress: Topic 1 Flight Basics
 
-Plan agreed September 2026. Generic, figure-led page in Week 1, with detail moved to linked pages.
+Plan agreed September 2026. Generic, figure-led page in Topic 1, with detail moved to linked pages.
 
 - [x] Phase 0 — figure style approved; `fig_tools/` toolkit and generic controller figure built.
 - [x] Phase 1 — page skeleton, flight checklist landing page, post-flight list, nav fix,
@@ -89,7 +89,7 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
       Basics and the pre-flight checklist; feature-availability matrix added as a section of Flight
       Basics rather than its own page, since it is one table.
 - [ ] Phase 4 — **deferred by the instructor, September 2026. Keep, do not drop.** Optional
-      animation on two or three figures, a full read-through of both Week 1 pages for length
+      animation on two or three figures, a full read-through of both Topic 1 pages for length
       and consistency, and a backlog tidy. Pick this up once the other weeks are revised.
 
 ## Done
@@ -99,20 +99,20 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - 2026-09-03 — Built `fig_tools/` (SVG toolkit, reusable parts, controller figure script) and
   recorded the figure style rules in `instructions.md`. Folder named `fig_tools`, not `figures`,
   so it is not mistaken for a folder of images.
-- 2026-09-03 — Week 1 Flight Basics finished: all sections written with sixteen generated
+- 2026-09-03 — Topic 1 Flight Basics finished: all sections written with sixteen generated
   figures, plus Check Your Understanding with collapsible answers and a Resources section.
   Automated Flight Functions sits below A Basic Flight so students meet manual flying first.
   Added `pymdownx.details` to `mkdocs.yml` for the collapsible answer blocks.
-- 2026-09-03 — Redrew Week 4 Figure 3 around one building at four stages, and added Figure 3b
+- 2026-09-03 — Redrew Topic 4 Figure 3 around one building at four stages, and added Figure 3b
   for where the orthophoto and DSM come from.
-- 2026-09-03 — Rewrote both Week 4 pages around the decisions a student actually makes, with nine
+- 2026-09-03 — Rewrote both Topic 4 pages around the decisions a student actually makes, with nine
   figures. Six are new (parallax, overlap, overlap cost, GSD, nadir/oblique, accuracy) and three
   replaced older drawings. Algorithm names moved into a collapsed appendix.
 - 2026-09-03 — Added `week_01/flight_issues.md` (symptom, cause, action tables plus a fly-away
   warning) and a feature-availability matrix inside Flight Basics.
-- 2026-09-03 — Adopted `wNN_figMM_short_name.svg` for figure files and converted Weeks 1 and 5.
+- 2026-09-03 — Adopted `wNN_figMM_short_name.svg` for figure files and converted Topics 1 and 5.
   `svgkit.figure_name()` is now the only place a generated figure's name is built.
-- 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
+- 2026-09-03 — Fixed the Topic 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
   `week_01/flight_basics.md`. Added `flight_check_list/index.md`, filled the empty post-flight
   checklist, and removed the dangling "links below" promise from both checklist pages. The strict
   build is now clean.
