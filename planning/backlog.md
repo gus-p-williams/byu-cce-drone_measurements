@@ -2,14 +2,12 @@
 
 Open items, ideas, and known gaps. Move items to "Done" with the date rather than deleting them.
 
-## Build warnings (a clean `mkdocs build --strict` should pass)
+## Build warnings
 
-- [ ] `mkdocs.yml` links Week 1 "Flight Basics" to `week_01/DJI_Mini_Basics.md`, but that file does
-      not exist and is not in git history. Commit `d173bd4` added the nav entry without staging the
-      page. Being replaced by the new `week_01/flight_basics.md` (see the Flight Basics section
-      below). This is the only warning in the current build.
+`mkdocs build --strict` currently passes with no warnings. Keep it that way.
+
 - [ ] `docs/coming_soon.md` is not in the nav. Decide whether it and
-      `docs/images/logo_with_coming_soon.png` are still needed.
+      `docs/images/logo_with_coming_soon.png` are still needed. (Reported as INFO, not a warning.)
 - [ ] `docs/week_05/Week_5_60_Question_Exam_Instructor_Key (1).md` is a stray duplicate of the
       instructor key and is not in the nav. Confirm and remove.
 
@@ -18,10 +16,8 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 - [ ] Week 5 `FAA_Exam_Planning_and_Overview.md` has captions for Figures 15, 16, 19, 20, 24, 25,
       and 27, but no matching image files exist. Those captions currently sit under nothing.
       Either draw the figures or remove the captions.
-- [ ] `docs/flight_check_list/post_flight/post_general.md` has an empty checklist, and its intro is
-      a copy of the pre-flight text that still says "before every flight".
-- [ ] `docs/flight_check_list/pre_flight/pre_general.md` says "click on the links below for
-      drone-specific pre-flight checklists" but has no links.
+- [ ] Neither flight checklist links to drone-specific lists yet. Both pages now say those will be
+      added rather than promising links that do not exist. Write them when the fleet is settled.
 
 ## Housekeeping
 
@@ -45,7 +41,8 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 Plan agreed September 2026. Generic, figure-led page in Week 1, with detail moved to linked pages.
 
 - [x] Phase 0 — figure style approved; `fig_tools/` toolkit and generic controller figure built.
-- [ ] Phase 1 — page skeleton, flight checklist landing page, nav fix, clean strict build.
+- [x] Phase 1 — page skeleton, flight checklist landing page, post-flight list, nav fix,
+      clean strict build. Awaiting instructor review of the checklist overview prose.
 - [ ] Phase 2 — sections, each as figure then caption: aircraft parts, controller, stick controls,
       how it flies, automated functions, basic flight, payloads and rules.
 - [ ] Phase 3 — linked pages: common flight issues, feature-availability table, checklist cross-links.
@@ -58,3 +55,7 @@ Plan agreed September 2026. Generic, figure-led page in Week 1, with detail move
 - 2026-09-03 — Built `fig_tools/` (SVG toolkit, reusable parts, controller figure script) and
   recorded the figure style rules in `instructions.md`. Folder named `fig_tools`, not `figures`,
   so it is not mistaken for a folder of images.
+- 2026-09-03 — Fixed the Week 1 nav entry (`DJI_Mini_Basics.md` never existed) by adding
+  `week_01/flight_basics.md`. Added `flight_check_list/index.md`, filled the empty post-flight
+  checklist, and removed the dangling "links below" promise from both checklist pages. The strict
+  build is now clean.

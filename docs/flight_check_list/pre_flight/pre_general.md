@@ -24,4 +24,8 @@ A comprehensive pre-flight checklist is essential for ensuring the safety and su
 
 ## Drone-Specific Checks
 
-See click on the links below for drone-specific pre-flight checklists:
+Aircraft differ in how they fold, how the battery seats, and which sensors need a clear view.
+Check the manual for the drone you are flying, and see
+[Flight Basics](../../week_01/flight_basics.md) for what each part does.
+
+Drone-specific checklists will be linked here as they are added.

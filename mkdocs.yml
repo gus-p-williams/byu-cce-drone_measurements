@@ -27,14 +27,13 @@ theme:
 
 nav:
   - Home: index.md
-  - Flight Checklist:
-      - Pre-Flight Checklist:
-          - General Checklist: flight_check_list/pre_flight/pre_general.md
-      - Post-Flight Checklist:
-          - General Checklist: flight_check_list/post_flight/post_general.md
+  - Flight Checklists:
+      - Overview: flight_check_list/index.md
+      - Pre-Flight Checklist: flight_check_list/pre_flight/pre_general.md
+      - Post-Flight Checklist: flight_check_list/post_flight/post_general.md
   - Week 1 - Introduction:
       - Overview: week_01/class_overview.md
-      - Flight Basics: week_01/DJI_Mini_Basics.md
+      - Flight Basics: week_01/flight_basics.md
   - Week 2 - Software:
       - Bentley iTwin: week_02/bentley_itwin.md
       - QGIS Measurements: week_02/qgis_measurements.md
