@@ -85,12 +85,13 @@ which is stripping the vegetation away to get at the ground.
 
 ## Example outputs & images
 
-### 1) Point Cloud vs. Terrain Model
-This diagram shows how LiDAR returns are used to separate the "ground" from "vegetation."
+### 1) How the ground gets separated from what grows on it
 
-![Stylized LiDAR point cloud and terrain model](images/lidar_pointcloud.svg)
+![One pulse, several returns, and the two surfaces they build](images/w06_fig01_lidar_returns.svg){ width="100%" }
 
-*Description: Ground returns (last returns) form the DTM, while first returns contribute to the DSM. This filtering process is what allows LiDAR to "see" the ground under trees.*
+*Figure 1: A single pulse returns several times on its way down. The first return builds the surface
+model, the last one that reached the ground builds the terrain model, and the gap between them is the
+height of whatever is growing there.*
 
 **Activity:**
 - If you were looking for an old stone wall buried under a forest, which data product would you use: the DSM or the DTM? Why?
@@ -100,7 +101,7 @@ This diagram shows how LiDAR returns are used to separate the "ground" from "veg
 ### 2) Seeing the ground through vegetation
 ![Ferrybridge Henge LiDAR hillshade](images/A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg)
 
-*Description: A "hillshade" rendering of a DTM: the vegetation has been stripped out and the bare
+*Figure 2: A "hillshade" rendering of a DTM: the vegetation has been stripped out and the bare
 ground lit from one side to reveal its shape. Archaeologists use this to find earthworks, but it is
 the same operation you need to find an old ditch, a buried foundation, or the fall of the land
 across a brushy site.*
@@ -115,7 +116,8 @@ across a brushy site.*
 ### 3) Forestry — Canopy Heights
 ![LiDAR forestry canopy heights](images/Lidar_forestry.png)
 
-*Description: Points colored by height. This visualization is a powerful tool for foresters to estimate timber volume and monitor forest health.*
+*Figure 3: Points colored by height. Foresters use this to estimate timber volume; the same canopy
+height model tells you how much clearing a site needs.*
 
 **Activity:**
 - Explain the calculation for a Canopy Height Model (CHM). If the DSM value at a point is 45 meters and the DTM value is 32 meters, how tall is the tree?

@@ -1,10 +1,10 @@
-"""Proposed replacement for the Topic 6 LiDAR returns figure.
+"""Topic 6 Figure 1: how LiDAR separates ground from vegetation.
 
-The figure it replaces asserts that the last return is ground, but draws two
+The figure this replaced asserted that the last return is ground, but draws two
 unrelated scatters of dots with no pulse, no returns, and nothing connecting
-them. The mechanism is invisible, so the claim has to be taken on trust.
+them, so the mechanism was invisible and the claim had to be taken on trust.
 
-This one shows it twice: one pulse producing several returns on the left, then
+This shows it twice: one pulse producing several returns on the left, then
 what a whole flight's worth of those looks like as a classified cross-section on
 the right, with the two surfaces drawn through the points they come from.
 
@@ -232,7 +232,7 @@ def main() -> None:
     ap.add_argument("--out", default="review")
     ap.add_argument("--png", action="store_true")
     args = ap.parse_args()
-    fname = os.path.join(args.out, "w06_lidar_returns_proposed.svg")
+    fname = os.path.join(args.out, figure_name(6, 1, "lidar_returns"))
     build().save(fname)
     print("wrote", fname)
     if args.png:

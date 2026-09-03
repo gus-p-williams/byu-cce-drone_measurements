@@ -34,6 +34,9 @@ Instructor decision, September 2026: keep the current images for now and revisit
       and `Lidar_forestry.png` are Wikimedia originals with no link, author, or licence in the
       caption. The Thermal page links each image to its Commons page and is a good pattern to copy,
       though it still needs author and licence in visible text.
+- [ ] **The two LiDAR photos still need renaming to `w06_figNN_`.** They are captioned Figure 2 and
+      Figure 3 now, but keep their Wikimedia file names because the rename should happen together
+      with capturing their author and licence.
 - [ ] **The LiDAR examples are off-topic for this course.** Archaeology and forestry, in a civil
       engineering and construction management class. The captions now point at the civil parallel,
       but the right fix is examples from actual project work: an earthwork site, a stockpile, a
@@ -118,6 +121,10 @@ Plan agreed September 2026. Generic, figure-led page in Topic 1, with detail mov
       and consistency, and a backlog tidy. Pick this up once the other weeks are revised.
 
 ## Done
+
+- 2026-09-03 — Redrew the LiDAR returns figure as Topic 6 Figure 1: one pulse with four
+  returns beside a classified cross-section, with a legend and a note that the two surfaces
+  coincide over open ground. Numbered the LiDAR page's three figures.
 
 - 2026-09-03 — Added tracked `planning/` folder, root `CLAUDE.md`, git-ignored `.claude/local/`
   and `review/` folders.
