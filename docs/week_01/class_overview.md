@@ -87,10 +87,9 @@ A drone flight produces photographs. Software turns those photographs into thing
 
 *The same set of photos becomes a map, then a surface, then a number you can put in a report.*
 
-![Surface model compared with terrain model](images/w01_overview_surface_vs_terrain.svg){ width="100%" }
-
-*Whether you keep the trees and buildings or strip them out depends entirely on the question you
-are answering.*
+Each of those has a name, a file format, and a question it is good at answering.
+[What a Flight Produces](data_products.md) is the reference page for all of them, and you will come
+back to it through the rest of the course.
 
 ---
 

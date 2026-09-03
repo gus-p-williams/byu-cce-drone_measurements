@@ -13,7 +13,6 @@ Outputs:
     w01_overview_semester.svg           the six weeks at a glance
     w01_overview_accuracy_effort.svg    picking a measurement method
     w01_overview_products.svg           one site, four things a drone gives you
-    w01_overview_surface_vs_terrain.svg what gets left in, and what gets removed
 """
 from __future__ import annotations
 
@@ -239,73 +238,6 @@ def build_products() -> Figure:
     return fig
 
 
-# ---------------------------------------------------------------------------
-# Surface model against terrain model
-# ---------------------------------------------------------------------------
-def hillside(cx, gy):
-    """The same ground in both panels: a slope with a building and two trees."""
-    return g(path(f"M{cx - 150},{gy} L{cx - 60},{gy - 34} "
-                  f"L{cx + 30},{gy - 22} L{cx + 150},{gy - 58}",
-                  fill="none", stroke="#9a8f78", stroke_width=3))
-
-
-def build_surface_vs_terrain() -> Figure:
-    fig = Figure(900, 420, "What the model includes",
-                 "Same flight, same site, two different surfaces. Which one you "
-                 "need depends on the question.")
-
-    for cx, keep in ((250, True), (650, False)):
-        top, gy = 84, 268
-        fig.add(rect(cx - 190, top, 380, 250, **CARD))
-        fig.add(text(cx, top + 30,
-                     "Surface model (DSM)" if keep else "Terrain model (DTM)",
-                     text_anchor="middle", font_size=15, font_weight="bold",
-                     fill=P["ink"]))
-        fig.add(text(cx, top + 50,
-                     "everything the drone saw" if keep
-                     else "bare ground, trees and buildings stripped out",
-                     text_anchor="middle", font_size=11.5, fill=P["muted"]))
-
-        # building and trees, solid when kept, ghosted when removed
-        op = "1" if keep else "0.22"
-        fig.add(g(rect(cx - 26, gy - 74, 52, 42, fill="#c2cad2",
-                       stroke=P["line"], stroke_width=1.5), opacity=op))
-        for tx, th in ((cx - 108, 46), (cx + 92, 38)):
-            base = gy - 30 if tx < cx else gy - 44
-            fig.add(g(line(tx, base, tx, base - th * 0.4, stroke="#8a6a45",
-                           stroke_width=4),
-                      circle(tx, base - th * 0.62, th * 0.42, fill="#7fa87f",
-                             stroke="#5f855f", stroke_width=1.5), opacity=op))
-
-        fig.add(hillside(cx, gy))
-        # the modelled surface: over the tops, or along the ground
-        if keep:
-            fig.add(path(f"M{cx - 150},{gy - 4} L{cx - 130},{gy - 12} "
-                         f"L{cx - 108},{gy - 62} L{cx - 86},{gy - 22} "
-                         f"L{cx - 26},{gy - 78} L{cx + 26},{gy - 74} "
-                         f"L{cx + 70},{gy - 32} L{cx + 92},{gy - 70} "
-                         f"L{cx + 114},{gy - 40} L{cx + 150},{gy - 62}",
-                         fill="none", stroke=P["accent"], stroke_width=3,
-                         stroke_linejoin="round"))
-        else:
-            fig.add(path(f"M{cx - 150},{gy} L{cx - 60},{gy - 34} "
-                         f"L{cx + 30},{gy - 22} L{cx + 150},{gy - 58}",
-                         fill="none", stroke=P["accent"], stroke_width=3,
-                         stroke_dasharray="9 6"))
-
-        fig.add(text(cx, top + 226,
-                     "use it to check clearances and heights" if keep
-                     else "use it for earthwork, drainage and grading",
-                     text_anchor="middle", font_size=12.5, fill=P["muted"]))
-
-    fig.add(text(450, 396,
-                 "Digital Elevation Model (DEM) is the umbrella term you will "
-                 "also hear for both of these.",
-                 text_anchor="middle", font_size=13, font_style="italic",
-                 fill=P["muted"]))
-    return fig
-
-
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--out", default="review")
@@ -317,7 +249,6 @@ def main() -> None:
         (build_semester, "overview_semester"),
         (build_accuracy_effort, "overview_accuracy_effort"),
         (build_products, "overview_products"),
-        (build_surface_vs_terrain, "overview_surface_vs_terrain"),
     ):
         fname = os.path.join(args.out, figure_name(1, None, slug))
         builder().save(fname)

@@ -53,6 +53,10 @@ when the captions are rewritten.
 
 ## Week 1 follow-ups
 
+- [ ] Replace the eight `w01_example_*.svg` placeholders on `week_01/data_products.md` with real
+      products from class flights: orthomosaic, point cloud, DSM, DTM, 3D model, contours, thermal,
+      and an index map. Each is a separate file, so they can be swapped one at a time as data
+      becomes available.
 - [ ] Replace `w01_overview_photo_placeholder.svg` on the overview page with a real photo of
       students flying. Worth having: pilot, controller, and aircraft all in one frame; someone at a
       laptop with a finished map on screen. Check whether consent is needed for recognizable faces.

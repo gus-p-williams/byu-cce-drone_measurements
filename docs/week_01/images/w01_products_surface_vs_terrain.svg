@@ -16,9 +16,7 @@
     <line x1="342" y1="224" x2="342" y2="208.8" stroke="#8a6a45" stroke-width="4"/>
     <circle cx="342" cy="200.44" r="15.959999999999999" fill="#7fa87f" stroke="#5f855f" stroke-width="1.5"/>
   </g>
-  <g>
-    <path d="M100,268 L190,234 L280,246 L400,210" fill="none" stroke="#9a8f78" stroke-width="3"/>
-  </g>
+  <path d="M100,268 L190,234 L280,246 L400,210" fill="none" stroke="#9a8f78" stroke-width="3"/>
   <path d="M100,264 L120,256 L142,206 L164,246 L224,190 L276,194 L320,236 L342,198 L364,228 L400,206" fill="none" stroke="#4a90d9" stroke-width="3" stroke-linejoin="round"/>
   <text x="250" y="310" text-anchor="middle" font-size="12.5" fill="#555555">use it to check clearances and heights</text>
   <rect x="460" y="84" width="380" height="250" rx="10" fill="#ffffff" stroke="#dde3e9" stroke-width="1.5"/>
@@ -35,9 +33,7 @@
     <line x1="742" y1="224" x2="742" y2="208.8" stroke="#8a6a45" stroke-width="4"/>
     <circle cx="742" cy="200.44" r="15.959999999999999" fill="#7fa87f" stroke="#5f855f" stroke-width="1.5"/>
   </g>
-  <g>
-    <path d="M500,268 L590,234 L680,246 L800,210" fill="none" stroke="#9a8f78" stroke-width="3"/>
-  </g>
+  <path d="M500,268 L590,234 L680,246 L800,210" fill="none" stroke="#9a8f78" stroke-width="3"/>
   <path d="M500,268 L590,234 L680,246 L800,210" fill="none" stroke="#4a90d9" stroke-width="3" stroke-dasharray="9 6"/>
   <text x="650" y="310" text-anchor="middle" font-size="12.5" fill="#555555">use it for earthwork, drainage and grading</text>
   <text x="450" y="396" text-anchor="middle" font-size="13" font-style="italic" fill="#555555">Digital Elevation Model (DEM) is the umbrella term you will also hear for both of these.</text>
