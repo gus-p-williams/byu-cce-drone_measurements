@@ -414,45 +414,83 @@ def photo_frame(fx, fy, fw, fh, base, top, marks):
 
 
 def build_matching() -> Figure:
-    fig = Figure(900, 710, "Two photos, one pole, and where height comes from",
+    fig = Figure(900, 752, "Two photos, one pole, and where height comes from",
                  "The same point sits in a different place in each photo. That "
                  "difference is what the software turns into 3D.")
 
     # ---- the geometry, seen from the side ----
-    fig.add(rect(30, 82, 840, 300, **CARD))
+    fig.add(rect(30, 82, 840, 322, **CARD))
     gy, px = 330, 450
+    ptop = 198
     fig.add(line(70, gy, 830, gy, stroke="#9aa7b2", stroke_width=3,
                  stroke_linecap="round"))
-    fig.add(rect(px - 5, gy - 132, 10, 132, fill="#5a6570", stroke=P["line"],
-                 stroke_width=1.5))
-    fig.add(circle(px, gy - 132, 7, fill="none", stroke=P["bad"],
+    fig.add(rect(px - 5, ptop, 10, gy - ptop, fill="#5a6570",
+                 stroke=P["line"], stroke_width=1.5))
+    fig.add(circle(px, ptop, 7, fill="none", stroke=P["bad"],
                    stroke_width=2.5))
-    fig.add(text(px + 18, gy - 70, "one pole", font_size=12,
-                 fill=P["muted"]))
 
-    for dx, dy, label, side in ((430, 138, "position A", "end"),
-                                (712, 156, "position B", "start")):
-        fig.add(g(line(dx, dy + 12, px, gy - 132), line(dx, dy + 12, px, gy),
+    # the unknown we are solving for
+    fig.add(g(line(px + 26, ptop, px + 26, gy),
+              line(px + 20, ptop, px + 32, ptop),
+              line(px + 20, gy, px + 32, gy),
+              stroke=P["ink"], stroke_width=1.8))
+    fig.add(text(px + 38, (ptop + gy) / 2 + 5, "h = ?", font_size=14,
+                 font_weight="bold", fill=P["ink"]))
+
+    cams = ((415, 118, "position A", "end", 46),
+            (620, 118, "position B", "start", 56))
+    for dx, dy, label, side, arc_r in cams:
+        cyc = dy + 12
+        fig.add(g(line(dx, cyc, px, ptop), line(dx, cyc, px, gy),
                   stroke=SHOT, stroke_width=1.5, stroke_dasharray="6 4"))
+        # straight down from the camera, the reference the angle is measured from
+        fig.add(line(dx, cyc, dx, gy, stroke="#b6c2cc", stroke_width=1.5,
+                     stroke_dasharray="3 4"))
+        a0 = 90.0
+        a1 = math.degrees(math.atan2(ptop - cyc, px - dx))
+        sweep = 1 if a1 > a0 else 0
+        p0 = (dx + arc_r * math.cos(math.radians(a0)),
+              cyc + arc_r * math.sin(math.radians(a0)))
+        p1 = (dx + arc_r * math.cos(math.radians(a1)),
+              cyc + arc_r * math.sin(math.radians(a1)))
+        fig.add(path(f"M{p0[0]:.1f},{p0[1]:.1f} A{arc_r},{arc_r} 0 0,{sweep} "
+                     f"{p1[0]:.1f},{p1[1]:.1f}", fill="none", stroke="#b8860b",
+                     stroke_width=2.5))
+        away = -1 if "A" in label else 1      # keep the label off the pole
+        fig.add(text(dx + away * (arc_r + 16), cyc + arc_r + 14,
+                     "angle A" if "A" in label else "angle B",
+                     text_anchor="end" if away < 0 else "start",
+                     font_size=12, font_weight="bold", fill="#b8860b"))
         fig.add(translate(dx, dy, aircraft_mini_side(0.5, nose=False)))
         fig.add(text(dx + (-22 if side == "end" else 22), dy - 24, label,
                      text_anchor=side, font_size=13, font_weight="bold",
                      fill=P["ink"]))
-        fig.add(line(dx, gy - 7, dx, gy + 7, stroke="#8fa3b5",
-                     stroke_width=2))
-    fig.add(text(450, 366,
-                 "the pole sits almost under A, and well off to the side of B",
-                 text_anchor="middle", font_size=12.5, fill=P["muted"]))
+        fig.add(line(dx, gy - 7, dx, gy + 7, stroke="#8fa3b5", stroke_width=2))
+
+    # the baseline, which the drone knows from its own positions
+    bl = 356
+    fig.add(g(line(cams[0][0], bl, cams[1][0], bl),
+              line(cams[0][0], bl - 6, cams[0][0], bl + 6),
+              line(cams[1][0], bl - 6, cams[1][0], bl + 6),
+              stroke=P["ink"], stroke_width=1.8))
+    fig.add(text((cams[0][0] + cams[1][0]) / 2, bl - 10,
+                 "distance between the two shots, known from GPS",
+                 text_anchor="middle", font_size=12, fill=P["ink"]))
+    fig.add(text(450, 390,
+                 "Two known camera positions, two measured angles, one unknown "
+                 "height. That is a triangle, and trigonometry solves it.",
+                 text_anchor="middle", font_size=12.5, font_weight="bold",
+                 fill=P["muted"]))
 
     # ---- what each photo looks like ----
-    fw, fh, fy = 330, 178, 430
+    fw, fh, fy = 330, 178, 452
     _, top_a = photo_frame(90, fy, fw, fh, (18, 22), (32, 0),
                            ((-92, -34, 6), (74, 40, 5), (-40, 52, 4)))
-    _, top_b = photo_frame(480, fy, fw, fh, (-44, 22), (-118, -26),
+    _, top_b = photo_frame(480, fy, fw, fh, (-52, 22), (-132, -28),
                            ((-52, -40, 6), (114, 34, 5), (0, 56, 4)))
     fig.add(photo_frame(90, fy, fw, fh, (18, 22), (32, 0),
                         ((-92, -34, 6), (74, 40, 5), (-40, 52, 4)))[0])
-    fig.add(photo_frame(480, fy, fw, fh, (-44, 22), (-118, -26),
+    fig.add(photo_frame(480, fy, fw, fh, (-52, 22), (-132, -28),
                         ((-52, -40, 6), (114, 34, 5), (0, 56, 4)))[0])
 
     fig.add(text(255, fy - 14, "photo from A", text_anchor="middle",
@@ -467,16 +505,16 @@ def build_matching() -> Figure:
     # the same feature, linked across the two photos
     fig.add(line(top_a[0], top_a[1], top_b[0], top_b[1], stroke=P["bad"],
                  stroke_width=1.5, stroke_dasharray="5 4"))
-    fig.add(text(450, fy + fh + 52, "the circled point is the same top of the "
+    fig.add(text(450, fy + fh + 54, "the circled point is the same top of the "
                  "same pole, in a different place in each photo",
                  text_anchor="middle", font_size=12.5, fill=P["bad"]))
 
-    fig.add(text(450, 672,
+    fig.add(text(450, 710,
                  "Knowing where the drone was for each shot, the software works "
                  "backwards from",
                  text_anchor="middle", font_size=13, font_style="italic",
                  fill=P["muted"]))
-    fig.add(text(450, 692,
+    fig.add(text(450, 730,
                  "that difference to the height. Millions of points later, you "
                  "have a 3D model.",
                  text_anchor="middle", font_size=13, font_style="italic",
