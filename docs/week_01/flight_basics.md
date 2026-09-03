@@ -188,9 +188,39 @@ stays where it is.*
 
 ## A Basic Flight, Start to Finish
 
-*[Figure 10 — flight sequence strip, nine icons from unfold to power off.]*
+Every flight follows the same nine steps, whether it is a two-minute check or a full survey. Run
+them in the same order every time, especially on the flights that feel routine.
 
-*[Figure 11 (optional) — box and hover practice pattern, top view.]*
+![The nine steps of a flight](images/fig10_flight_sequence.svg){ width="100%" }
+
+*Figure 10: A flight from start to finish. The three phases are setting up on the ground, starting
+up and checking, then flying and packing away.*
+
+!!! note "Why the power order matters"
+    Turn the **controller on first and off last**. If the aircraft is powered while the controller
+    is not, it has nothing to listen to. Depending on the model it may sit there refusing to arm,
+    or it may start a Return to Home you did not ask for.
+
+The detailed item-by-item lists live on the checklist pages:
+[Pre-Flight](../flight_check_list/pre_flight/pre_general.md) and
+[Post-Flight](../flight_check_list/post_flight/post_general.md). Figure 10 is the shape of the
+flight; the checklists are what you actually tick off.
+
+### Your first flights
+
+Before flying any real task, get comfortable with the controls somewhere open, well away from
+people, cars, buildings, and trees. The box is the standard first exercise.
+
+![The box practice pattern](images/fig11_practice_pattern.svg){ width="100%" }
+
+*Figure 11: Fly one side, stop in a hover at the corner, then fly the next side. Slow and
+deliberate beats fast and smooth at this stage.*
+
+!!! tip "Hover before you go anywhere"
+    After take-off, hold a hover at about eye level for a few seconds and try a small input on each
+    stick. You are checking that the aircraft responds the way you expect and is not drifting. If
+    something feels wrong, land while the drone is still two metres away and at head height, not
+    when it is a hundred metres out.
 
 ---
 
