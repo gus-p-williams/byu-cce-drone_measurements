@@ -2,11 +2,16 @@
 
 This page introduces multispectral sensors on drones, explains common spectral bands and indices, and provides practical guidance for planning flights and producing quantitative products.
 
-## Key Takeaways
-- **Beyond visible:** Multispectral sensors capture light outside the visible range (Near-Infrared, Red-edge).
-- **Plant health:** Healthy plants reflect Near-Infrared (NIR) light strongly, which is a key signal for vigor.
-- **Indices:** Mathematical formulas like NDVI combine spectral bands to quantify plant stress and biomass.
-- **Calibration:** Using reflectance panels is essential for comparing data over time or between sensors.
+!!! abstract "Key Takeaways"
+    - **Beyond visible.** Multispectral sensors capture light outside the visible range, usually
+      near-infrared and red-edge.
+    - **Ratios, not values.** Almost nothing useful comes from a single band's number. The analysis
+      is done on **normalized band ratios**, such as NDVI, because a ratio survives changes in
+      lighting that a raw value does not.
+    - **Plant health.** Healthy vegetation absorbs red light and reflects near-infrared strongly.
+      The gap between those two bands is the signal.
+    - **Calibration.** Reflectance panels and a light sensor are what make index values comparable
+      between flights, not just within one.
 
 ---
 
@@ -34,9 +39,46 @@ When chlorophyll-rich leaves are illuminated, they absorb much of the blue and r
 - **Time-series change maps:** Monitoring growth or stress over a season.
 
 ## Key bands & indices
-- **NDVI (Normalized Difference Vegetation Index)** = (NIR - Red) / (NIR + Red)
-  - Commonly used to estimate vegetation vigor and relative chlorophyll.
-- **NDRE (Normalized Difference Red Edge):** Better for dense canopies where NIR might saturate.
+
+### Why ratios rather than band values
+
+The number a sensor records for one band is not a property of the plant. It also depends on how
+bright the sun was, the angle it struck the leaf at, haze, and the sensor itself. Fly the same field
+an hour later and every band value has changed, without a single plant changing.
+
+A **ratio between bands** cancels most of that out, because whatever scaled one band scaled the
+others in the same image at the same instant. Two flights that disagree completely on raw values can
+agree closely on the ratio.
+
+### Why *normalized* ratios
+
+In practice the ratios used are **normalized differences**, of the form:
+
+`index = (A − B) / (A + B)`
+
+Dividing by the sum bounds the result between −1 and +1 however bright the scene was. That is what
+lets a legend mean the same thing on every map you produce, and lets you compare this week's field
+against last week's.
+
+| Index | Formula | Use it for |
+|-------|---------|------------|
+| **NDVI** | (NIR − Red) / (NIR + Red) | General vigor and biomass. The default starting point |
+| **NDRE** | (NIR − RedEdge) / (NIR + RedEdge) | Dense canopy, where NDVI saturates and stops discriminating |
+| **NDWI** | (Green − NIR) / (Green + NIR) | Open water and moisture, rather than vegetation |
+
+Healthy vegetation absorbs red light for photosynthesis and reflects near-infrared strongly, so those
+two bands pull far apart and NDVI runs high. A stressed plant loses chlorophyll, absorbs less red,
+and the gap closes before anything is visible to the eye.
+
+!!! tip "The same idea as the thermal page"
+    On [the thermal page](Thermal.md) the useful reading was the **difference between things that
+    should match**, not an absolute temperature. Here it is the **ratio between bands in the same
+    image**. Both work for the same reason: what you compare against carries the same errors, so the
+    errors largely cancel.
+
+    Ratios do not remove the need for calibration. They make one flight internally consistent;
+    reflectance panels and a downwelling light sensor are what make **this** flight comparable with
+    **last month's**.
 
 ## Use cases & applications
 - **Precision agriculture:** Map crop vigor and identify zones for targeted interventions (fertilizer, irrigation).
