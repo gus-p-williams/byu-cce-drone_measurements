@@ -24,12 +24,12 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 
 Instructor decision, September 2026: keep the current images for now and revisit later.
 
-- [ ] **Licensing on the four Multispectral images.** `electromagnetic-spectrum-jpg-1536x655.webp`
-      and `mulitspectral-leaf-jpg-1536x847.webp` carry WordPress thumbnail suffixes,
-      `Screenshot-2019-04-09-14.04.41.webp` is a screenshot, and `1_AQtOQh_X4O0JKZg9tGzOmA.webp` is
-      a Medium CDN filename. No source, no author, no licence stated, on a public site. The spectrum
-      chart and the leaf reflectance curve would both be better as drawn diagrams anyway, which
-      sidesteps the question entirely.
+- [ ] **Licensing on the remaining two Multispectral images.**
+      `Screenshot-2019-04-09-14.04.41.webp` is a screenshot and `1_AQtOQh_X4O0JKZg9tGzOmA.webp` is a
+      Medium CDN filename. No source, no author, no licence stated, on a public site. Both are NDVI
+      map examples, so the fix is a real NDVI product from one of our own flights.
+      Half done: the spectrum chart and the leaf reflectance curve were the other two, and Figure 10
+      (`fig_tools/fig_spectral.py`) now draws both in one figure. Those two files are deleted.
 - [ ] **Attribution on the LiDAR photos.** `A_lidar_view_of_Ferrybridge_Henge_in_West_Yorkshire.jpg`
       and `Lidar_forestry.png` are Wikimedia originals with no link, author, or licence in the
       caption. The Thermal page links each image to its Commons page and is a good pattern to copy,
@@ -46,7 +46,8 @@ Instructor decision, September 2026: keep the current images for now and revisit
       `Effigy_mounds_lidar.jpg`, `Infrared_thermal_imaging_during_a_yacht_survey.jpg`,
       `LIDAR_field_yield.jpg`, `Tank-DSM-filled.webp`, and both files in `week_06/media/`.
 - [ ] **Raw `<img>` tags** remain on the Thermal and Multispectral pages, which work only because
-      clean URLs are on. Convert to Markdown with `attr_list`.
+      clean URLs are on. Convert to Markdown with `attr_list`. Two fewer on Multispectral now that
+      the spectrum and leaf images are gone.
 
 ## Housekeeping
 
