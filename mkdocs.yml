@@ -28,10 +28,17 @@ theme:
 
 nav:
   - Home: index.md
-  - Flight Checklists:
-      - Overview: flight_check_list/index.md
-      - Pre-Flight Checklist: flight_check_list/pre_flight/pre_general.md
-      - Post-Flight Checklist: flight_check_list/post_flight/post_general.md
+
+  - Class Resources:
+      - Syllabus: class_resources/syllabus.md
+      - Teaching Assistants:
+          - About the TAs: class_resources/ta/tas.md
+          - Office Hours: class_resources/ta/ta_hours.md
+      - Flight Checklists:
+          - Overview: flight_check_list/index.md
+          - Pre-Flight Checklist: flight_check_list/pre_flight/pre_general.md
+          - Post-Flight Checklist: flight_check_list/post_flight/post_general.md
+
   - Topic 1 — Getting Started:
       - Overview: week_01/class_overview.md
       - Aerial Measurement Products: week_01/data_products.md
@@ -41,7 +48,6 @@ nav:
       - Bentley iTwin: week_02/bentley_itwin.md
       - QGIS Measurements: week_02/qgis_measurements.md
   - Topic 3 — Measurements:
-      - Measurements Lab: week_03/lab_measurements.md
       - Metadata: week_03/metadata.md
   - Topic 4 — Mission Planning:
       - How Photos Become 3D: week_04/SfM_Workflow.md
@@ -58,3 +64,16 @@ nav:
       - LiDAR Overview: week_06/LiDAR.md
       - Thermal Imaging Overview: week_06/Thermal.md
       - Multispectral Imaging Overview: week_06/Multispectral.md
+
+  - Labs:
+      - Intro to Flying: labs/0_intro_to_flying.md
+      - Flight Checklist: labs/1_flight_checklist.md
+      - Measurements and Methods: labs/2_measurements_and_methods.md
+      - Creating Flight Plans: labs/3_creating_flight_plans.md
+
+  - Final Project:
+      - Overview: final_project/overview.md
+      - Project Proposal: final_project/proposal.md
+      - Flight and Data Processing: final_project/flight_and_data_processing.md
+      - Project Presentation: final_project/presentation.md
+      - Final Report: final_project/report.md

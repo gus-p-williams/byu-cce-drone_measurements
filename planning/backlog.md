@@ -11,6 +11,27 @@ Open items, ideas, and known gaps. Move items to "Done" with the date rather tha
 - [ ] `docs/week_05/Week_5_60_Question_Exam_Instructor_Key (1).md` is a stray duplicate of the
       instructor key and is not in the nav. Confirm and remove.
 
+## Labs and the final project
+
+Brought across from `byu-cce-drones/content` on 2026-09-03. See `.claude/local/SOURCE_MATERIAL.md`.
+
+- [ ] **Labs 4, 5 and 6 do not exist.** Rock Canyon Park flight, data processing, and Part 107
+      studying are empty coming-soon stubs upstream, so there was nothing to bring across. They are
+      referenced by Lab 3's "Looking Ahead" and by the syllabus schedule. Write them.
+- [ ] **The labs have no figures.** Four labs, one borrowed photo (`holy_stone_controller.jpeg`,
+      unreferenced) and one site image. Every lab would carry a figure or two well, and Lab 0's
+      homework asks students to label a controller, which `w01_fig07_controller.svg` already draws.
+      Convention is set (`labNN_figMM_slug.svg`); the drawings are not.
+- [ ] **The final project is scaffolded, not decided.** `final_project/overview.md` ends with ten
+      open decisions for the instructor and TAs: team size and formation, individual versus team
+      grading, site selection, whether every team flies, all four due dates, minimum ground truth,
+      processing software, submission location, presentation length and venue, and the late-work
+      policy. Each page carries "Decision needed" admonitions in place. Resolve them, then delete
+      the "This page is a draft" blocks.
+- [ ] **Rubrics are suggestions.** Every point split in the four project pages is a proposal for the
+      instructor to confirm or replace.
+- [ ] **No AI-use policy** for the final report. Worth setting before the project is assigned.
+
 ## Content gaps
 
 - [ ] Topic 5 `FAA_Exam_Planning_and_Overview.md` has captions for Figures 15, 16, 19, 20, 24, 25,
@@ -50,6 +71,13 @@ Instructor decision, September 2026: keep the current images for now and revisit
       the spectrum and leaf images are gone.
 
 ## Housekeeping
+
+- [ ] `docs/week_03/` now holds only `metadata.md`. The measurement lab moved to
+      `docs/labs/2_measurements_and_methods.md` (the TA version, which supersedes the older, shorter
+      copy that was here). Decide whether Topic 3 should absorb another page or be folded elsewhere.
+- [ ] Upstream has `docs/software/qgis_measurements COPY.md`, a stray duplicate with a space in the
+      filename, published live as `software/qgis_measurements%20COPY/`. Not brought across. Flag it
+      to the TAs.
 
 
 - [ ] Topic 6 uses raw `<img src="../images/...">` tags in seven places. MkDocs does not rewrite

@@ -24,6 +24,19 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
 
 ## Files and naming
 
+`docs/` is organized by what a page **is**, not by when it is used:
+
+| Folder | Holds |
+|--------|-------|
+| `docs/week_NN/` | The readings, one folder per Topic. Images in `docs/week_NN/images/`. |
+| `docs/labs/` | The lab sessions, numbered from 0. Images in `docs/labs/images/`. |
+| `docs/final_project/` | The five final project pages. |
+| `docs/class_resources/` | Syllabus and TA pages. |
+| `docs/flight_check_list/` | The checklists, grouped under Class Resources in the nav. |
+
+Nav nesting does not change a page's URL in MkDocs, so a page can be regrouped in `nav:` without
+moving the file or breaking a link. Moving the file does break links.
+
 - Put each week's pages in `docs/week_NN/`. Images go in `docs/week_NN/images/`.
 - Use descriptive file names with underscores, matching existing pages (for example
   `Mission_Planning_SfM.md`). Do not leave duplicate or numbered copies such as `file (1).md`.
@@ -43,7 +56,9 @@ regulatory cautions, `tip` for practical advice, `example` for worked problems.
   varies between models, say so in the subtitle or caption.
 - Keep text as text in the SVG. Do not convert labels to paths.
 - File names: `wNN_figMM_short_name.svg` inside the week's `images/` folder, for example
-  `w01_fig07_controller.svg`. The week prefix means an exported figure still says where it came
+  `w01_fig07_controller.svg`. Lab figures use `labNN_figMM_short_name.svg` in `docs/labs/images/`,
+  for example `lab00_fig01_controller.svg`, numbered as one sequence per lab. The prefix says which
+  lab a figure came from once it is out of the repository, the same way `wNN_` does for a Topic. The week prefix means an exported figure still says where it came
   from once it is out of the repository. Scripts build the name with `svgkit.figure_name()`, so the
   number in the file name cannot drift away from the number printed inside the drawing.
 - `MM` runs as **one sequence across the whole week**, following the nav order of that week's pages.
